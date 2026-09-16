@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "revision": 7,
+  "publishedAt": "2026-09-16T00:00:00Z",
+  "models": [
+    {
+      "id": "qwen2.5-0.5b-instruct",
+      "name": {
+        "ja": "Qwen2.5 0.5B Instruct",
+        "en": "Qwen2.5 0.5B Instruct"
+      },
+      "description": {
+        "ja": "小型で高速な汎用チャットモデル。日本語にも対応し、メモリの少ない端末でも動作します。",
+        "en": "A small, fast general-purpose chat model. Supports Japanese and runs on devices with little memory."
+      },
+      "developer": "Qwen (Alibaba Cloud)",
+      "origin": "overseas",
+      "version": "2.5",
+      "parameterCount": 494000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "qwen2.5-0.5b-instruct-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 1300000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/9217f5db79a29953eb74d5343926648285ec7e67/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+              "sizeBytes": 491400032,
+              "sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 28.2,
+              "knownIssues": [
+                "Pixel 6: GPU offload not used (CPU inference)"
+              ]
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qwen3.5-2b",
+      "name": {
+        "ja": "Qwen3.5 2B",
+        "en": "Qwen3.5 2B"
+      },
+      "description": {
+        "ja": "2026年の新しい小型モデル。日本語を含む多言語に対応し、品質と速度のバランスが良いモデルです。",
+        "en": "A 2026 small model with multilingual support including Japanese and a good balance of quality and speed."
+      },
+      "developer": "Qwen (Alibaba Cloud)",
+      "origin": "overseas",
+      "version": "3.5",
+      "parameterCount": 2000000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh"
+      ],
+      "tags": [
+        "recommended",
+        "balanced"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "qwen3.5-2b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 1700000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/f6d5376be1edb4d416d56da11e5397a961aca8ae/Qwen3.5-2B-Q4_K_M.gguf",
+              "sizeBytes": 1280835840,
+              "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 7.1
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qwen3.5-0.8b",
+      "name": {
+        "ja": "Qwen3.5 0.8B",
+        "en": "Qwen3.5 0.8B"
+      },
+      "description": {
+        "ja": "2026年の新しい超小型モデル。メモリの少ない端末でも軽快に動作します。",
+        "en": "A 2026 very small model that runs smoothly even on devices with little memory."
+      },
+      "developer": "Qwen (Alibaba Cloud)",
+      "origin": "overseas",
+      "version": "3.5",
+      "parameterCount": 800000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "qwen3.5-0.8b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 800000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF/resolve/6ab461498e2023f6e3c1baea90a8f0fe38ab64d0/Qwen3.5-0.8B-Q4_K_M.gguf",
+              "sizeBytes": 532517120,
+              "sha256": "bd258782e35f7f458f8aced1adc053e6e92e89bc735ba3be89d38a06121dc517"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 17.0
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qwen3.5-2b-vision",
+      "name": {
+        "ja": "Qwen3.5 2B（画像対応）",
+        "en": "Qwen3.5 2B (Vision)"
+      },
+      "description": {
+        "ja": "Qwen3.5 2B に画像の読み取り機能を加えた版です。写真や図について質問できます。画像処理用のファイルが加わるため、ダウンロードと必要メモリが増えます。",
+        "en": "Qwen3.5 2B with image understanding. Ask about photos and diagrams. The extra vision file increases the download and memory use."
+      },
+      "developer": "Qwen (Alibaba Cloud)",
+      "origin": "overseas",
+      "version": "3.5",
+      "parameterCount": 2000000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "qwen3.5-2b-vision-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming",
+            "vision"
+          ],
+          "estimatedRamBytes": 2500000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/f6d5376be1edb4d416d56da11e5397a961aca8ae/Qwen3.5-2B-Q4_K_M.gguf",
+              "sizeBytes": 1280835840,
+              "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
+            },
+            {
+              "role": "projector",
+              "fileName": "mmproj.gguf",
+              "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/f6d5376be1edb4d416d56da11e5397a961aca8ae/mmproj-F16.gguf",
+              "sizeBytes": 668227264,
+              "sha256": "7035e9cb8d7c6a9681d07eef9a364783e86ea4cd73faab2eabb4f43a101830c7"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 11.6,
+              "knownIssues": [
+                "Pixel 6: first response takes ~17 s with an image (CPU vision encoding)"
+              ]
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
