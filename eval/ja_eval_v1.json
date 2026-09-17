@@ -1,0 +1,375 @@
+{
+  "id": "ja-eval",
+  "version": "1",
+  "description": "Local AI Team JP 日本語AI評価セット v1（6カテゴリ×5問）",
+  "items": [
+    {
+      "id": "conv-1",
+      "category": "conversation",
+      "prompt": "最近疲れやすいのですが、休日にできるリフレッシュ方法を3つ教えてください。",
+      "maxTokens": 320,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "minChars", "value": 60},
+        {"type": "maxChars", "value": 700}
+      ],
+      "rubric": "疲れている相手への気遣いがあり、具体的で実行しやすい方法を3つ、自然な日本語で提案しているか。"
+    },
+    {
+      "id": "conv-2",
+      "category": "conversation",
+      "prompt": "雨の日に小学生の子どもと家で楽しめる遊びを教えてください。",
+      "maxTokens": 320,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "minChars", "value": 50},
+        {"type": "maxChars", "value": 700}
+      ],
+      "rubric": "室内で安全にできる具体的な遊びを、自然で親しみやすい日本語で提案しているか。"
+    },
+    {
+      "id": "conv-3",
+      "category": "conversation",
+      "prompt": "「おはよう」と「こんにちは」の使い分けを簡単に説明してください。",
+      "maxTokens": 256,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "contains", "values": ["おはよう", "こんにちは"]},
+        {"type": "maxChars", "value": 500}
+      ],
+      "rubric": "時間帯による使い分けを正しく、簡潔に説明しているか。事実誤りがないか。"
+    },
+    {
+      "id": "conv-4",
+      "category": "conversation",
+      "prompt": "初めて一人暮らしをする友人に送る、温かい一言メッセージを考えてください。",
+      "maxTokens": 200,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "minChars", "value": 15},
+        {"type": "maxChars", "value": 300}
+      ],
+      "rubric": "友人に送る自然で温かいメッセージになっているか。不自然な言い回しがないか。"
+    },
+    {
+      "id": "conv-5",
+      "category": "conversation",
+      "prompt": "日本でお正月にすることを2つ、短く教えてください。",
+      "maxTokens": 200,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "containsAny", "values": ["おせち", "初詣", "年賀", "お年玉", "雑煮", "鏡餅", "門松", "初日の出"]},
+        {"type": "maxChars", "value": 300}
+      ],
+      "rubric": "日本のお正月の習慣として正しいものを2つ、簡潔に挙げているか。"
+    },
+    {
+      "id": "keigo-1",
+      "category": "keigo",
+      "prompt": "次の文を、取引先に送る丁寧な敬語に直してください。\n「明日の会議、3時からに変えてもいい？」",
+      "maxTokens": 200,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "polite"},
+        {"type": "noCasual"},
+        {"type": "contains", "values": ["会議"]},
+        {"type": "containsAny", "values": ["いただけ", "でしょうか", "願え", "願い", "頂け"]}
+      ],
+      "rubric": "取引先に対して適切な敬語（依頼の形、尊敬語・謙譲語）になっているか。意味（明日の会議を3時開始に変更したい）が保たれているか。"
+    },
+    {
+      "id": "keigo-2",
+      "category": "keigo",
+      "prompt": "「資料を見ました」を、上司への報告として正しい謙譲語を使った表現に直してください。",
+      "maxTokens": 160,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "containsAny", "values": ["拝見", "拝読"]},
+        {"type": "noCasual"}
+      ],
+      "rubric": "「見る」の謙譲語（拝見する・拝読する）を正しく使えているか。二重敬語などの誤りがないか。"
+    },
+    {
+      "id": "keigo-3",
+      "category": "keigo",
+      "prompt": "上司に有給休暇を申請するメールの本文を、丁寧な敬語で短く書いてください。",
+      "maxTokens": 320,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "polite"},
+        {"type": "noCasual"},
+        {"type": "containsAny", "values": ["休暇"]},
+        {"type": "containsAny", "values": ["よろしくお願い", "いただけ", "存じ", "申し訳"]}
+      ],
+      "rubric": "ビジネスメールとして適切な敬語・構成（依頼、日付、お礼）になっているか。"
+    },
+    {
+      "id": "keigo-4",
+      "category": "keigo",
+      "prompt": "お店の店員として、「ちょっと待ってて」をお客様への言い方に直してください。",
+      "maxTokens": 120,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "containsAny", "values": ["少々お待ち", "しばらくお待ち"]},
+        {"type": "noCasual"}
+      ],
+      "rubric": "接客として自然で正しい敬語（少々お待ちください等）になっているか。"
+    },
+    {
+      "id": "keigo-5",
+      "category": "keigo",
+      "prompt": "「このこと、知ってる？」を目上の人に使う丁寧な表現に直してください。",
+      "maxTokens": 120,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "containsAny", "values": ["ご存じ", "ご存知"]},
+        {"type": "noCasual"}
+      ],
+      "rubric": "「知っている」の尊敬語（ご存じ）を正しく使った丁寧な質問になっているか。"
+    },
+    {
+      "id": "sum-1",
+      "category": "summary",
+      "prompt": "次の文章を3つの箇条書きで要約してください。\n\n地方の小さな町では、近年、空き家の増加が大きな課題になっている。若い世代が進学や就職で都市部へ移り、高齢の住民だけが残る地域が増えた。一方で、リモートワークの普及により、自然の多い環境で暮らしたいと考える人も増えている。ある町では、空き家を改修して移住希望者に貸し出す取り組みを始めた。町は改修費の一部を補助し、地元の工務店が工事を担当する。取り組みの結果、三年間で四十世帯が移住し、町の小学校では児童数が増加に転じた。",
+      "maxTokens": 256,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "bullets", "value": 3},
+        {"type": "contains", "values": ["空き家", "移住"]},
+        {"type": "maxChars", "value": 300}
+      ],
+      "rubric": "空き家の増加という課題、改修・貸し出しの取り組み、移住者と児童数の増加という成果を、正確に3点で要約しているか。本文にない情報を加えていないか。"
+    },
+    {
+      "id": "sum-2",
+      "category": "summary",
+      "prompt": "次の文章を一文で要約してください。\n\n睡眠不足が続くと、集中力や判断力が下がるだけでなく、免疫の働きも弱まることが分かっている。専門家は、毎日同じ時間に寝起きすることや、寝る前にスマートフォンの画面を見る時間を減らすことを勧めている。休日に長く寝だめをしても、平日の不足を十分に補うことは難しいという。",
+      "maxTokens": 160,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "contains", "values": ["睡眠"]},
+        {"type": "maxChars", "value": 120}
+      ],
+      "rubric": "睡眠不足の悪影響と、規則正しい睡眠などの対策という要点を、一文で正確にまとめているか。"
+    },
+    {
+      "id": "sum-3",
+      "category": "summary",
+      "prompt": "次のお知らせを50字以内で要約してください。\n\n市は、利用者の減少が続いている北部地域の路線バスについて、来年4月から運行本数を平日1日12本から8本に減らすと発表した。一方で、予約制の乗合タクシーを新たに導入し、バス停から遠い地域の住民の移動手段を確保する。予約は電話とアプリで受け付ける。",
+      "maxTokens": 120,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "containsAny", "values": ["バス"]},
+        {"type": "containsAny", "values": ["タクシー"]},
+        {"type": "maxChars", "value": 70}
+      ],
+      "rubric": "バスの減便と乗合タクシーの導入という2つの要点を、50字程度で正確にまとめているか。"
+    },
+    {
+      "id": "sum-4",
+      "category": "summary",
+      "prompt": "次の会議メモから、決定事項だけを箇条書きで抜き出してください。\n\n・新しい社内報は4月から月1回発行することに決まった。\n・デザインについてはA案とB案で意見が分かれ、次回に持ち越し。\n・予算は年間30万円で承認された。\n・担当は広報部の田中さんに決定。\n・配布方法（紙か電子か）は引き続き検討する。",
+      "maxTokens": 200,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "bullets", "value": 3},
+        {"type": "contains", "values": ["4月", "30万", "田中"]},
+        {"type": "notContains", "values": ["A案", "B案"]}
+      ],
+      "rubric": "決定事項（4月から月1回発行、年間予算30万円、担当は田中さん）の3点だけを抜き出し、未決事項を含めていないか。"
+    },
+    {
+      "id": "sum-5",
+      "category": "summary",
+      "prompt": "次のレビューから、良い点と悪い点をそれぞれ一つずつ短くまとめてください。\n\nこのワイヤレスイヤホンは音質がとても良く、低音もしっかり聞こえます。軽くて長時間つけても耳が痛くなりません。ただ、ケースが大きくてポケットに入れにくいのが残念です。",
+      "maxTokens": 160,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "containsAny", "values": ["音質", "低音", "軽"]},
+        {"type": "containsAny", "values": ["ケース"]},
+        {"type": "maxChars", "value": 200}
+      ],
+      "rubric": "良い点（音質・軽さ）と悪い点（ケースが大きい）を正確に一つずつ挙げているか。"
+    },
+    {
+      "id": "write-1",
+      "category": "writing",
+      "prompt": "地域の清掃ボランティアへの参加を呼びかける告知文を、150字程度で書いてください。日時は5月10日（土）9時、集合場所は中央公園です。",
+      "maxTokens": 320,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "contains", "values": ["清掃", "中央公園"]},
+        {"type": "containsAny", "values": ["5月10日", "5/10"]},
+        {"type": "minChars", "value": 90},
+        {"type": "maxChars", "value": 300}
+      ],
+      "rubric": "日時・場所を正しく含み、参加したくなる自然な告知文になっているか。長さは150字程度か。"
+    },
+    {
+      "id": "write-2",
+      "category": "writing",
+      "prompt": "新商品「抹茶アイス」の紹介文を、親しみやすい文体で100字程度で書いてください。",
+      "maxTokens": 256,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "contains", "values": ["抹茶"]},
+        {"type": "minChars", "value": 60},
+        {"type": "maxChars", "value": 220}
+      ],
+      "rubric": "親しみやすい文体で、商品の魅力が伝わる自然な紹介文になっているか。"
+    },
+    {
+      "id": "write-3",
+      "category": "writing",
+      "prompt": "「春」をテーマにした4行の短い詩を書いてください。",
+      "maxTokens": 200,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "containsAny", "values": ["春", "桜", "花"]},
+        {"type": "maxChars", "value": 250}
+      ],
+      "rubric": "春らしい情景が伝わる、日本語として美しく自然な4行の詩になっているか。"
+    },
+    {
+      "id": "write-4",
+      "category": "writing",
+      "prompt": "転職する同僚への送別メッセージを3文で書いてください。",
+      "maxTokens": 200,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "minChars", "value": 40},
+        {"type": "maxChars", "value": 250}
+      ],
+      "rubric": "感謝と今後へのエールを含む、自然で温かい3文のメッセージになっているか。"
+    },
+    {
+      "id": "write-5",
+      "category": "writing",
+      "prompt": "学校の図書室の利用ルールを、小学生にわかる言葉で3つ、箇条書きで書いてください。",
+      "maxTokens": 256,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "bullets", "value": 3},
+        {"type": "containsAny", "values": ["本"]}
+      ],
+      "rubric": "小学生にわかる平易な言葉で、図書室の利用ルールとして適切なものを3つ挙げているか。"
+    },
+    {
+      "id": "trans-1",
+      "category": "translation",
+      "prompt": "次の文を英語に翻訳してください。訳文だけを答えてください。\n「明日は雨が降るかもしれないので、傘を持っていきましょう。」",
+      "maxTokens": 120,
+      "checks": [
+        {"type": "english"},
+        {"type": "chrf", "reference": "It might rain tomorrow, so let's take an umbrella."}
+      ],
+      "reference": "It might rain tomorrow, so let's take an umbrella.",
+      "rubric": "意味を正確に保った自然な英語になっているか。"
+    },
+    {
+      "id": "trans-2",
+      "category": "translation",
+      "prompt": "次の文を英語に翻訳してください。訳文だけを答えてください。\n「この商品は来週から全国の店舗で販売されます。」",
+      "maxTokens": 120,
+      "checks": [
+        {"type": "english"},
+        {"type": "chrf", "reference": "This product will be sold at stores nationwide starting next week."}
+      ],
+      "reference": "This product will be sold at stores nationwide starting next week.",
+      "rubric": "意味を正確に保った自然な英語になっているか。"
+    },
+    {
+      "id": "trans-3",
+      "category": "translation",
+      "prompt": "Translate the following sentence into Japanese. Answer with the translation only.\n\"The meeting has been postponed until further notice.\"",
+      "maxTokens": 120,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "chrf", "reference": "会議は追って通知があるまで延期されました。"}
+      ],
+      "reference": "会議は追って通知があるまで延期されました。",
+      "rubric": "意味を正確に保った自然な日本語になっているか。"
+    },
+    {
+      "id": "trans-4",
+      "category": "translation",
+      "prompt": "Translate the following sentence into Japanese. Answer with the translation only.\n\"Please make sure to turn off the lights when you leave the room.\"",
+      "maxTokens": 120,
+      "checks": [
+        {"type": "japanese"},
+        {"type": "chrf", "reference": "部屋を出るときは、必ず電気を消してください。"}
+      ],
+      "reference": "部屋を出るときは、必ず電気を消してください。",
+      "rubric": "意味を正確に保った自然な日本語になっているか。"
+    },
+    {
+      "id": "trans-5",
+      "category": "translation",
+      "prompt": "次の文を英語に翻訳してください。訳文だけを答えてください。\n「お忙しいところ恐れ入りますが、ご確認をお願いいたします。」",
+      "maxTokens": 120,
+      "checks": [
+        {"type": "english"},
+        {"type": "chrf", "reference": "I'm sorry to trouble you while you're busy, but could you please check this?"}
+      ],
+      "reference": "I'm sorry to trouble you while you're busy, but could you please check this?",
+      "rubric": "敬語のニュアンス（丁寧な依頼）を保った自然な英語になっているか。"
+    },
+    {
+      "id": "code-1",
+      "category": "code",
+      "prompt": "Pythonで、整数のリストを受け取り偶数だけを返す関数 filter_even(numbers) を書いてください。",
+      "maxTokens": 384,
+      "checks": [
+        {"type": "codeBlock"},
+        {"type": "codeContains", "values": ["def filter_even"]},
+        {"type": "pythonParses"}
+      ],
+      "rubric": "正しく動作するPythonコードか（偶数判定、戻り値）。説明が日本語で分かりやすいか。"
+    },
+    {
+      "id": "code-2",
+      "category": "code",
+      "prompt": "JavaScriptで、文字列を逆順にする関数 reverseString(s) を書いてください。",
+      "maxTokens": 384,
+      "checks": [
+        {"type": "codeBlock"},
+        {"type": "codeContains", "values": ["reverseString"]}
+      ],
+      "rubric": "正しく動作するJavaScriptコードか。説明が日本語で分かりやすいか。"
+    },
+    {
+      "id": "code-3",
+      "category": "code",
+      "prompt": "Pythonで、辞書のリスト people を 'age' キーの昇順に並べ替えるコードを書いてください。",
+      "maxTokens": 384,
+      "checks": [
+        {"type": "codeBlock"},
+        {"type": "codeContains", "values": ["sort", "age"]},
+        {"type": "pythonParses"}
+      ],
+      "rubric": "sorted / sort と key 引数を正しく使ったPythonコードか。説明が日本語で分かりやすいか。"
+    },
+    {
+      "id": "code-4",
+      "category": "code",
+      "prompt": "次のPythonコードの誤りを直して、修正後のコードを示してください。\n\n```python\ndef add(a, b)\n    return a + b\n```",
+      "maxTokens": 320,
+      "checks": [
+        {"type": "codeBlock"},
+        {"type": "codeContains", "values": ["def add(a, b):"]},
+        {"type": "pythonParses"}
+      ],
+      "rubric": "コロンの欠落という誤りを正しく指摘・修正しているか。"
+    },
+    {
+      "id": "code-5",
+      "category": "code",
+      "prompt": "SQLで、users テーブルから age が20以上のユーザーの name を取得するクエリを書いてください。",
+      "maxTokens": 256,
+      "checks": [
+        {"type": "codeContains", "values": ["select", "users", "20"]}
+      ],
+      "rubric": "WHERE age >= 20 を含む正しいSQLか。説明が日本語で分かりやすいか。"
+    }
+  ]
+}

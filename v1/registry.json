@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 7,
+  "revision": 8,
   "publishedAt": "2026-09-16T00:00:00Z",
   "models": [
     {
@@ -83,6 +83,29 @@
             }
           ]
         }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 87,
+          "categories": {
+            "conversation": 93,
+            "keigo": 77,
+            "summary": 88,
+            "writing": 99,
+            "translation": 66,
+            "code": 97
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.5",
+          "artifactId": "qwen2.5-0.5b-instruct-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-17",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルールによる自動採点 / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
       ]
     },
     {
@@ -163,6 +186,29 @@
             }
           ]
         }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 91,
+          "categories": {
+            "conversation": 98,
+            "keigo": 84,
+            "summary": 92,
+            "writing": 96,
+            "translation": 73,
+            "code": 100
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-2b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-17",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルールによる自動採点 / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
       ]
     },
     {
@@ -241,6 +287,29 @@
               "status": "experimental"
             }
           ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 85,
+          "categories": {
+            "conversation": 91,
+            "keigo": 71,
+            "summary": 87,
+            "writing": 96,
+            "translation": 74,
+            "code": 93
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-0.8b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-17",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルールによる自動採点 / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
     },
@@ -331,6 +400,29 @@
               "status": "experimental"
             }
           ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 91,
+          "categories": {
+            "conversation": 98,
+            "keigo": 84,
+            "summary": 92,
+            "writing": 96,
+            "translation": 73,
+            "code": 100
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-2b-vision-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-17",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルールによる自動採点 / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
+          "evalSet": "ja-eval-v1",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
     }
