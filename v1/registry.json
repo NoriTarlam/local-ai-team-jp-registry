@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 8,
+  "revision": 9,
   "publishedAt": "2026-09-16T00:00:00Z",
   "models": [
     {
@@ -153,7 +153,8 @@
           "quantization": "Q4_K_M",
           "capabilities": [
             "text",
-            "streaming"
+            "streaming",
+            "toolCalling"
           ],
           "estimatedRamBytes": 1700000000,
           "maxContext": 4096,
@@ -255,7 +256,8 @@
           "quantization": "Q4_K_M",
           "capabilities": [
             "text",
-            "streaming"
+            "streaming",
+            "toolCalling"
           ],
           "estimatedRamBytes": 800000000,
           "maxContext": 4096,
@@ -358,7 +360,8 @@
           "capabilities": [
             "text",
             "streaming",
-            "vision"
+            "vision",
+            "toolCalling"
           ],
           "estimatedRamBytes": 2500000000,
           "maxContext": 4096,
