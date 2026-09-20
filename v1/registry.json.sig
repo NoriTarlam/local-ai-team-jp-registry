@@ -1,1 +1,1 @@
-{"keyId":"registry-2026","algorithm":"ed25519","signature":"fJMU0JZXbGtvE6Q0piY49rjTIA+rKqPd/E9p/V/7T45/mJXhk2Igf69aufIiK92Kg6/KPtw7srjVRCeK2CYHAA=="}
+{"keyId":"registry-2026","algorithm":"ed25519","signature":"fsjbDs5hkkm+W3WR58/4j9t7mwAp6Ze0D0cWx7661F6+1l5gDtQ7368bMmzZLQVj0X5hH+MuwGYKmWeK00h6Ag=="}

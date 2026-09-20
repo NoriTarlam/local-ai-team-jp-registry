@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 10,
+  "revision": 16,
   "publishedAt": "2026-09-16T00:00:00Z",
   "models": [
     {
@@ -86,14 +86,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 87,
+          "overall": 49,
           "categories": {
-            "conversation": 93,
-            "keigo": 77,
-            "summary": 88,
-            "writing": 99,
-            "translation": 66,
-            "code": 97
+            "conversation": 44,
+            "keigo": 39,
+            "summary": 56,
+            "writing": 48,
+            "translation": 41,
+            "code": 64
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -101,8 +101,32 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルールによる自動採点 / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 39,
+          "categories": {
+            "reasoning": 13,
+            "math": 9,
+            "instruction": 68,
+            "code": 51,
+            "longInput": 53
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.5",
+          "artifactId": "qwen2.5-0.5b-instruct-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -190,14 +214,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 91,
+          "overall": 62,
           "categories": {
-            "conversation": 98,
-            "keigo": 84,
-            "summary": 92,
-            "writing": 96,
+            "conversation": 50,
+            "keigo": 50,
+            "summary": 62,
+            "writing": 61,
             "translation": 73,
-            "code": 100
+            "code": 77
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -205,8 +229,32 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルールによる自動採点 / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 60,
+          "categories": {
+            "reasoning": 31,
+            "math": 41,
+            "instruction": 74,
+            "code": 71,
+            "longInput": 82
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-2b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -289,18 +337,89 @@
               "status": "experimental"
             }
           ]
+        },
+        {
+          "id": "qwen3.5-0.8b-int8-litertlm",
+          "format": "litertlm",
+          "quantization": "INT8",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 960000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/Qwen3.5-0.8B/resolve/c23b16e43ada6ead533b12593fe500bbe268014f/Qwen3.5-0.8B_int8.litertlm",
+              "sizeBytes": 963184864,
+              "sha256": "684d4d34adf7176eb47f6026ff65c33d42584737254e5524a8d1ad62edc21b98"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "experimental",
+              "referenceDecodeTokensPerSec": 10.7,
+              "knownIssues": [
+                "LiteRT-LM takes no system role, so the app folds the system prompt into the first user message; this artifact then ignores translation instructions (Japanese AI Score 28-30 against 50 for the GGUF build)"
+              ]
+            }
+          ],
+          "accelerators": [
+            "cpu"
+          ]
+        },
+        {
+          "id": "qwen3.5-0.8b-vl-int8-litertlm",
+          "format": "litertlm",
+          "quantization": "INT8",
+          "capabilities": [
+            "text",
+            "streaming",
+            "vision"
+          ],
+          "estimatedRamBytes": 1300000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/Qwen3.5-0.8B/resolve/c23b16e43ada6ead533b12593fe500bbe268014f/Qwen3.5-0.8B-VL_int8.litertlm",
+              "sizeBytes": 1302262448,
+              "sha256": "e3360b658c929ff35ab740a21f5e4b688096a72e351b8d347e26ccda314121b7"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "experimental",
+              "referenceDecodeTokensPerSec": 10.7,
+              "knownIssues": [
+                "LiteRT-LM takes no system role, so the app folds the system prompt into the first user message; this artifact then ignores translation instructions (Japanese AI Score 28-30 against 50 for the GGUF build)"
+              ]
+            }
+          ],
+          "accelerators": [
+            "cpu"
+          ]
         }
       ],
       "japaneseScores": [
         {
-          "overall": 85,
+          "overall": 50,
           "categories": {
-            "conversation": 91,
-            "keigo": 71,
-            "summary": 87,
-            "writing": 96,
-            "translation": 74,
-            "code": 93
+            "conversation": 41,
+            "keigo": 32,
+            "summary": 60,
+            "writing": 54,
+            "translation": 49,
+            "code": 65
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -308,8 +427,76 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルールによる自動採点 / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 28,
+          "categories": {
+            "conversation": 36,
+            "keigo": 26,
+            "summary": 47,
+            "writing": 31,
+            "translation": 0,
+            "code": 25
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-0.8b-vl-int8-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT8",
+          "evaluatedAt": "2026-09-18",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 30,
+          "categories": {
+            "conversation": 37,
+            "keigo": 24,
+            "summary": 48,
+            "writing": 30,
+            "translation": 1,
+            "code": 41
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-0.8b-int8-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT8",
+          "evaluatedAt": "2026-09-18",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 19,
+          "categories": {
+            "reasoning": 13,
+            "math": 7,
+            "instruction": 23,
+            "code": 22,
+            "longInput": 31
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-0.8b-int8-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT8",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -407,14 +594,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 91,
+          "overall": 62,
           "categories": {
-            "conversation": 98,
-            "keigo": 84,
-            "summary": 92,
-            "writing": 96,
+            "conversation": 50,
+            "keigo": 50,
+            "summary": 62,
+            "writing": 61,
             "translation": 73,
-            "code": 100
+            "code": 77
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -422,8 +609,32 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルールによる自動採点 / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
           "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 60,
+          "categories": {
+            "reasoning": 31,
+            "math": 41,
+            "instruction": 74,
+            "code": 71,
+            "longInput": 82
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-2b-vision-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -571,6 +782,1804 @@
           ]
         }
       ]
+    },
+    {
+      "id": "gemma-4-e2b",
+      "name": {
+        "ja": "Gemma 4 E2B",
+        "en": "Gemma 4 E2B"
+      },
+      "description": {
+        "ja": "Google の小型モデルです。LiteRT-LM 用に作られており、対応する端末では GPU や NPU でも動かせます。",
+        "en": "Google's small model, built for LiteRT-LM. It can also run on the GPU or NPU where supported."
+      },
+      "developer": "Google",
+      "origin": "overseas",
+      "version": "4",
+      "parameterCount": 2000000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "gemma-4-e2b-litertlm",
+          "format": "litertlm",
+          "quantization": "mixed",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2580000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it.litertlm",
+              "sizeBytes": 2588147712,
+              "sha256": "181938105e0eefd105961417e8da75903eacda102c4fce9ce90f50b97139a63c"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 9.9
+            }
+          ],
+          "accelerators": [
+            "cpu"
+          ]
+        },
+        {
+          "id": "gemma-4-e2b-gpu-litertlm",
+          "format": "litertlm",
+          "quantization": "mixed",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2000000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it-gpu.litertlm",
+              "sizeBytes": 2008432640,
+              "sha256": "a53a59001894c58e6bdb5b9b227709f91a2e3e556baa7d85acf9c55402ba5cf5"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "experimental",
+              "knownIssues": [
+                "Pixel 6 (Mali-G78): engine creation fails for the GPU backend, so this bundle cannot run there (measured 2026-09-19); the CPU bundle works"
+              ]
+            }
+          ],
+          "accelerators": [
+            "gpu"
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 74,
+          "categories": {
+            "conversation": 71,
+            "keigo": 75,
+            "summary": 76,
+            "writing": 69,
+            "translation": 73,
+            "code": 81
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "4",
+          "artifactId": "gemma-4-e2b-litertlm",
+          "runtime": "liteRt",
+          "quantization": "mixed",
+          "evaluatedAt": "2026-09-18",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 68,
+          "categories": {
+            "reasoning": 29,
+            "math": 44,
+            "instruction": 94,
+            "code": 90,
+            "longInput": 82
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "4",
+          "artifactId": "gemma-4-e2b-litertlm",
+          "runtime": "liteRt",
+          "quantization": "mixed",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "qwen3-0.6b",
+      "name": {
+        "ja": "Qwen3 0.6B",
+        "en": "Qwen3 0.6B"
+      },
+      "description": {
+        "ja": "LiteRT-LM 用の小さなモデルです。空きメモリが少ない端末でも動かせます。",
+        "en": "A small LiteRT-LM model for devices with little free memory."
+      },
+      "developer": "Qwen (Alibaba Cloud)",
+      "origin": "overseas",
+      "version": "3",
+      "parameterCount": 600000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "qwen3-0.6b-int4-litertlm",
+          "format": "litertlm",
+          "quantization": "mixed INT4",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 490000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/Qwen3-0.6B/resolve/8414150f2e9dcc82449bcc9c5abc404b399a4d06/qwen3_0_6b_mixed_int4.litertlm",
+              "sizeBytes": 497664000,
+              "sha256": "b1baab462f6be49d70eada79d715c2c52cd9ece0cad00bddf6a2c097d23498e9"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 21.8
+            }
+          ],
+          "accelerators": [
+            "cpu"
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 45,
+          "categories": {
+            "conversation": 37,
+            "keigo": 26,
+            "summary": 55,
+            "writing": 34,
+            "translation": 43,
+            "code": 77
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3",
+          "artifactId": "qwen3-0.6b-int4-litertlm",
+          "runtime": "liteRt",
+          "quantization": "mixed INT4",
+          "evaluatedAt": "2026-09-18",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 40,
+          "categories": {
+            "reasoning": 14,
+            "math": 27,
+            "instruction": 60,
+            "code": 43,
+            "longInput": 56
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3",
+          "artifactId": "qwen3-0.6b-int4-litertlm",
+          "runtime": "liteRt",
+          "quantization": "mixed INT4",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "lfm2.5-1.2b-jp",
+      "name": {
+        "ja": "LFM2.5 1.2B JP",
+        "en": "LFM2.5 1.2B JP"
+      },
+      "description": {
+        "ja": "日本語向けに調整された小型モデルです。LiteRT-LM 用で、ダウンロードは約 736MB です。売上の大きい組織は商用利用ができないライセンスです。",
+        "en": "A small model tuned for Japanese, for LiteRT-LM (about 736 MB). Its license bars commercial use by larger organizations."
+      },
+      "developer": "Liquid AI",
+      "origin": "overseas",
+      "version": "2.5",
+      "parameterCount": 1200000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "lfm-open-license-1.0",
+        "name": "LFM Open License",
+        "version": "1.0",
+        "url": "https://huggingface.co/litert-community/LFM2.5-1.2B-JP/blob/main/LICENSE",
+        "commercialUse": "restricted",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": true,
+        "reviewed": true,
+        "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。"
+      },
+      "artifacts": [
+        {
+          "id": "lfm2.5-1.2b-jp-int4-litertlm",
+          "format": "litertlm",
+          "quantization": "INT4",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 730000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/LFM2.5-1.2B-JP/resolve/8bd3bb3c434e47b12d4789608e100bf8144d5ec5/LFM2.5-1.2B-JP_int4.litertlm",
+              "sizeBytes": 736015744,
+              "sha256": "97909ba9e275470b69a202b506fa347a2b92dfef69ac7048f771e375319dee2e"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 14.6
+            }
+          ],
+          "accelerators": [
+            "cpu"
+          ]
+        },
+        {
+          "id": "lfm2.5-1.2b-jp-int4-gpu-litertlm",
+          "format": "litertlm",
+          "quantization": "INT4",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 730000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/LFM2.5-1.2B-JP/resolve/8bd3bb3c434e47b12d4789608e100bf8144d5ec5/LFM2.5-1.2B-JP_int4_gpu.litertlm",
+              "sizeBytes": 736220768,
+              "sha256": "2c826a9cdeefc614c9b7de1d1c5565c9a64f704e5f3291ad2cd5d7da396790d5"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 15.8
+            }
+          ],
+          "accelerators": [
+            "gpu"
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 62,
+          "categories": {
+            "conversation": 48,
+            "keigo": 58,
+            "summary": 65,
+            "writing": 56,
+            "translation": 75,
+            "code": 68
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.5",
+          "artifactId": "lfm2.5-1.2b-jp-int4-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT4",
+          "evaluatedAt": "2026-09-18",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 55,
+          "categories": {
+            "reasoning": 21,
+            "math": 40,
+            "instruction": 81,
+            "code": 77,
+            "longInput": 58
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.5",
+          "artifactId": "lfm2.5-1.2b-jp-int4-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT4",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "sarashina2.2-0.5b",
+      "name": {
+        "ja": "Sarashina2.2 0.5B",
+        "en": "Sarashina2.2 0.5B"
+      },
+      "description": {
+        "ja": "ソフトバンクの SB Intuitions が作った日本語特化の小型モデルです。最小構成で、古い端末でも動きます。",
+        "en": "A small Japanese-focused model from SB Intuitions (SoftBank). The smallest of the family, it runs on older phones."
+      },
+      "developer": "SB Intuitions（ソフトバンク）",
+      "origin": "domestic",
+      "version": "2.2",
+      "parameterCount": 500000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "mit",
+        "name": "MIT License",
+        "version": "1.0",
+        "url": "https://opensource.org/license/mit",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "sarashina2.2-0.5b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 800000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/mmnga/sarashina2.2-0.5b-instruct-v0.1-gguf/resolve/5c71186a7a57b8c0325dec70ba2f295303effcd8/sarashina2.2-0.5b-instruct-v0.1-Q4_K_M.gguf",
+              "sizeBytes": 528204672,
+              "sha256": "bb03044eff8f15f6517c568312ee4b6b84945e3bd177e81beb4e2d4baa83cdff"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 55,
+          "categories": {
+            "conversation": 53,
+            "keigo": 53,
+            "summary": 56,
+            "writing": 56,
+            "translation": 39,
+            "code": 73
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.2",
+          "artifactId": "sarashina2.2-0.5b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 27,
+          "categories": {
+            "reasoning": 21,
+            "math": 9,
+            "instruction": 29,
+            "code": 36,
+            "longInput": 42
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.2",
+          "artifactId": "sarashina2.2-0.5b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "sarashina2.2-1b",
+      "name": {
+        "ja": "Sarashina2.2 1B",
+        "en": "Sarashina2.2 1B"
+      },
+      "description": {
+        "ja": "SB Intuitions の日本語特化モデルです。0.5B より受け答えが安定します。",
+        "en": "SB Intuitions' Japanese-focused model. Steadier answers than the 0.5B."
+      },
+      "developer": "SB Intuitions（ソフトバンク）",
+      "origin": "domestic",
+      "version": "2.2",
+      "parameterCount": 1000000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "mit",
+        "name": "MIT License",
+        "version": "1.0",
+        "url": "https://opensource.org/license/mit",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "sarashina2.2-1b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 1400000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/mmnga/sarashina2.2-1b-instruct-v0.1-gguf/resolve/cd8b02dcc14f38a5101171f304ab269d514fafd4/sarashina2.2-1b-instruct-v0.1-Q4_K_M.gguf",
+              "sizeBytes": 931179392,
+              "sha256": "750b883784931cb65c8cf4ce105e78629a906e10ba6dc6eccc5c96999221d0c2"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 58,
+          "categories": {
+            "conversation": 71,
+            "keigo": 38,
+            "summary": 49,
+            "writing": 60,
+            "translation": 61,
+            "code": 71
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.2",
+          "artifactId": "sarashina2.2-1b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 35,
+          "categories": {
+            "reasoning": 13,
+            "math": 17,
+            "instruction": 44,
+            "code": 60,
+            "longInput": 41
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.2",
+          "artifactId": "sarashina2.2-1b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "sarashina2.2-3b",
+      "name": {
+        "ja": "Sarashina2.2 3B",
+        "en": "Sarashina2.2 3B"
+      },
+      "description": {
+        "ja": "SB Intuitions の日本語特化モデルの中で、いちばん品質が高い構成です。メモリに余裕のある端末向けです。",
+        "en": "The best-quality build of SB Intuitions' Japanese-focused family, for devices with memory to spare."
+      },
+      "developer": "SB Intuitions（ソフトバンク）",
+      "origin": "domestic",
+      "version": "2.2",
+      "parameterCount": 3000000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "mit",
+        "name": "MIT License",
+        "version": "1.0",
+        "url": "https://opensource.org/license/mit",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "sarashina2.2-3b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2700000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/mmnga/sarashina2.2-3b-instruct-v0.1-gguf/resolve/31d771319b04032f33e0d9d860f3984ea4812154/sarashina2.2-3b-instruct-v0.1-Q4_K_M.gguf",
+              "sizeBytes": 2066390112,
+              "sha256": "d96f4d98eb528df26e8bc09ab81a1d165be4fce67616739e65980bed9038f0f2"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 76,
+          "categories": {
+            "conversation": 73,
+            "keigo": 81,
+            "summary": 81,
+            "writing": 72,
+            "translation": 78,
+            "code": 72
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.2",
+          "artifactId": "sarashina2.2-3b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 55,
+          "categories": {
+            "reasoning": 19,
+            "math": 31,
+            "instruction": 72,
+            "code": 77,
+            "longInput": 74
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.2",
+          "artifactId": "sarashina2.2-3b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "tinyswallow-1.5b",
+      "name": {
+        "ja": "TinySwallow 1.5B",
+        "en": "TinySwallow 1.5B"
+      },
+      "description": {
+        "ja": "Sakana AI が大きなモデルから知識を写して作った日本語モデルです。1.5B としては日本語が自然です。",
+        "en": "A Japanese model Sakana AI distilled from a much larger one; natural Japanese for its 1.5B size."
+      },
+      "developer": "Sakana AI",
+      "origin": "domestic",
+      "version": "1.0",
+      "parameterCount": 1500000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "tinyswallow-1.5b-q5km-gguf",
+          "format": "gguf",
+          "quantization": "Q5_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 1600000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-GGUF/resolve/38c003aaf8be9d17af11dece1fbabeb873c567fa/tinyswallow-1.5b-instruct-q5_k_m.gguf",
+              "sizeBytes": 1125051232,
+              "sha256": "85aab0b1776d358eb04e79f47af7856f21ffc60514dad072c97debb94b7782f2"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 72,
+          "categories": {
+            "conversation": 83,
+            "keigo": 61,
+            "summary": 72,
+            "writing": 62,
+            "translation": 68,
+            "code": 83
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "1.0",
+          "artifactId": "tinyswallow-1.5b-q5km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q5_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 45,
+          "categories": {
+            "reasoning": 22,
+            "math": 21,
+            "instruction": 59,
+            "code": 63,
+            "longInput": 61
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "1.0",
+          "artifactId": "tinyswallow-1.5b-q5km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q5_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "rakuten-ai-2.0-mini",
+      "name": {
+        "ja": "Rakuten AI 2.0 mini",
+        "en": "Rakuten AI 2.0 mini"
+      },
+      "description": {
+        "ja": "楽天が日本語向けに作った小型モデルです。端末の中で動かすことを想定しています。",
+        "en": "Rakuten's small Japanese model, built to run on the device itself."
+      },
+      "developer": "楽天グループ",
+      "origin": "domestic",
+      "version": "2.0",
+      "parameterCount": 1500000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "rakuten-ai-2.0-mini-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 1400000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/mmnga/RakutenAI-2.0-mini-instruct-gguf/resolve/9bd2900dd7bff11c248fb510d4297b3a88817b76/RakutenAI-2.0-mini-instruct-Q4_K_M.gguf",
+              "sizeBytes": 935981984,
+              "sha256": "4ea42db18218198ef1ee4c79360880214467abe94ede68c4870f53e0f06eedb3"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 66,
+          "categories": {
+            "conversation": 69,
+            "keigo": 71,
+            "summary": 59,
+            "writing": 63,
+            "translation": 56,
+            "code": 76
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.0",
+          "artifactId": "rakuten-ai-2.0-mini-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 46,
+          "categories": {
+            "reasoning": 16,
+            "math": 11,
+            "instruction": 69,
+            "code": 90,
+            "longInput": 42
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.0",
+          "artifactId": "rakuten-ai-2.0-mini-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "plamo-2-1b",
+      "name": {
+        "ja": "PLaMo 2 1B",
+        "en": "PLaMo 2 1B"
+      },
+      "description": {
+        "ja": "Preferred Networks が日本語で学習させたモデルです。国産の実行環境に近い構成です。",
+        "en": "A model trained on Japanese by Preferred Networks."
+      },
+      "developer": "Preferred Networks",
+      "origin": "domestic",
+      "version": "2",
+      "parameterCount": 1000000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "plamo-2-1b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 1200000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/mmnga/plamo-2-1b-gguf/resolve/aaaa8e55117b528f5633822bab0c5c41e5f09757/plamo-2-1b-Q4_K_M.gguf",
+              "sizeBytes": 821992064,
+              "sha256": "33da06cd8daf012b008849f7f63031f8929dba9a55c27951e6ed365bcc17ddbb"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "experimental",
+              "knownIssues": [
+                "Pixel 6: this GGUF ends its turn by printing <|im_end|> as text and stops, so answers come out empty or truncated (measured 2026-09-19); the chat template of the conversion does not match the model"
+              ]
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 17,
+          "categories": {
+            "conversation": 21,
+            "keigo": 17,
+            "summary": 21,
+            "writing": 25,
+            "translation": 9,
+            "code": 8
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2",
+          "artifactId": "plamo-2-1b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 15,
+          "categories": {
+            "reasoning": 13,
+            "math": 0,
+            "instruction": 23,
+            "code": 13,
+            "longInput": 27
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2",
+          "artifactId": "plamo-2-1b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "phi-4-mini",
+      "name": {
+        "ja": "Phi-4-mini",
+        "en": "Phi-4-mini"
+      },
+      "description": {
+        "ja": "Microsoft の小型モデルです。計算や論理の問題に強いのが特徴です。",
+        "en": "Microsoft's small model, strong at arithmetic and reasoning."
+      },
+      "developer": "Microsoft",
+      "origin": "overseas",
+      "version": "4",
+      "parameterCount": 3800000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "mit",
+        "name": "MIT License",
+        "version": "1.0",
+        "url": "https://opensource.org/license/mit",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "phi-4-mini-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming",
+            "toolCalling"
+          ],
+          "estimatedRamBytes": 3200000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/bartowski/microsoft_Phi-4-mini-instruct-GGUF/resolve/7ff82c2aaa4dde30121698a973765f39be5288c0/microsoft_Phi-4-mini-instruct-Q4_K_M.gguf",
+              "sizeBytes": 2491874688,
+              "sha256": "01999f17c39cc3074afae5e9c539bc82d45f2dd7faa3917c66cbef76fce8c0c2"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "knownIssues": [
+                "Tool calling measured 2026-09-20: calculator yes; it declines the date question instead of calling the clock"
+              ]
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 53,
+          "categories": {
+            "conversation": 51,
+            "keigo": 52,
+            "summary": 67,
+            "writing": 57,
+            "translation": 25,
+            "code": 68
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "4",
+          "artifactId": "phi-4-mini-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 58,
+          "categories": {
+            "reasoning": 14,
+            "math": 40,
+            "instruction": 69,
+            "code": 91,
+            "longInput": 78
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "4",
+          "artifactId": "phi-4-mini-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "smollm3-3b",
+      "name": {
+        "ja": "SmolLM3 3B",
+        "en": "SmolLM3 3B"
+      },
+      "description": {
+        "ja": "Hugging Face が公開している小型モデルです。多言語に対応しています。",
+        "en": "Hugging Face's small multilingual model."
+      },
+      "developer": "Hugging Face",
+      "origin": "overseas",
+      "version": "3",
+      "parameterCount": 3000000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "smollm3-3b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2500000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/ggml-org/SmolLM3-3B-GGUF/resolve/4965cb60b150737b68a0408c36aeefb65078f894/SmolLM3-Q4_K_M.gguf",
+              "sizeBytes": 1915305312,
+              "sha256": "8334b850b7bd46238c16b0c550df2138f0889bf433809008cc17a8b05761863e"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "knownIssues": [
+                "Tool calling measured 2026-09-20: never calls a tool and answers arithmetic from its own head (1234x5678 came out wrong), so tools are off for this model"
+              ]
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 58,
+          "categories": {
+            "conversation": 56,
+            "keigo": 43,
+            "summary": 67,
+            "writing": 56,
+            "translation": 51,
+            "code": 77
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3",
+          "artifactId": "smollm3-3b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 61,
+          "categories": {
+            "reasoning": 38,
+            "math": 42,
+            "instruction": 62,
+            "code": 88,
+            "longInput": 76
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3",
+          "artifactId": "smollm3-3b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "deepseek-r1-distill-qwen-1.5b",
+      "name": {
+        "ja": "DeepSeek-R1 Distill Qwen 1.5B",
+        "en": "DeepSeek-R1 Distill Qwen 1.5B"
+      },
+      "description": {
+        "ja": "答える前に考える手順を書き出す推論モデルです。思考の部分は折りたたんで表示します。",
+        "en": "A reasoning model that writes out its thinking before answering; the thinking is shown collapsed."
+      },
+      "developer": "DeepSeek",
+      "origin": "overseas",
+      "version": "R1",
+      "parameterCount": 1500000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "mit",
+        "name": "MIT License",
+        "version": "1.0",
+        "url": "https://opensource.org/license/mit",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "deepseek-r1-distill-qwen-1.5b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 1600000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF/resolve/3cb4d15544a2a5e07439592b9a0965b6445fbd34/DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf",
+              "sizeBytes": 1117321312,
+              "sha256": "f3bdf9cf31dee4b57ae4e455a1cb0d01b5c2c1b50d72d3112141c195506c2840"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "knownIssues": [
+                "Answers Japanese prompts in Chinese (Japanese AI Score 24, translation 2); the reasoning it writes is folded away in Chat"
+              ]
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 24,
+          "categories": {
+            "conversation": 37,
+            "keigo": 18,
+            "summary": 18,
+            "writing": 30,
+            "translation": 2,
+            "code": 36
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "R1",
+          "artifactId": "deepseek-r1-distill-qwen-1.5b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 17,
+          "categories": {
+            "reasoning": 8,
+            "math": 21,
+            "instruction": 23,
+            "code": 6,
+            "longInput": 29
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "R1",
+          "artifactId": "deepseek-r1-distill-qwen-1.5b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "llama-3.2-1b",
+      "name": {
+        "ja": "Llama 3.2 1B",
+        "en": "Llama 3.2 1B"
+      },
+      "description": {
+        "ja": "Meta の小型モデルです。Built with Llama（Llama を使って作られています）。",
+        "en": "Meta's small model. Built with Llama."
+      },
+      "developer": "Meta",
+      "origin": "overseas",
+      "version": "3.2",
+      "parameterCount": 1200000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "llama-3.2-community",
+        "name": "Llama 3.2 Community License",
+        "version": "3.2",
+        "url": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct/blob/main/LICENSE.txt",
+        "commercialUse": "restricted",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": true,
+        "reviewed": true,
+        "notice": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。"
+      },
+      "artifacts": [
+        {
+          "id": "llama-3.2-1b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 1200000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/unsloth/Llama-3.2-1B-Instruct-GGUF/resolve/b69aef112e9f895e6f98d7ae0949f72ff09aa401/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+              "sizeBytes": 807694368,
+              "sha256": "3f5a22426976ab26cfe84dba63c1d08391717abb1af893e10f1b2968d862dcc1"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "knownIssues": [
+                "Tool calling measured 2026-09-20: writes the call as JSON in the reply instead of calling the tool, so tools are off for this model"
+              ]
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 44,
+          "categories": {
+            "conversation": 40,
+            "keigo": 31,
+            "summary": 54,
+            "writing": 47,
+            "translation": 29,
+            "code": 64
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.2",
+          "artifactId": "llama-3.2-1b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 45,
+          "categories": {
+            "reasoning": 14,
+            "math": 20,
+            "instruction": 57,
+            "code": 66,
+            "longInput": 70
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.2",
+          "artifactId": "llama-3.2-1b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "llama-3.2-3b",
+      "name": {
+        "ja": "Llama 3.2 3B",
+        "en": "Llama 3.2 3B"
+      },
+      "description": {
+        "ja": "Meta の小型モデルの上位構成です。Built with Llama（Llama を使って作られています）。",
+        "en": "The larger of Meta's small models. Built with Llama."
+      },
+      "developer": "Meta",
+      "origin": "overseas",
+      "version": "3.2",
+      "parameterCount": 3200000000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "tags": [
+        "balanced"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "llama-3.2-community",
+        "name": "Llama 3.2 Community License",
+        "version": "3.2",
+        "url": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct/blob/main/LICENSE.txt",
+        "commercialUse": "restricted",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": true,
+        "reviewed": true,
+        "notice": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。"
+      },
+      "artifacts": [
+        {
+          "id": "llama-3.2-3b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2600000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/unsloth/Llama-3.2-3B-Instruct-GGUF/resolve/e7d0997e49c9cb00d88b4c1a6a16aa894b0bbc31/Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+              "sizeBytes": 2019377600,
+              "sha256": "6c99cc00ae910f6a532a80022cb4bc1939094527a089c29294b841c0bd87f74d"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "knownIssues": [
+                "Tool calling measured 2026-09-20: calls the tool but then answers with fragments of the JSON call, so tools are off for this model"
+              ]
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "ios",
+              "status": "experimental"
+            },
+            {
+              "runtime": "llamaCpp",
+              "platform": "macos",
+              "status": "experimental"
+            }
+          ]
+        }
+      ],
+      "japaneseScores": [
+        {
+          "overall": 54,
+          "categories": {
+            "conversation": 55,
+            "keigo": 35,
+            "summary": 62,
+            "writing": 53,
+            "translation": 51,
+            "code": 68
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.2",
+          "artifactId": "llama-3.2-3b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ],
+      "capabilityScores": [
+        {
+          "overall": 61,
+          "categories": {
+            "reasoning": 16,
+            "math": 27,
+            "instruction": 83,
+            "code": 92,
+            "longInput": 87
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.2",
+          "artifactId": "llama-3.2-3b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
     }
-  ]
+  ],
+  "updatedAt": "2026-09-18"
 }
