@@ -1,0 +1,763 @@
+{
+  "evalSet": "ja-eval-v1",
+  "scoreVersion": "ja-score-1",
+  "judgeModel": "claude-opus-5",
+  "scoredAt": "2026-09-20T10:17:44.929665Z",
+  "results": [
+    {
+      "run": {
+        "modelId": "lfm2.5-1.2b-jp",
+        "modelVersion": "2.5",
+        "artifactId": "lfm2.5-1.2b-jp-int4-gpu-litertlm",
+        "runtime": "liteRt",
+        "quantization": "INT4",
+        "weightsSha256": "2c826a9cdeefc614c9b7de1d1c5565c9a64f704e5f3291ad2cd5d7da396790d5",
+        "device": "Google Pixel 6 / Android 17 (API 37)",
+        "evaluatedAt": "2026-09-20T10:00:21.355329Z"
+      },
+      "overall": 62,
+      "categories": {
+        "conversation": 61,
+        "keigo": 48,
+        "summary": 67,
+        "writing": 56,
+        "translation": 71,
+        "code": 68
+      },
+      "items": [
+        {
+          "itemId": "conv-1",
+          "category": "conversation",
+          "prompt": "最近疲れやすいのですが、休日にできるリフレッシュ方法を3つ教えてください。",
+          "response": "1. 散歩する：外で散歩することは、心をクリアにし、気分をリフレッシュする素晴らしい方法です。自然の中で過ごすことで、ストレスが軽減され、気分が向上します。\n\n2. 瞑想する：瞑想は、心を落ち着かせ、ストレスを軽減するのに役立ちます。数分間、静かに座り、呼吸に意識を向け、思考を手放すだけでも効果があります。\n\n3. 入浴する：温かいお風呂やシャワーは、疲れた体をリラックスさせ、ストレスを軽減するのに役立ちます。入浴中に音楽を聴いたり、好きな本を読んだり、ただリラックスする時間を過ごすのも良いでしょう。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "minChars",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 7,
+          "judgeReason": "3つの方法を具体的に自然な日本語で提案できているが、疲れている相手への気遣いの言葉がなく、やや翻訳調で温かみに欠ける。",
+          "score": 80.0
+        },
+        {
+          "itemId": "conv-2",
+          "category": "conversation",
+          "prompt": "雨の日に小学生の子どもと家で楽しめる遊びを教えてください。",
+          "response": "雨の日に小学生の子どもと家で楽しめる遊びは、**「雨の日の物語作り」**です。\n\n**やり方:**\n1. 雨の日の情景を想像する（例：傘をさす、雨音を聞く、窓から見える空）。\n2. 子どもと一緒に、雨の日の物語を一文ずつ作る（例：「雨が降る中、僕は傘をさして、空を見上げた」）。\n3. 物語を書き終えたら、みんなで朗読する。\n\n**メリット:**\n- 想像力と語彙力が育つ。\n- 雨の日の情景を共有できる。\n- 静かな時間に集中できる。\n\n**代替案:**\n- 雨の日の絵を描いて、みんなで見る。\n- 雨の日の歌を歌って、みんなで歌う。\n\n**時間:**\n- 10〜15分で完了。\n\n**なぜ効果的か:**\n- 雨の日の情景を想像する必要がない。\n- 子どもが自分の言葉で物語を書ける。\n- 静かな時間に集中できる。\n\n**注意:**\n- 雨が激しい場合は、室内で物語を書くか、雨の日の絵を描く。\n\n**時間:**\n- 10〜15分で完了。\n\n**なぜ効果的か:**\n- 想像力",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "minChars",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 3,
+          "judgeReason": "提案が1案のみで選択肢に乏しく、見出しや内容の重複・矛盾（「想像する必要がない」等）があり、末尾も途切れている。",
+          "score": 53.3
+        },
+        {
+          "itemId": "conv-3",
+          "category": "conversation",
+          "prompt": "「おはよう」と「こんにちは」の使い分けを簡単に説明してください。",
+          "response": "「おはよう」と「こんにちは」はどちらも挨拶ですが、時間帯と相手の関係で使い分けます。\n\n- **おはよう**は、午前6時から正午までの時間帯に、主に友人や家族、知人に対して使います。カジュアルで親しみやすい印象です。\n\n- **こんにちは**は、午後12時から午後6時までの時間帯に、主に同僚や知人、見知らぬ人に対して使います。ビジネスシーンやフォーマルな場面で使われることが多いです。\n\n要するに、**「おはよう」**は「午前6時から正午まで」、**「こんにちは」**は「午後12時から午後6時まで」の時間帯に使うと覚えておけば、自然に使い分けられます。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "contains",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 6,
+          "judgeReason": "時間帯の説明は概ね妥当だが、時刻を機械的に限定し、敬語形「おはようございます」や業界慣習への言及がなく不正確な面がある。",
+          "score": 73.3
+        },
+        {
+          "itemId": "conv-4",
+          "category": "conversation",
+          "prompt": "初めて一人暮らしをする友人に送る、温かい一言メッセージを考えてください。",
+          "response": "「一人暮らしの旅路で、あなたが一人でいることを知っています。新しい家に慣れる時間が欲しいなら、私はここにいます。新しい友達を作り、家を飾り、あなたが一人でいることを知っているから、私はここにいます。」",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "minChars",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "翻訳調で不自然、同じ表現の重複があり意味も不明瞭。友人への温かい一言として不適切。",
+          "score": 46.7
+        },
+        {
+          "itemId": "conv-5",
+          "category": "conversation",
+          "prompt": "日本でお正月にすることを2つ、短く教えてください。",
+          "response": "1. 初詣（はつれい）：お寺や神社で鐘を鳴らし、神様に祝福を願う行事。  \n2. 正月の料理：おせち料理やおにぎり、餅などを食べ、幸せを象徴する。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 3,
+          "judgeReason": "初詣の読みが誤り、鐘や「おにぎり」など説明も不正確。項目自体は妥当だが誤情報が多い。",
+          "score": 53.3
+        },
+        {
+          "itemId": "keigo-1",
+          "category": "keigo",
+          "prompt": "次の文を、取引先に送る丁寧な敬語に直してください。\n「明日の会議、3時からに変えてもいい？」",
+          "response": "「明日の会議、3時からに変更していただくことは可能でしょうか？」",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "polite",
+              "score": 1.0
+            },
+            {
+              "type": "noCasual",
+              "score": 1.0
+            },
+            {
+              "type": "contains",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 6,
+          "judgeReason": "敬語化はできているが「明日の会議、」が口語的で、変更を依頼する主体表現もやや不自然。",
+          "score": 73.3
+        },
+        {
+          "itemId": "keigo-2",
+          "category": "keigo",
+          "prompt": "「資料を見ました」を、上司への報告として正しい謙譲語を使った表現に直してください。",
+          "response": "資料を見ましたので、報告させていただきます。",
+          "rule": 0.667,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 0.0
+            },
+            {
+              "type": "noCasual",
+              "score": 1.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "「見ました」が謙譲語に直されておらず、依頼の核心（拝見しました）を満たしていない。",
+          "score": 33.3
+        },
+        {
+          "itemId": "keigo-3",
+          "category": "keigo",
+          "prompt": "上司に有給休暇を申請するメールの本文を、丁寧な敬語で短く書いてください。",
+          "response": "件名：有給休暇申請\n\n[上司のお名前] 様\n\nお元気でいらっしゃいますか。\n\nこの度、[開始日]から[終了日]までの有給休暇を申請させていただきます。\n\nご検討のほどよろしくお願いいたします。\n\n敬具\n[あなたの名前]",
+          "rule": 0.867,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "polite",
+              "score": 0.333
+            },
+            {
+              "type": "noCasual",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 5,
+          "judgeReason": "構成は最低限だが「お元気でいらっしゃいますか」「敬具」が社内メールに不自然で、業務調整の配慮や謝意も不足。",
+          "score": 61.3
+        },
+        {
+          "itemId": "keigo-4",
+          "category": "keigo",
+          "prompt": "お店の店員として、「ちょっと待ってて」をお客様への言い方に直してください。",
+          "response": "「ちょっと待ってて」ではなく、次のように言います：  \n**「お待ちください。」**  \n\nこの表現は、丁寧で明確、かつ簡潔です。",
+          "rule": 0.667,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 0.0
+            },
+            {
+              "type": "noCasual",
+              "score": 1.0
+            }
+          ],
+          "judge": 4,
+          "judgeReason": "「お待ちください」は敬語だが接客では「少々お待ちくださいませ」等が自然。配慮表現が乏しく説明も浅い。",
+          "score": 46.7
+        },
+        {
+          "itemId": "keigo-5",
+          "category": "keigo",
+          "prompt": "「このこと、知ってる？」を目上の人に使う丁寧な表現に直してください。",
+          "response": "「この件について、すでに把握しておりますので、よろしくお願いいたします。」",
+          "rule": 0.667,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 0.0
+            },
+            {
+              "type": "noCasual",
+              "score": 1.0
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "尊敬語「ご存じ」を使わず、質問文にもなっておらず自分の謙譲表現に変えており、依頼に全く応えていない。",
+          "score": 26.7
+        },
+        {
+          "itemId": "sum-1",
+          "category": "summary",
+          "prompt": "次の文章を3つの箇条書きで要約してください。\n\n地方の小さな町では、近年、空き家の増加が大きな課題になっている。若い世代が進学や就職で都市部へ移り、高齢の住民だけが残る地域が増えた。一方で、リモートワークの普及により、自然の多い環境で暮らしたいと考える人も増えている。ある町では、空き家を改修して移住希望者に貸し出す取り組みを始めた。町は改修費の一部を補助し、地元の工務店が工事を担当する。取り組みの結果、三年間で四十世帯が移住し、町の小学校では児童数が増加に転じた。",
+          "response": "- 空き家が増加し、若い世代が都市部へ移り、高齢の住民だけが残る地域が増えた。\n- リモートワークの普及により、自然の多い環境で暮らしたいと考える人が増えている。\n- 空き家を改修して移住希望者に貸し出す取り組みを始めた。改修費の一部を補助し、地元の工務店が工事を担当する。三年間で四十世帯が移住し、町の小学校では児童数が増加に転じた。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "bullets",
+              "score": 1.0
+            },
+            {
+              "type": "contains",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 8,
+          "judgeReason": "3点で正確に要約し捏造もないが、3点目に情報が偏り配分がやや不均衡。",
+          "score": 86.7
+        },
+        {
+          "itemId": "sum-2",
+          "category": "summary",
+          "prompt": "次の文章を一文で要約してください。\n\n睡眠不足が続くと、集中力や判断力が下がるだけでなく、免疫の働きも弱まることが分かっている。専門家は、毎日同じ時間に寝起きすることや、寝る前にスマートフォンの画面を見る時間を減らすことを勧めている。休日に長く寝だめをしても、平日の不足を十分に補うことは難しいという。",
+          "response": "睡眠不足は集中力、判断力、免疫の働きを低下させ、毎日同じ時間に寝起きし、寝る前にスマートフォンの画面を見る時間を減らすことが専門家から推奨されています。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "contains",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 8,
+          "judgeReason": "悪影響と対策を一文で正確に要約。寝だめの点が欠落し、主語の接続もやや不自然。",
+          "score": 86.7
+        },
+        {
+          "itemId": "sum-3",
+          "category": "summary",
+          "prompt": "次のお知らせを50字以内で要約してください。\n\n市は、利用者の減少が続いている北部地域の路線バスについて、来年4月から運行本数を平日1日12本から8本に減らすと発表した。一方で、予約制の乗合タクシーを新たに導入し、バス停から遠い地域の住民の移動手段を確保する。予約は電話とアプリで受け付ける。",
+          "response": "市は、北部地域の路線バスを来年4月から平日1日12本から8本に減らすと発表。予約制の乗合タクシーを新たに導入し、バス停から遠い地域の住民の移動手段を確保する。予約は電話とアプリで受け付ける。",
+          "rule": 0.911,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 0.643
+            }
+          ],
+          "judge": 4,
+          "judgeReason": "2要点は正確だが約95字で50字以内の字数指示を大きく超過している。",
+          "score": 56.4
+        },
+        {
+          "itemId": "sum-4",
+          "category": "summary",
+          "prompt": "次の会議メモから、決定事項だけを箇条書きで抜き出してください。\n\n・新しい社内報は4月から月1回発行することに決まった。\n・デザインについてはA案とB案で意見が分かれ、次回に持ち越し。\n・予算は年間30万円で承認された。\n・担当は広報部の田中さんに決定。\n・配布方法（紙か電子か）は引き続き検討する。",
+          "response": "- 新しい社内報は4月から月1回発行することに決まった。\n- デザインはA案とB案で意見が分かれ、次回に持ち越した。\n- 予算は年間30万円で承認された。\n- 担当は広報部の田中さんに決定した。\n- 配布方法（紙か電子か）は引き続き検討する。",
+          "rule": 0.5,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "bullets",
+              "score": 0.0
+            },
+            {
+              "type": "contains",
+              "score": 1.0
+            },
+            {
+              "type": "notContains",
+              "score": 0.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "決定事項の抽出指示に従わず、未決の2項目も含めて全文を列挙しており不適切。",
+          "score": 26.7
+        },
+        {
+          "itemId": "sum-5",
+          "category": "summary",
+          "prompt": "次のレビューから、良い点と悪い点をそれぞれ一つずつ短くまとめてください。\n\nこのワイヤレスイヤホンは音質がとても良く、低音もしっかり聞こえます。軽くて長時間つけても耳が痛くなりません。ただ、ケースが大きくてポケットに入れにくいのが残念です。",
+          "response": "**良い点:**  \n- 音質がとても良く、低音もしっかり聞こえます。  \n- 軽くて長時間つけても耳が痛くなりません。  \n\n**悪い点:**  \n- ケースが大きくてポケットに入れにくいです。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 7,
+          "judgeReason": "内容は正確だが、良い点を一つにまとめる指示に反し2項目挙げている点が減点。",
+          "score": 80.0
+        },
+        {
+          "itemId": "write-1",
+          "category": "writing",
+          "prompt": "地域の清掃ボランティアへの参加を呼びかける告知文を、150字程度で書いてください。日時は5月10日（土）9時、集合場所は中央公園です。",
+          "response": "地域の清掃ボランティアに参加しましょう！5月10日（土）9時、中央公園で集合。ご協力で美しい環境を守りましょう。",
+          "rule": 0.8,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "contains",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "minChars",
+              "score": 0.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 4,
+          "judgeReason": "日時・場所は正確だが約55字と大幅に短く、呼びかけ内容も乏しい。",
+          "score": 52.0
+        },
+        {
+          "itemId": "write-2",
+          "category": "writing",
+          "prompt": "新商品「抹茶アイス」の紹介文を、親しみやすい文体で100字程度で書いてください。",
+          "response": "抹茶アイスは、抹茶のほろ苦さと甘さをバランスよく楽しめる新商品です。抹茶の香りが広がり、さっぱりとした味わいが特徴です。抹茶アイスは、抹茶のほろ苦さと甘さをバランスよく楽しめる新商品です。抹茶の香りが広がり、さっぱりとした味わいが特徴です。抹茶アイスは、抹茶のほろ苦さと甘さをバランスよく楽しめる新商品です。抹茶の香りが広がり、さっぱりとした味わいが特徴です。抹茶アイスは、抹茶のほろ苦さと甘さをバランスよく楽しめる新商品です。抹茶の香りが広がり、さっぱりとした味わいが特徴です。抹茶アイスは、抹茶のほろ苦さと甘さをバランスよく楽しめる新商品です。抹茶の香りが広がり、さっぱりとした味わいが特徴です。抹茶アイスは、抹茶のほろ苦さと甘さをバランスよく楽しめる新商品です",
+          "rule": 0.872,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "contains",
+              "score": 1.0
+            },
+            {
+              "type": "minChars",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 0.486
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "同一文の反復で字数指示を大きく超過し、親しみやすさも欠く不適切な回答。",
+          "score": 34.9
+        },
+        {
+          "itemId": "write-3",
+          "category": "writing",
+          "prompt": "「春」をテーマにした4行の短い詩を書いてください。",
+          "response": "春のささやき、  \n花びらが優しく舞い、  \n太陽が暖かな光を、  \n新たな命が芽吹く。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 5,
+          "judgeReason": "4行で春らしさはあるが、3行目が述語を欠き文として不完全。全体に翻訳調で美しさに欠ける。",
+          "score": 66.7
+        },
+        {
+          "itemId": "write-4",
+          "category": "writing",
+          "prompt": "転職する同僚への送別メッセージを3文で書いてください。",
+          "response": "同僚の[名前]さんへ、  \nチームに加わってから[X]年間、[具体的な貢献や成果]を支えてくれました。  \n[会社名]でのご活躍を心からお祈りし、[名前]さんが新しい役割で素晴らしい成果を上げることを願っています。  \n改めて、[名前]さんに感謝の気持ちを伝え、[会社名]でのご活躍を祈ります。  \n[名前]さん、[会社名]でのご活躍を祈ります。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "minChars",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 3,
+          "judgeReason": "3文指定に反し文数過多、プレースホルダ多用で冗長、同内容の繰り返しが不自然。",
+          "score": 53.3
+        },
+        {
+          "itemId": "write-5",
+          "category": "writing",
+          "prompt": "学校の図書室の利用ルールを、小学生にわかる言葉で3つ、箇条書きで書いてください。",
+          "response": "- 静かに本を読む。\n- 借りた本は返す。\n- 他の人の本を勝手に借りない。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "bullets",
+              "score": 1.0
+            },
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 6,
+          "judgeReason": "平易で3つ挙げるが、3つ目が図書室ルールとして不自然。期限など具体性や小学生向けの丁寧さに欠ける。",
+          "score": 73.3
+        },
+        {
+          "itemId": "trans-1",
+          "category": "translation",
+          "prompt": "次の文を英語に翻訳してください。訳文だけを答えてください。\n「明日は雨が降るかもしれないので、傘を持っていきましょう。」",
+          "response": "「We should bring an umbrella because it might rain tomorrow.」",
+          "rule": 0.806,
+          "checks": [
+            {
+              "type": "english",
+              "score": 1.0
+            },
+            {
+              "type": "chrf",
+              "score": 0.612
+            }
+          ],
+          "judge": 8,
+          "judgeReason": "意味は正確で自然な英語。ただし語順が原文と逆で、鉤括弧付きの出力は訳文のみの指示にやや不適合。",
+          "score": 78.9
+        },
+        {
+          "itemId": "trans-2",
+          "category": "translation",
+          "prompt": "次の文を英語に翻訳してください。訳文だけを答えてください。\n「この商品は来週から全国の店舗で販売されます。」",
+          "response": "「This product will be available in all stores nationwide next week.」",
+          "rule": 0.83,
+          "checks": [
+            {
+              "type": "english",
+              "score": 1.0
+            },
+            {
+              "type": "chrf",
+              "score": 0.66
+            }
+          ],
+          "judge": 7,
+          "judgeReason": "意味はほぼ正確だが「all」で全店舗と限定し、「来週から」の起点が曖昧。訳文のみの指示には概ね従っている。",
+          "score": 73.2
+        },
+        {
+          "itemId": "trans-3",
+          "category": "translation",
+          "prompt": "Translate the following sentence into Japanese. Answer with the translation only.\n\"The meeting has been postponed until further notice.\"",
+          "response": "「会議は更なる通知まで延期されました。」",
+          "rule": 0.749,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "chrf",
+              "score": 0.497
+            }
+          ],
+          "judge": 6,
+          "judgeReason": "意味は伝わるが「更なる通知まで」は直訳的で不自然。「追って通知があるまで」が自然。訳文のみの指示には概ね従っている。",
+          "score": 63.3
+        },
+        {
+          "itemId": "trans-4",
+          "category": "translation",
+          "prompt": "Translate the following sentence into Japanese. Answer with the translation only.\n\"Please make sure to turn off the lights when you leave the room.\"",
+          "response": "部屋を出る際は照明を消してください。",
+          "rule": 0.738,
+          "checks": [
+            {
+              "type": "japanese",
+              "score": 1.0
+            },
+            {
+              "type": "chrf",
+              "score": 0.476
+            }
+          ],
+          "judge": 7,
+          "judgeReason": "自然で正確だが「make sure to(必ず)」の強調が訳出されておらず、原文のニュアンスがやや弱い。",
+          "score": 69.5
+        },
+        {
+          "itemId": "trans-5",
+          "category": "translation",
+          "prompt": "次の文を英語に翻訳してください。訳文だけを答えてください。\n「お忙しいところ恐れ入りますが、ご確認をお願いいたします。」",
+          "response": "「I'm sorry to bother you, but could you please confirm?」",
+          "rule": 0.737,
+          "checks": [
+            {
+              "type": "english",
+              "score": 1.0
+            },
+            {
+              "type": "chrf",
+              "score": 0.474
+            }
+          ],
+          "judge": 7,
+          "judgeReason": "丁寧さは自然だが「お忙しいところ」の要素が省略され、鉤括弧付きで訳文のみの指示にやや不忠実。",
+          "score": 69.5
+        },
+        {
+          "itemId": "code-1",
+          "category": "code",
+          "prompt": "Pythonで、整数のリストを受け取り偶数だけを返す関数 filter_even(numbers) を書いてください。",
+          "response": "```python\ndef filter_even(numbers):\n    return [num for num in numbers if num % 2 == 0]\n```",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeBlock",
+              "score": 1.0
+            },
+            {
+              "type": "codeContains",
+              "score": 1.0
+            },
+            {
+              "type": "pythonParses",
+              "score": 1.0
+            }
+          ],
+          "judge": 7,
+          "judgeReason": "コードは正しく動作し簡潔だが、日本語の説明が一切なく評価観点の一部を満たさない。",
+          "score": 80.0
+        },
+        {
+          "itemId": "code-2",
+          "category": "code",
+          "prompt": "JavaScriptで、文字列を逆順にする関数 reverseString(s) を書いてください。",
+          "response": "以下は、JavaScriptで文字列を逆順にするシンプルな関数です。\n\n```javascript\nfunction reverseString(s) {\n    return s.split('').reverse().join('');\n}\n```\n\nこの関数は、文字列を文字の配列に分割し、配列を逆順にし、再び文字列に結合します。\n\nあるいは、JavaScriptの組み込みメソッド `reverse()` を使用して、より簡潔に文字列を逆順にすることもできます。\n\n```javascript\nfunction reverseString(s) {\n    return s.split('').reverse().join('');\n}\n```\n\nまたは、JavaScriptの `reduce()` メソッドを使用して、より簡潔に文字列を逆順にすることもできます。\n\n```javascript\nfunction reverseString(s) {\n    return s.split('').reduce((a, b) => a + b, '');\n}\n```",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeBlock",
+              "score": 1.0
+            },
+            {
+              "type": "codeContains",
+              "score": 1.0
+            }
+          ],
+          "judge": 3,
+          "judgeReason": "最初のコードは正しいが、2つ目は同一の重複、3つ目のreduce例は逆順にならず誤り。説明も冗長で不正確。",
+          "score": 53.3
+        },
+        {
+          "itemId": "code-3",
+          "category": "code",
+          "prompt": "Pythonで、辞書のリスト people を 'age' キーの昇順に並べ替えるコードを書いてください。",
+          "response": "```python\npeople = [{'name': 'Alice', 'age': 30}, {'name': 'Bob', 'age': 25}, {'name': 'Charlie', 'age': 20}]\npeople.sort(key=lambda x: x['age'])\n```",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeBlock",
+              "score": 1.0
+            },
+            {
+              "type": "codeContains",
+              "score": 1.0
+            },
+            {
+              "type": "pythonParses",
+              "score": 1.0
+            }
+          ],
+          "judge": 6,
+          "judgeReason": "sortとkeyの使い方は正しいが、日本語の説明が一切なく、出力例やsortedとの違いの補足もない点が不足。",
+          "score": 73.3
+        },
+        {
+          "itemId": "code-4",
+          "category": "code",
+          "prompt": "次のPythonコードの誤りを直して、修正後のコードを示してください。\n\n```python\ndef add(a, b)\n    return a + b\n```",
+          "response": "```python\ndef add(a, b):\n    return a + b\n```",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeBlock",
+              "score": 1.0
+            },
+            {
+              "type": "codeContains",
+              "score": 1.0
+            },
+            {
+              "type": "pythonParses",
+              "score": 1.0
+            }
+          ],
+          "judge": 8,
+          "judgeReason": "コロン欠落を正しく修正したコードを提示。ただし誤りの指摘・説明がなく簡素すぎる点が惜しい。",
+          "score": 86.7
+        },
+        {
+          "itemId": "code-5",
+          "category": "code",
+          "prompt": "SQLで、users テーブルから age が20以上のユーザーの name を取得するクエリを書いてください。",
+          "response": "```sql\nSELECT name\nFROM users\nWHERE age > 20;\n```",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeContains",
+              "score": 1.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "20以上の条件が > 20 となっており誤り。説明も皆無。",
+          "score": 46.7
+        }
+      ]
+    }
+  ]
+}

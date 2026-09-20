@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 16,
+  "revision": 17,
   "publishedAt": "2026-09-16T00:00:00Z",
   "models": [
     {
@@ -1179,6 +1179,28 @@
           "judgeModel": "claude-opus-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 62,
+          "categories": {
+            "conversation": 61,
+            "keigo": 48,
+            "summary": 67,
+            "writing": 56,
+            "translation": 71,
+            "code": 68
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.5",
+          "artifactId": "lfm2.5-1.2b-jp-int4-gpu-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT4",
+          "evaluatedAt": "2026-09-20",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
@@ -1197,6 +1219,27 @@
           "runtime": "liteRt",
           "quantization": "INT4",
           "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 59,
+          "categories": {
+            "reasoning": 21,
+            "math": 44,
+            "instruction": 83,
+            "code": 81,
+            "longInput": 64
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.5",
+          "artifactId": "lfm2.5-1.2b-jp-int4-gpu-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT4",
+          "evaluatedAt": "2026-09-20",
           "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5",
@@ -2389,7 +2432,7 @@
               "platform": "android",
               "status": "verified",
               "knownIssues": [
-                "Tool calling measured 2026-09-20: writes the call as JSON in the reply instead of calling the tool, so tools are off for this model"
+                "Tool calling measured 2026-09-20: writes the call as JSON in the reply instead of calling the tool, and llama.cpp then aborts the process (\"Unexpected empty grammar stack\"), so tools are off for this model"
               ]
             },
             {

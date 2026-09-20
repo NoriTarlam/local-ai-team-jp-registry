@@ -1,0 +1,550 @@
+{
+  "evalSet": "core-eval-v1",
+  "scoreVersion": "ja-score-1",
+  "judgeModel": "claude-opus-5",
+  "scoredAt": "2026-09-20T10:19:03.631482Z",
+  "results": [
+    {
+      "run": {
+        "modelId": "lfm2.5-1.2b-jp",
+        "modelVersion": "2.5",
+        "artifactId": "lfm2.5-1.2b-jp-int4-gpu-litertlm",
+        "runtime": "liteRt",
+        "quantization": "INT4",
+        "weightsSha256": "2c826a9cdeefc614c9b7de1d1c5565c9a64f704e5f3291ad2cd5d7da396790d5",
+        "device": "Google Pixel 6 / Android 17 (API 37)",
+        "evaluatedAt": "2026-09-20T10:08:31.629739Z"
+      },
+      "overall": 59,
+      "categories": {
+        "reasoning": 21,
+        "math": 44,
+        "instruction": 83,
+        "code": 81,
+        "longInput": 64
+      },
+      "items": [
+        {
+          "itemId": "reason-1",
+          "category": "reasoning",
+          "prompt": "Three friends share a taxi. Ana rides the whole 12 km, Ben rides the first 8 km, and Cara rides the first 4 km. They split the 36 fare so that each kilometre is paid equally by whoever is still in the taxi. How much does each pay? Show your working briefly.",
+          "response": "各人が支払う金額を求めるために、まず各人が支払うべき総額を計算します。\n\nAna は 12 km 全距離を走り、Ben は最初の 8 km、Cara は最初の 4 km です。\n\nAna と Ben が走った合計距離は 12 + 8 = 20 km です。  \nCara が走った距離は 4 km です。\n\nAna と Ben が走った合計距離は 20 km、Cara が走った距離は 4 km です。\n\nAna と Ben が走った合計距離は 20 km、Cara が走った距離は 4 km です。\n\nAna と Ben が走った合計距離は 20 km、Cara が走った距離は 4 km です。\n\nAna と Ben が走った合計距離は 20 km、Cara が走った距離は 4 km です。\n\nAna と Ben が走った合計距離は 20 km、Cara が走った距離は 4 km です。\n\nAna と Ben が走った合計距離は 20 km、Cara が走った距離は 4 km です。\n\nAna と Ben が走った合計距離は 20 km、Cara が走った距離は 4 km です。\n\nAna と Ben が走った合計距離は 20 km、Cara が走った距離は",
+          "rule": 0.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 0.0
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "同一文の無限反復で答えが出ておらず、区間分割の考え方も示されていない。",
+          "score": 0.0
+        },
+        {
+          "itemId": "reason-2",
+          "category": "reasoning",
+          "prompt": "A shop opens at 09:00 and closes at 17:30. It is closed for lunch from 12:45 to 13:30. Today the owner arrived 25 minutes late and left 10 minutes early. How many minutes was the shop actually open today?",
+          "response": "店は午前9時から午後5時30分まで営業していました。正午45分から午後1時30分までのランチタイムは閉店時間に含まれるため、実際の営業時間は午前9時から午後5時までとなります。\n\n店は午前9時から午後5時まで営業していました。午前9時から午前25分までの遅刻は、午前9時から午前25分までの営業時間に含まれるため、実際の営業時間は午前9時から午前25分までとなります。午前25分から午前10時までの早退は、午前25分から午前10分までの営業時間に含まれるため、実際の営業時間は午前9時から午前10分までとなります。\n\nしたがって、店は午前9時から午前10分まで営業していました。",
+          "rule": 0.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 0.0
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "計算が破綻し日本語も不自然で、正答430分に至っていない。",
+          "score": 0.0
+        },
+        {
+          "itemId": "reason-3",
+          "category": "reasoning",
+          "prompt": "You have two jugs, one holds 5 litres and one holds 3 litres, and a tap. Describe the shortest sequence of steps that leaves exactly 4 litres in the 5-litre jug.",
+          "response": "以下は、5リットルのジャグに正確に4リットルを残すための最短手順です。\n\n1. **5リットルのジャグから3リットルのジャグへ水を移す**  \n   - 5リットルのジャグに3リットルを入れると、残りは2リットルになります。  \n   - 3リットルのジャグに3リットルを入れると、満杯になり、5リットルのジャグには2リットルが残ります。\n\n2. **5リットルのジャグから3リットルのジャグへ水を移す**  \n   - 5リットルのジャグに3リットルを入れると、残りは2リットルになります。  \n   - 3リットルのジャグに3リットルを入れると、満杯になり、5リットルのジャグには2リットルが残ります。\n\n3. **5リットルのジャグから3リットルのジャグへ水を移す**  \n   - 5リットルのジャグに3リットルを入れると、残りは2リットルになります。  \n   - 3リットルのジャグに3リットルを入れると、満杯になり、5リットルのジャグには2リットルが残ります。\n\n4. **5リットルのジャグから3リットルのジャグへ水を",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "minChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "同一手順の反復で4リットルに到達せず、途中で文が切れ完全に破綻している。",
+          "score": 40.0
+        },
+        {
+          "itemId": "reason-4",
+          "category": "reasoning",
+          "prompt": "Every student who passed the exam attended the review class. Mika attended the review class. Did Mika pass the exam? Answer in one sentence and say why.",
+          "response": "いいえ、ミカは試験に合格していません。ミカはレビュークラスに出席したので、レビュークラスは試験の前に受講されたことを示しています。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "不合格と誤って断定し、理由も支離滅裂。正答は「断定できない」。",
+          "score": 40.0
+        },
+        {
+          "itemId": "reason-5",
+          "category": "reasoning",
+          "prompt": "A train leaves at 14:05 and the journey takes 3 hours 50 minutes. There is one transfer that costs 25 minutes of waiting. What time does the passenger arrive? Give only the time.",
+          "response": "14:05 + 3時間50分 + 25分 = 17:20",
+          "rule": 0.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 0.0
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "正解18:20に対し17:20と誤り。時刻のみの指示にも違反。",
+          "score": 0.0
+        },
+        {
+          "itemId": "reason-6",
+          "category": "reasoning",
+          "prompt": "Here is a receipt:\n\nStore: Hilltop Grocers\n2026-03-04 18:22\nOat milk 1L x2  3.80\nBrown rice 2kg  4.15\nTomatoes 500g   2.60\nChicken thighs  7.45\nBin bags        3.00\nSubtotal       21.00\nMember discount -2.10\nTotal          18.90\n\nThe member discount applies to the subtotal. What percentage discount is it, and does the printed total match?",
+          "response": "**計算結果:**\n\n- **割引率:** 2.10 ÷ 21.00 = **約 0.10（10%）**  \n  つまり、**10% の割引** が適用されます。\n\n- **割引後の合計:** 18.90 – 2.10 = **16.80**\n\n**印刷された合計と一致するか:**  \nはい、**印刷された合計は 16.80** です。\n\n---\n\n**要約:**  \n- 割引率: 10%  \n- 割引後の合計: 16.80  \n- 印刷された合計: 16.80 ✅",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "割引率10%は正しいが、21.00-2.10=18.90を誤って16.80とし、整合性判断を誤っている。",
+          "score": 46.7
+        },
+        {
+          "itemId": "math-1",
+          "category": "math",
+          "prompt": "Compute 17 x 24 - 118. Give only the number.",
+          "response": "-118",
+          "rule": 0.0,
+          "checks": [
+            {
+              "type": "contains",
+              "score": 0.0
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "正解290に対し-118と誤答。計算が全く合っていない。",
+          "score": 0.0
+        },
+        {
+          "itemId": "math-2",
+          "category": "math",
+          "prompt": "A jacket costs 12,800 yen. It is reduced by 35%, then 8% tax is added to the reduced price. What is the final price in yen, rounded to the nearest yen?",
+          "response": "ジャケットの元の価格は12,800 yenです。\n\nまず、35%の割引を適用します：\n12,800 yen × 0.35 = 4,480 yen（割引額）\n\n割引後の価格は：\n12,800 yen − 4,480 yen = 8,320 yen\n\n次に、割引後の価格に8%の税を加えます：\n8,320 yen × 0.08 = 665.60 yen（税額）\n\n税額を割引後の価格に加算します：\n8,320 yen + 665.60 yen = 8,985.60 yen\n\n8,985.60 yenを最も近い整数に四捨五入すると、**8,986 yen**になります。\n\n**最終価格：8,986 yen**",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 10,
+          "judgeReason": "計算手順・四捨五入とも正確で、日本語の説明も明快。",
+          "score": 100.0
+        },
+        {
+          "itemId": "math-3",
+          "category": "math",
+          "prompt": "Solve for x: 3(x - 4) = 2x + 7. Show one line of working and the answer.",
+          "response": "3(x - 4) = 2x + 7  \n3x - 12 = 2x + 7  \n3x - 2x = 7 + 12  \nx = 19",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "contains",
+              "score": 1.0
+            }
+          ],
+          "judge": 8,
+          "judgeReason": "x=19と正解で式変形も明確だが、「1行」の指示より多く記述している点が減点。",
+          "score": 86.7
+        },
+        {
+          "itemId": "math-4",
+          "category": "math",
+          "prompt": "A rectangular room is 4.2 m by 3.5 m. Flooring costs 5,400 yen per square metre and you must buy whole square metres. What is the cost?",
+          "response": "まず、部屋の面積を計算します。\n\n4.2 m × 3.5 m = 14.7 m²\n\n次に、1平方メートルあたりの費用を掛けます。\n\n14.7 m² × 5,400 yen/m² = 79,380 yen\n\nしたがって、必要な床材の費用は **79,380 yen** です。",
+          "rule": 0.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 0.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "整数単位での購入という条件を無視し、切り上げ15㎡=81,000円とすべきところを79,380円と誤答。",
+          "score": 6.7
+        },
+        {
+          "itemId": "math-5",
+          "category": "math",
+          "prompt": "The numbers are 12, 15, 9, 21, 18. Give the mean and the median, in that order.",
+          "response": "まず、数値を昇順に並べます：9, 12, 15, 18, 21。\n\n**平均（Mean）**：  \n(9 + 12 + 15 + 18 + 21) ÷ 5 = 85 ÷ 5 = **17**\n\n**中央値（Median）**：  \n中央の値は 15 です。\n\n**順序（Mean, Median）**：  \n**17, 15**",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "contains",
+              "score": 1.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "合計を85と誤り平均17と回答。中央値15のみ正しく、主要な数値が不正確。",
+          "score": 46.7
+        },
+        {
+          "itemId": "math-6",
+          "category": "math",
+          "prompt": "A tank loses 3.5% of its water every hour. It starts with 200 litres. Roughly how much is left after 5 hours? One number is enough.",
+          "response": "200 - (200 * 0.035 * 5) = 200 - 35 = 165 litres",
+          "rule": 0.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 0.0
+            }
+          ],
+          "judge": 5,
+          "judgeReason": "線形近似で165Lとし、正解167Lに近いが指数減衰を無視。説明も英語で簡素。",
+          "score": 26.7
+        },
+        {
+          "itemId": "inst-1",
+          "category": "instruction",
+          "prompt": "List exactly three tips for sleeping better. Use \"- \" at the start of each line. No introduction, no closing line.",
+          "response": "- 就寝の少なくとも1時間前には電子機器をオフにし、ブルーライトの影響を減らしてください。  \n- 部屋を涼しく静かに保ち、快適な睡眠環境を作りましょう。  \n- 毎日同じ時間に寝て起きることで、体内時計を整えてください。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "bullets",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 10,
+          "judgeReason": "3行ちょうどの箇条書きで前置き・締めが無く、日本語も自然で指示に完全準拠。",
+          "score": 100.0
+        },
+        {
+          "itemId": "inst-2",
+          "category": "instruction",
+          "prompt": "Reply with valid JSON only, no code fence, with exactly the keys \"city\", \"country\" and \"population\" for Osaka. The population must be a number, not a string.",
+          "response": "{\n  \"city\": \"Osaka\",\n  \"country\": \"Japan\",\n  \"population\": 1670000\n}",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "contains",
+              "score": 1.0
+            },
+            {
+              "type": "notContains",
+              "score": 1.0
+            }
+          ],
+          "judge": 10,
+          "judgeReason": "コードフェンスなしの純粋なJSONで、3キー揃い人口も数値。指示に完全準拠。",
+          "score": 100.0
+        },
+        {
+          "itemId": "inst-3",
+          "category": "instruction",
+          "prompt": "Write a single sentence about autumn that is under 15 words and does not contain the letter \"e\".",
+          "response": "Autumn brings crisp air and vibrant foliage.",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "foliage に e が含まれ、条件違反。語数と1文は満たすが不適切。",
+          "score": 46.7
+        },
+        {
+          "itemId": "inst-4",
+          "category": "instruction",
+          "prompt": "Summarise this in exactly two sentences, then add the line \"WORDS: n\" where n is the number of words you used.\n\nThe city council met on Tuesday to review the transport budget for the coming year. The finance officer reported that fare income had fallen by four per cent, mostly because two suburban lines were closed for repairs between March and June. Maintenance costs rose by eleven per cent over the same period, and the council had to hire replacement buses for eighty-one days. Councillor Adeyemi argued that the replacement buses were too expensive and proposed shorter closures spread over two years instead. Councillor Brandt disagreed, saying that repeated closures would cost more in the long run and annoy passengers twice. The engineering department estimated that the two-year option would add about 1.4 million to the total bill but would keep at least one line open at all times. After a long discussion the council voted six to four to keep the single longer closure, but asked the department to publish a weekly progress report and to run the replacement buses every ten minutes rather than every fifteen. The chair noted that the decision would be reviewed in September if the works fell behind schedule.",
+          "response": "The city council voted to keep the single longer closure for the two suburban lines, arguing that shorter closures would be more expensive and disruptive. The council also decided to publish weekly progress reports and run the replacement buses every ten minutes instead of every fifteen.\n\nWORDS: 6",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "contains",
+              "score": 1.0
+            }
+          ],
+          "judge": 3,
+          "judgeReason": "2文の要約は適切だが、語数6は実際の約46語と大きく乖離し指示不履行。",
+          "score": 53.3
+        },
+        {
+          "itemId": "inst-5",
+          "category": "instruction",
+          "prompt": "Answer with one word only: what is the chemical symbol for gold?",
+          "response": "Au",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 1.0
+            },
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 10,
+          "judgeReason": "指示通り「Au」の一語のみで正確に回答している。",
+          "score": 100.0
+        },
+        {
+          "itemId": "inst-6",
+          "category": "instruction",
+          "prompt": "Rewrite this sentence in the passive voice and change nothing else: \"The committee approved the revised budget on Friday.\"",
+          "response": "The revised budget was approved by the committee on Friday.",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 10,
+          "judgeReason": "受動態に正確に変換され、他の語も変えず余計な説明もない完璧な回答。",
+          "score": 100.0
+        },
+        {
+          "itemId": "code-1",
+          "category": "code",
+          "prompt": "Write a Python function `second_largest(numbers)` that returns the second largest distinct value, or None when there is not one. Code only, in a fenced block.",
+          "response": "```python\ndef second_largest(numbers):\n    unique = list(set(numbers))\n    if len(unique) < 2:\n        return None\n    sorted_unique = sorted(unique, reverse=True)\n    return sorted_unique[1]\n```",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeBlock",
+              "score": 1.0
+            },
+            {
+              "type": "pythonParses",
+              "score": 1.0
+            },
+            {
+              "type": "codeContains",
+              "score": 1.0
+            }
+          ],
+          "judge": 9,
+          "judgeReason": "重複除外と要素不足時のNone処理が正しく、コードのみをコードブロックで返しており指示に適合。",
+          "score": 93.3
+        },
+        {
+          "itemId": "code-2",
+          "category": "code",
+          "prompt": "This Python raises an error. Give the corrected code in a fenced block and one line explaining the cause.\n\n```python\ndef average(values):\n    return sum(values) / len(values)\nprint(average([]))\n```",
+          "response": "```python\ndef average(values):\n    return sum(values) / len(values) if values else 0\nprint(average([1, 2, 3, 4, 5]))\n```\n\n原因: 空のリストで `len(values)` が 0 となり、ゼロ除算エラーが発生します。リストが空の場合は 0 を返すようにチェックを追加しました。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeBlock",
+              "score": 1.0
+            },
+            {
+              "type": "pythonParses",
+              "score": 1.0
+            }
+          ],
+          "judge": 7,
+          "judgeReason": "ゼロ除算回避は適切だが、呼び出し例を空リストから変更し検証性を損ない、説明も1行超え気味。",
+          "score": 80.0
+        },
+        {
+          "itemId": "code-3",
+          "category": "code",
+          "prompt": "Write a SQL query that returns the three customers with the highest total order value from tables customers(id, name) and orders(id, customer_id, amount). Code only.",
+          "response": "```sql\nSELECT c.name, SUM(o.amount) AS total_order_value\nFROM customers c\nJOIN (\n    SELECT customer_id, SUM(amount) AS total_order_value\n    FROM orders\n    GROUP BY customer_id\n) o\nON c.id = o.customer_id\nGROUP BY c.name\nHAVING total_order_value = (\n    SELECT MAX(total_order_value) \n    FROM (\n        SELECT SUM(amount) AS total_order_value \n        FROM orders \n        GROUP BY customer_id\n    ) t\n    WHERE t.total_order_value = (\n        SELECT MAX(total_order_value) \n        FROM (\n            SELECT SUM(amount) AS total_order_value \n            FROM orders \n            GROUP BY customer_id\n        ) t\n        WHERE t.total_order_value = (\n            SELECT MAX(total_order_value) \n            FROM (\n                SELECT SUM(amount) AS total_order_value \n                FROM orders \n                GROUP BY customer_id\n            ) t\n            WHERE t.total_order_value = (\n                SELECT MAX(total_order_value) \n                FROM (\n                    SELECT SUM(amount) AS total_order_value \n                    FROM orders \n                    GROUP",
+          "rule": 0.667,
+          "checks": [
+            {
+              "type": "codeContains",
+              "score": 0.667
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "クエリが途中で途切れ、ORDER BYや上位3件指定もなく無意味な入れ子で不正。",
+          "score": 26.7
+        },
+        {
+          "itemId": "code-4",
+          "category": "code",
+          "prompt": "Write a Python one-liner that reads lines from a file called \"log.txt\" and prints how many contain the word \"ERROR\". Code only, in a fenced block.",
+          "response": "```python\nprint(sum(1 for line in open(\"log.txt\") if \"ERROR\" in line))\n```",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeBlock",
+              "score": 1.0
+            },
+            {
+              "type": "pythonParses",
+              "score": 1.0
+            },
+            {
+              "type": "codeContains",
+              "score": 1.0
+            }
+          ],
+          "judge": 10,
+          "judgeReason": "1行で正しくファイルを開きERROR行数を数え、コードのみで指示通り。",
+          "score": 100.0
+        },
+        {
+          "itemId": "code-5",
+          "category": "code",
+          "prompt": "Explain in at most three sentences what a race condition is, and give one concrete example from everyday software.",
+          "response": "レースコンディションは、複数のスレッドやプロセスが共有リソースに同時にアクセスし、操作の順序が予測できないときに発生します。例えば、銀行アプリケーションで、2つのスレッドが同時に口座残高を更新しようとすると、残高が正しくない状態になる可能性があります。",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "maxChars",
+              "score": 1.0
+            }
+          ],
+          "judge": 8,
+          "judgeReason": "定義は正確で例も具体的、2文で条件を満たす。ただし英語依頼に日本語回答で、例の説明がやや浅い。",
+          "score": 86.7
+        },
+        {
+          "itemId": "code-6",
+          "category": "code",
+          "prompt": "Write a Python function `is_balanced(text)` that returns True when brackets ()[]{} are balanced and correctly nested. Code only, in a fenced block.",
+          "response": "```python\ndef is_balanced(text):\n    stack = []\n    mapping = {')': '(', '}': '{', ']': '['}\n    for char in text:\n        if char in mapping.values():\n            stack.append(char)\n        elif char in mapping:\n            if not stack or stack.pop() != mapping[char]:\n                return False\n    return not stack\n```",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "codeBlock",
+              "score": 1.0
+            },
+            {
+              "type": "pythonParses",
+              "score": 1.0
+            },
+            {
+              "type": "codeContains",
+              "score": 1.0
+            }
+          ],
+          "judge": 10,
+          "judgeReason": "スタックで正しく判定し、対応と余りも適切。コードのみで指示通り。",
+          "score": 100.0
+        },
+        {
+          "itemId": "long-1",
+          "category": "longInput",
+          "prompt": "The city council met on Tuesday to review the transport budget for the coming year. The finance officer reported that fare income had fallen by four per cent, mostly because two suburban lines were closed for repairs between March and June. Maintenance costs rose by eleven per cent over the same period, and the council had to hire replacement buses for eighty-one days. Councillor Adeyemi argued that the replacement buses were too expensive and proposed shorter closures spread over two years instead. Councillor Brandt disagreed, saying that repeated closures would cost more in the long run and annoy passengers twice. The engineering department estimated that the two-year option would add about 1.4 million to the total bill but would keep at least one line open at all times. After a long discussion the council voted six to four to keep the single longer closure, but asked the department to publish a weekly progress report and to run the replacement buses every ten minutes rather than every fifteen. The chair noted that the decision would be reviewed in September if the works fell behind schedule.\n\nHow did the council vote, and what two conditions did they attach? Answer in one sentence.",
+          "response": "The council voted 6 to 4 to keep the single longer closure, and attached the conditions that the department publish a weekly progress report and run the replacement buses every ten minutes rather than every fifteen.",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 9,
+          "judgeReason": "6対4の可決と2条件を正確に一文で記述。英語回答だが原文言語に沿い妥当。",
+          "score": 93.3
+        },
+        {
+          "itemId": "long-2",
+          "category": "longInput",
+          "prompt": "The city council met on Tuesday to review the transport budget for the coming year. The finance officer reported that fare income had fallen by four per cent, mostly because two suburban lines were closed for repairs between March and June. Maintenance costs rose by eleven per cent over the same period, and the council had to hire replacement buses for eighty-one days. Councillor Adeyemi argued that the replacement buses were too expensive and proposed shorter closures spread over two years instead. Councillor Brandt disagreed, saying that repeated closures would cost more in the long run and annoy passengers twice. The engineering department estimated that the two-year option would add about 1.4 million to the total bill but would keep at least one line open at all times. After a long discussion the council voted six to four to keep the single longer closure, but asked the department to publish a weekly progress report and to run the replacement buses every ten minutes rather than every fifteen. The chair noted that the decision would be reviewed in September if the works fell behind schedule.\n\nWhich councillor wanted shorter closures, and what did the engineering department estimate that option would cost? Answer in one sentence.",
+          "response": "Councillor Brandt wanted shorter closures, and the engineering department estimated that the two-year option would add about 1.4 million to the total bill.",
+          "rule": 0.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 0.0
+            }
+          ],
+          "judge": 2,
+          "judgeReason": "議員名をBrandtと誤答。金額のみ正しく、核心の2点中1点が不正確。",
+          "score": 6.7
+        },
+        {
+          "itemId": "long-3",
+          "category": "longInput",
+          "prompt": "The city council met on Tuesday to review the transport budget for the coming year. The finance officer reported that fare income had fallen by four per cent, mostly because two suburban lines were closed for repairs between March and June. Maintenance costs rose by eleven per cent over the same period, and the council had to hire replacement buses for eighty-one days. Councillor Adeyemi argued that the replacement buses were too expensive and proposed shorter closures spread over two years instead. Councillor Brandt disagreed, saying that repeated closures would cost more in the long run and annoy passengers twice. The engineering department estimated that the two-year option would add about 1.4 million to the total bill but would keep at least one line open at all times. After a long discussion the council voted six to four to keep the single longer closure, but asked the department to publish a weekly progress report and to run the replacement buses every ten minutes rather than every fifteen. The chair noted that the decision would be reviewed in September if the works fell behind schedule.\n\nSummarise the passage in three bullet points, each starting with \"- \".",
+          "response": "- The city council voted to keep the single longer bus closure instead of shorter ones, arguing that repeated closures would cost more and annoy passengers twice.  \n- The engineering department estimated that a two-year option would add about 1.4 million to the total transport budget but keep at least one line open at all times.  \n- The council decided to review the progress weekly and run replacement buses every ten minutes, with a September follow-up if the works fell behind schedule.",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "bullets",
+              "score": 1.0
+            }
+          ],
+          "judge": 4,
+          "judgeReason": "3点形式は守るが、運賃収入4%減・維持費11%増の骨子が欠落し、採決結果も6対4の記載なし。",
+          "score": 60.0
+        },
+        {
+          "itemId": "long-4",
+          "category": "longInput",
+          "prompt": "The city council met on Tuesday to review the transport budget for the coming year. The finance officer reported that fare income had fallen by four per cent, mostly because two suburban lines were closed for repairs between March and June. Maintenance costs rose by eleven per cent over the same period, and the council had to hire replacement buses for eighty-one days. Councillor Adeyemi argued that the replacement buses were too expensive and proposed shorter closures spread over two years instead. Councillor Brandt disagreed, saying that repeated closures would cost more in the long run and annoy passengers twice. The engineering department estimated that the two-year option would add about 1.4 million to the total bill but would keep at least one line open at all times. After a long discussion the council voted six to four to keep the single longer closure, but asked the department to publish a weekly progress report and to run the replacement buses every ten minutes rather than every fifteen. The chair noted that the decision would be reviewed in September if the works fell behind schedule.\n\nDoes the passage say when the decision would be reviewed? Answer with the month only, or \"not stated\".",
+          "response": "September",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 10,
+          "judgeReason": "指示通り月名のみを正確に回答し、余計な情報もない。",
+          "score": 100.0
+        },
+        {
+          "itemId": "long-5",
+          "category": "longInput",
+          "prompt": "The city council met on Tuesday to review the transport budget for the coming year. The finance officer reported that fare income had fallen by four per cent, mostly because two suburban lines were closed for repairs between March and June. Maintenance costs rose by eleven per cent over the same period, and the council had to hire replacement buses for eighty-one days. Councillor Adeyemi argued that the replacement buses were too expensive and proposed shorter closures spread over two years instead. Councillor Brandt disagreed, saying that repeated closures would cost more in the long run and annoy passengers twice. The engineering department estimated that the two-year option would add about 1.4 million to the total bill but would keep at least one line open at all times. After a long discussion the council voted six to four to keep the single longer closure, but asked the department to publish a weekly progress report and to run the replacement buses every ten minutes rather than every fifteen. The chair noted that the decision would be reviewed in September if the works fell behind schedule.\n\nWhat was the main reason fare income fell? Answer in one short sentence.",
+          "response": "The main reason fare income fell was the closure of two suburban lines for repairs between March and June.",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 8,
+          "judgeReason": "閉鎖理由を正確かつ簡潔に指摘。ただし日本語依頼に対し英語回答で自然さに難。",
+          "score": 86.7
+        },
+        {
+          "itemId": "long-6",
+          "category": "longInput",
+          "prompt": "The city council met on Tuesday to review the transport budget for the coming year. The finance officer reported that fare income had fallen by four per cent, mostly because two suburban lines were closed for repairs between March and June. Maintenance costs rose by eleven per cent over the same period, and the council had to hire replacement buses for eighty-one days. Councillor Adeyemi argued that the replacement buses were too expensive and proposed shorter closures spread over two years instead. Councillor Brandt disagreed, saying that repeated closures would cost more in the long run and annoy passengers twice. The engineering department estimated that the two-year option would add about 1.4 million to the total bill but would keep at least one line open at all times. After a long discussion the council voted six to four to keep the single longer closure, but asked the department to publish a weekly progress report and to run the replacement buses every ten minutes rather than every fifteen. The chair noted that the decision would be reviewed in September if the works fell behind schedule.\n\nList every number that appears in the passage, in the order they appear, separated by commas. Numbers written as words count.",
+          "response": "4, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, ",
+          "rule": 1.0,
+          "checks": [
+            {
+              "type": "containsAny",
+              "score": 1.0
+            }
+          ],
+          "judge": 1,
+          "judgeReason": "「4」の無意味な繰り返しで、正しい数列を全く提示できていない不適切な回答。",
+          "score": 40.0
+        }
+      ]
+    }
+  ]
+}
