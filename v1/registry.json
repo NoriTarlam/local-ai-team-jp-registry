@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 17,
+  "revision": 18,
   "publishedAt": "2026-09-16T00:00:00Z",
   "models": [
     {
@@ -16,6 +16,7 @@
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
       "version": "2.5",
+      "releasedAt": "2024-09-16",
       "parameterCount": 494000000,
       "languages": [
         "ja",
@@ -68,7 +69,7 @@
               "status": "verified",
               "referenceDecodeTokensPerSec": 28.2,
               "knownIssues": [
-                "Pixel 6: GPU offload not used (CPU inference)"
+                "Pixel 6 では GPU に処理が渡らず、CPU で動きます。"
               ]
             },
             {
@@ -145,6 +146,7 @@
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
       "version": "3.5",
+      "releasedAt": "2026-02-28",
       "parameterCount": 2000000000,
       "languages": [
         "ja",
@@ -273,6 +275,7 @@
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
       "version": "3.5",
+      "releasedAt": "2026-02-28",
       "parameterCount": 800000000,
       "languages": [
         "ja",
@@ -365,7 +368,7 @@
               "status": "experimental",
               "referenceDecodeTokensPerSec": 10.7,
               "knownIssues": [
-                "LiteRT-LM takes no system role, so the app folds the system prompt into the first user message; this artifact then ignores translation instructions (Japanese AI Score 28-30 against 50 for the GGUF build)"
+                "この形式はシステムの指示を受け取れないため、アプリは最初の発言にまとめて渡します。その影響で、英訳の指示に従わず日本語で答えることがあります（同じモデルの GGUF 版のほうが日本語AIスコアは高く出ます）。"
               ]
             }
           ],
@@ -401,7 +404,7 @@
               "status": "experimental",
               "referenceDecodeTokensPerSec": 10.7,
               "knownIssues": [
-                "LiteRT-LM takes no system role, so the app folds the system prompt into the first user message; this artifact then ignores translation instructions (Japanese AI Score 28-30 against 50 for the GGUF build)"
+                "この形式はシステムの指示を受け取れないため、アプリは最初の発言にまとめて渡します。その影響で、英訳の指示に従わず日本語で答えることがあります（同じモデルの GGUF 版のほうが日本語AIスコアは高く出ます）。"
               ]
             }
           ],
@@ -515,6 +518,7 @@
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
       "version": "3.5",
+      "releasedAt": "2026-02-28",
       "parameterCount": 2000000000,
       "languages": [
         "ja",
@@ -576,7 +580,7 @@
               "status": "verified",
               "referenceDecodeTokensPerSec": 11.6,
               "knownIssues": [
-                "Pixel 6: first response takes ~17 s with an image (CPU vision encoding)"
+                "Pixel 6 では、画像を付けると最初の返事まで17秒ほどかかります。"
               ]
             },
             {
@@ -653,6 +657,7 @@
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
       "version": "3",
+      "releasedAt": "2026-01-28",
       "parameterCount": 600000000,
       "languages": [
         "ja",
@@ -725,6 +730,7 @@
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
       "version": "3",
+      "releasedAt": "2026-01-28",
       "parameterCount": 1700000000,
       "languages": [
         "ja",
@@ -796,6 +802,7 @@
       "developer": "Google",
       "origin": "overseas",
       "version": "4",
+      "releasedAt": "2026-03-02",
       "parameterCount": 2000000000,
       "languages": [
         "ja",
@@ -878,7 +885,7 @@
               "platform": "android",
               "status": "experimental",
               "knownIssues": [
-                "Pixel 6 (Mali-G78): engine creation fails for the GPU backend, so this bundle cannot run there (measured 2026-09-19); the CPU bundle works"
+                "Pixel 6（Mali-G78）では、このGPU用ファイルは読み込みに失敗します（2026年9月19日 実機確認）。CPU用ファイルは問題なく動きます。"
               ]
             }
           ],
@@ -948,6 +955,7 @@
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
       "version": "3",
+      "releasedAt": "2025-04-27",
       "parameterCount": 600000000,
       "languages": [
         "ja",
@@ -1067,6 +1075,7 @@
       "developer": "Liquid AI",
       "origin": "overseas",
       "version": "2.5",
+      "releasedAt": "2026-05-26",
       "parameterCount": 1200000000,
       "languages": [
         "ja",
@@ -1261,6 +1270,7 @@
       "developer": "SB Intuitions（ソフトバンク）",
       "origin": "domestic",
       "version": "2.2",
+      "releasedAt": "2025-02-26",
       "parameterCount": 500000000,
       "languages": [
         "ja",
@@ -1384,6 +1394,7 @@
       "developer": "SB Intuitions（ソフトバンク）",
       "origin": "domestic",
       "version": "2.2",
+      "releasedAt": "2025-02-26",
       "parameterCount": 1000000000,
       "languages": [
         "ja",
@@ -1507,6 +1518,7 @@
       "developer": "SB Intuitions（ソフトバンク）",
       "origin": "domestic",
       "version": "2.2",
+      "releasedAt": "2025-02-26",
       "parameterCount": 3000000000,
       "languages": [
         "ja",
@@ -1630,6 +1642,7 @@
       "developer": "Sakana AI",
       "origin": "domestic",
       "version": "1.0",
+      "releasedAt": "2025-01-07",
       "parameterCount": 1500000000,
       "languages": [
         "ja",
@@ -1753,6 +1766,7 @@
       "developer": "楽天グループ",
       "origin": "domestic",
       "version": "2.0",
+      "releasedAt": "2025-02-04",
       "parameterCount": 1500000000,
       "languages": [
         "ja",
@@ -1876,6 +1890,7 @@
       "developer": "Preferred Networks",
       "origin": "domestic",
       "version": "2",
+      "releasedAt": "2025-02-05",
       "parameterCount": 1000000000,
       "languages": [
         "ja",
@@ -1925,7 +1940,7 @@
               "platform": "android",
               "status": "experimental",
               "knownIssues": [
-                "Pixel 6: this GGUF ends its turn by printing <|im_end|> as text and stops, so answers come out empty or truncated (measured 2026-09-19); the chat template of the conversion does not match the model"
+                "このファイルは会話形式の設定が合っておらず、回答が空になったり途中で止まったりします（2026年9月19日 実機確認）。"
               ]
             },
             {
@@ -2002,6 +2017,7 @@
       "developer": "Microsoft",
       "origin": "overseas",
       "version": "4",
+      "releasedAt": "2025-02-19",
       "parameterCount": 3800000000,
       "languages": [
         "ja",
@@ -2052,7 +2068,7 @@
               "platform": "android",
               "status": "verified",
               "knownIssues": [
-                "Tool calling measured 2026-09-20: calculator yes; it declines the date question instead of calling the clock"
+                "電卓は使えますが、日付を聞くと時計を使わずに「答えられない」と返します（2026年9月20日 実機確認）。"
               ]
             },
             {
@@ -2129,6 +2145,7 @@
       "developer": "Hugging Face",
       "origin": "overseas",
       "version": "3",
+      "releasedAt": "2025-07-08",
       "parameterCount": 3000000000,
       "languages": [
         "ja",
@@ -2178,7 +2195,7 @@
               "platform": "android",
               "status": "verified",
               "knownIssues": [
-                "Tool calling measured 2026-09-20: never calls a tool and answers arithmetic from its own head (1234x5678 came out wrong), so tools are off for this model"
+                "ツールを使わず暗算で答え、計算を間違えました（2026年9月20日 実機確認）。このモデルではツールを渡しません。"
               ]
             },
             {
@@ -2255,6 +2272,7 @@
       "developer": "DeepSeek",
       "origin": "overseas",
       "version": "R1",
+      "releasedAt": "2025-01-20",
       "parameterCount": 1500000000,
       "languages": [
         "ja",
@@ -2305,7 +2323,7 @@
               "platform": "android",
               "status": "verified",
               "knownIssues": [
-                "Answers Japanese prompts in Chinese (Japanese AI Score 24, translation 2); the reasoning it writes is folded away in Chat"
+                "日本語で質問しても中国語で答えることがあります。考えた内容はチャットでは折りたたんで表示します。"
               ]
             },
             {
@@ -2382,6 +2400,7 @@
       "developer": "Meta",
       "origin": "overseas",
       "version": "3.2",
+      "releasedAt": "2024-09-18",
       "parameterCount": 1200000000,
       "languages": [
         "ja",
@@ -2432,7 +2451,7 @@
               "platform": "android",
               "status": "verified",
               "knownIssues": [
-                "Tool calling measured 2026-09-20: writes the call as JSON in the reply instead of calling the tool, and llama.cpp then aborts the process (\"Unexpected empty grammar stack\"), so tools are off for this model"
+                "ツールを呼ばずに呼び出し用のJSONを本文に書き出し、そのあとアプリが強制終了することがあります（2026年9月20日 実機確認）。このモデルではツールを渡しません。"
               ]
             },
             {
@@ -2509,6 +2528,7 @@
       "developer": "Meta",
       "origin": "overseas",
       "version": "3.2",
+      "releasedAt": "2024-09-18",
       "parameterCount": 3200000000,
       "languages": [
         "ja",
@@ -2559,7 +2579,7 @@
               "platform": "android",
               "status": "verified",
               "knownIssues": [
-                "Tool calling measured 2026-09-20: calls the tool but then answers with fragments of the JSON call, so tools are off for this model"
+                "ツールは動きますが、そのあとの回答がJSONの断片になります（2026年9月20日 実機確認）。このモデルではツールを渡しません。"
               ]
             },
             {
