@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 32,
+  "revision": 33,
   "publishedAt": "2026-09-24T12:00:00Z",
   "models": [
     {
@@ -52,6 +52,7 @@
           ],
           "estimatedRamBytes": 1300000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.46,
           "kvCacheBytesPerToken": 12288,
           "files": [
             {
@@ -90,14 +91,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 49,
+          "overall": 50,
           "categories": {
-            "conversation": 44,
+            "conversation": 48,
             "keigo": 39,
-            "summary": 56,
-            "writing": 48,
-            "translation": 41,
-            "code": 64
+            "summary": 55,
+            "writing": 50,
+            "translation": 44,
+            "code": 63
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -105,22 +106,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 39,
+          "overall": 41,
           "categories": {
-            "reasoning": 13,
-            "math": 9,
-            "instruction": 68,
-            "code": 51,
-            "longInput": 53
+            "reasoning": 14,
+            "math": 14,
+            "instruction": 67,
+            "code": 52,
+            "longInput": 60
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -128,9 +129,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -187,6 +188,7 @@
           ],
           "estimatedRamBytes": 1700000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.76,
           "kvCacheBytesPerToken": 12288,
           "files": [
             {
@@ -221,12 +223,12 @@
         {
           "overall": 62,
           "categories": {
-            "conversation": 50,
+            "conversation": 55,
             "keigo": 50,
-            "summary": 62,
-            "writing": 61,
+            "summary": 58,
+            "writing": 60,
             "translation": 73,
-            "code": 77
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -234,9 +236,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -245,11 +247,11 @@
         {
           "overall": 60,
           "categories": {
-            "reasoning": 31,
+            "reasoning": 32,
             "math": 41,
-            "instruction": 74,
-            "code": 71,
-            "longInput": 82
+            "instruction": 73,
+            "code": 68,
+            "longInput": 87
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -257,9 +259,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -315,6 +317,7 @@
           ],
           "estimatedRamBytes": 800000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.81,
           "kvCacheBytesPerToken": 12288,
           "files": [
             {
@@ -330,7 +333,7 @@
               "runtime": "llamaCpp",
               "platform": "android",
               "status": "verified",
-              "referenceDecodeTokensPerSec": 19.8
+              "referenceDecodeTokensPerSec": 21.6
             },
             {
               "runtime": "llamaCpp",
@@ -354,6 +357,7 @@
           ],
           "estimatedRamBytes": 960000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.98,
           "kvCacheBytesPerToken": 12288,
           "files": [
             {
@@ -393,6 +397,7 @@
           ],
           "estimatedRamBytes": 1300000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.84,
           "kvCacheBytesPerToken": 12288,
           "files": [
             {
@@ -424,53 +429,9 @@
       ],
       "japaneseScores": [
         {
-          "overall": 50,
+          "overall": 31,
           "categories": {
-            "conversation": 41,
-            "keigo": 32,
-            "summary": 60,
-            "writing": 54,
-            "translation": 49,
-            "code": 65
-          },
-          "scoreVersion": "ja-score-1",
-          "modelVersion": "3.5",
-          "artifactId": "qwen3.5-0.8b-q4km-gguf",
-          "runtime": "llamaCpp",
-          "quantization": "Q4_K_M",
-          "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
-          "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
-          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
-        },
-        {
-          "overall": 28,
-          "categories": {
-            "conversation": 36,
-            "keigo": 26,
-            "summary": 47,
-            "writing": 31,
-            "translation": 0,
-            "code": 25
-          },
-          "scoreVersion": "ja-score-1",
-          "modelVersion": "3.5",
-          "artifactId": "qwen3.5-0.8b-vl-int8-litertlm",
-          "runtime": "liteRt",
-          "quantization": "INT8",
-          "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
-          "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
-          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
-        },
-        {
-          "overall": 30,
-          "categories": {
-            "conversation": 37,
+            "conversation": 39,
             "keigo": 24,
             "summary": 48,
             "writing": 30,
@@ -483,22 +444,66 @@
           "runtime": "liteRt",
           "quantization": "INT8",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 50,
+          "categories": {
+            "conversation": 42,
+            "keigo": 34,
+            "summary": 56,
+            "writing": 54,
+            "translation": 52,
+            "code": 64
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-0.8b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-17",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 28,
+          "categories": {
+            "conversation": 37,
+            "keigo": 26,
+            "summary": 49,
+            "writing": 31,
+            "translation": 0,
+            "code": 27
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-0.8b-vl-int8-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT8",
+          "evaluatedAt": "2026-09-18",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 19,
+          "overall": 20,
           "categories": {
             "reasoning": 13,
-            "math": 7,
+            "math": 9,
             "instruction": 23,
-            "code": 22,
-            "longInput": 31
+            "code": 23,
+            "longInput": 34
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -506,9 +511,30 @@
           "runtime": "liteRt",
           "quantization": "INT8",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 49,
+          "categories": {
+            "reasoning": 32,
+            "math": 43,
+            "instruction": 49,
+            "code": 56,
+            "longInput": 64
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-0.8b-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-24",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -612,12 +638,12 @@
         {
           "overall": 62,
           "categories": {
-            "conversation": 50,
+            "conversation": 55,
             "keigo": 50,
-            "summary": 62,
-            "writing": 61,
+            "summary": 58,
+            "writing": 60,
             "translation": 73,
-            "code": 77
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -625,22 +651,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 60,
+          "overall": 61,
           "categories": {
-            "reasoning": 31,
-            "math": 41,
-            "instruction": 74,
-            "code": 71,
-            "longInput": 82
+            "reasoning": 32,
+            "math": 43,
+            "instruction": 73,
+            "code": 69,
+            "longInput": 86
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -648,9 +674,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -1101,6 +1127,7 @@
           ],
           "estimatedRamBytes": 2580000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.82,
           "kvCacheBytesPerToken": 12288,
           "files": [
             {
@@ -1165,12 +1192,12 @@
         {
           "overall": 74,
           "categories": {
-            "conversation": 71,
-            "keigo": 75,
-            "summary": 76,
-            "writing": 69,
-            "translation": 73,
-            "code": 81
+            "conversation": 73,
+            "keigo": 70,
+            "summary": 75,
+            "writing": 71,
+            "translation": 74,
+            "code": 80
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -1178,22 +1205,22 @@
           "runtime": "liteRt",
           "quantization": "mixed",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 68,
+          "overall": 70,
           "categories": {
-            "reasoning": 29,
-            "math": 44,
-            "instruction": 94,
-            "code": 90,
-            "longInput": 82
+            "reasoning": 30,
+            "math": 49,
+            "instruction": 91,
+            "code": 88,
+            "longInput": 92
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -1201,9 +1228,9 @@
           "runtime": "liteRt",
           "quantization": "mixed",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -1258,6 +1285,7 @@
           ],
           "estimatedRamBytes": 490000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.37,
           "kvCacheBytesPerToken": 12288,
           "files": [
             {
@@ -1283,14 +1311,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 45,
+          "overall": 46,
           "categories": {
-            "conversation": 37,
-            "keigo": 26,
-            "summary": 55,
-            "writing": 34,
+            "conversation": 39,
+            "keigo": 28,
+            "summary": 54,
+            "writing": 35,
             "translation": 43,
-            "code": 77
+            "code": 76
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -1298,22 +1326,22 @@
           "runtime": "liteRt",
           "quantization": "mixed INT4",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 40,
+          "overall": 42,
           "categories": {
-            "reasoning": 14,
-            "math": 27,
-            "instruction": 60,
-            "code": 43,
-            "longInput": 56
+            "reasoning": 16,
+            "math": 28,
+            "instruction": 61,
+            "code": 44,
+            "longInput": 59
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -1321,9 +1349,9 @@
           "runtime": "liteRt",
           "quantization": "mixed INT4",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -1380,6 +1408,7 @@
           "estimatedRamBytes": 1300000000,
           "maxContext": 4096,
           "kvCacheBytesPerToken": 12288,
+          "japaneseCharsPerToken": 1.47,
           "files": [
             {
               "role": "weights",
@@ -1401,13 +1430,13 @@
       ],
       "japaneseScores": [
         {
-          "overall": 70,
+          "overall": 67,
           "categories": {
-            "conversation": 76,
-            "keigo": 55,
-            "summary": 78,
-            "writing": 75,
-            "translation": 67,
+            "conversation": 73,
+            "keigo": 51,
+            "summary": 71,
+            "writing": 73,
+            "translation": 64,
             "code": 71
           },
           "scoreVersion": "ja-score-1",
@@ -1416,22 +1445,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 60,
+          "overall": 62,
           "categories": {
             "reasoning": 17,
-            "math": 60,
-            "instruction": 69,
-            "code": 90,
-            "longInput": 64
+            "math": 62,
+            "instruction": 71,
+            "code": 87,
+            "longInput": 71
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5-202606",
@@ -1439,9 +1468,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -1509,6 +1538,7 @@
           "estimatedRamBytes": 2400000000,
           "maxContext": 4096,
           "kvCacheBytesPerToken": 16384,
+          "japaneseCharsPerToken": 3.18,
           "files": [
             {
               "role": "weights",
@@ -1591,6 +1621,7 @@
           ],
           "estimatedRamBytes": 1900000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.46,
           "accelerators": [
             "cpu"
           ],
@@ -1617,12 +1648,12 @@
         {
           "overall": 56,
           "categories": {
-            "conversation": 51,
-            "keigo": 39,
-            "summary": 59,
-            "writing": 55,
-            "translation": 58,
-            "code": 73
+            "conversation": 49,
+            "keigo": 41,
+            "summary": 55,
+            "writing": 56,
+            "translation": 61,
+            "code": 72
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -1630,22 +1661,22 @@
           "runtime": "liteRt",
           "quantization": "INT4",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 52,
+          "overall": 54,
           "categories": {
-            "reasoning": 23,
-            "math": 31,
-            "instruction": 70,
-            "code": 61,
-            "longInput": 77
+            "reasoning": 26,
+            "math": 34,
+            "instruction": 73,
+            "code": 60,
+            "longInput": 78
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -1653,9 +1684,9 @@
           "runtime": "liteRt",
           "quantization": "INT4",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -1709,6 +1740,7 @@
           ],
           "estimatedRamBytes": 800000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 2.39,
           "files": [
             {
               "role": "weights",
@@ -1742,12 +1774,12 @@
         {
           "overall": 55,
           "categories": {
-            "conversation": 53,
-            "keigo": 53,
-            "summary": 56,
-            "writing": 56,
+            "conversation": 55,
+            "keigo": 55,
+            "summary": 51,
+            "writing": 59,
             "translation": 39,
-            "code": 73
+            "code": 72
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -1755,22 +1787,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 27,
+          "overall": 29,
           "categories": {
             "reasoning": 21,
-            "math": 9,
-            "instruction": 29,
+            "math": 10,
+            "instruction": 32,
             "code": 36,
-            "longInput": 42
+            "longInput": 44
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -1778,9 +1810,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -1834,6 +1866,7 @@
           ],
           "estimatedRamBytes": 1400000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 2.51,
           "files": [
             {
               "role": "weights",
@@ -1867,12 +1900,12 @@
         {
           "overall": 58,
           "categories": {
-            "conversation": 71,
-            "keigo": 38,
-            "summary": 49,
-            "writing": 60,
-            "translation": 61,
-            "code": 71
+            "conversation": 65,
+            "keigo": 40,
+            "summary": 47,
+            "writing": 58,
+            "translation": 67,
+            "code": 69
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -1880,9 +1913,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -1892,9 +1925,9 @@
           "overall": 35,
           "categories": {
             "reasoning": 13,
-            "math": 17,
-            "instruction": 44,
-            "code": 60,
+            "math": 19,
+            "instruction": 46,
+            "code": 58,
             "longInput": 41
           },
           "scoreVersion": "ja-score-1",
@@ -1903,9 +1936,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -1959,6 +1992,7 @@
           ],
           "estimatedRamBytes": 2700000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 2.36,
           "files": [
             {
               "role": "weights",
@@ -1990,14 +2024,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 76,
+          "overall": 73,
           "categories": {
-            "conversation": 73,
+            "conversation": 71,
             "keigo": 81,
-            "summary": 81,
-            "writing": 72,
-            "translation": 78,
-            "code": 72
+            "summary": 71,
+            "writing": 68,
+            "translation": 75,
+            "code": 71
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -2005,22 +2039,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 55,
+          "overall": 56,
           "categories": {
-            "reasoning": 19,
-            "math": 31,
-            "instruction": 72,
-            "code": 77,
-            "longInput": 74
+            "reasoning": 22,
+            "math": 34,
+            "instruction": 76,
+            "code": 71,
+            "longInput": 77
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -2028,9 +2062,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2086,6 +2120,7 @@
           "estimatedRamBytes": 3500000000,
           "maxContext": 4096,
           "kvCacheBytesPerToken": 163840,
+          "japaneseCharsPerToken": 2.04,
           "files": [
             {
               "role": "weights",
@@ -2120,14 +2155,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 73,
+          "overall": 72,
           "categories": {
-            "conversation": 81,
-            "keigo": 65,
-            "summary": 72,
+            "conversation": 79,
+            "keigo": 66,
+            "summary": 64,
             "writing": 66,
-            "translation": 75,
-            "code": 77
+            "translation": 80,
+            "code": 76
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -2135,22 +2170,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 47,
+          "overall": 49,
           "categories": {
-            "reasoning": 22,
-            "math": 23,
-            "instruction": 64,
-            "code": 74,
-            "longInput": 50
+            "reasoning": 23,
+            "math": 30,
+            "instruction": 66,
+            "code": 73,
+            "longInput": 54
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -2158,9 +2193,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2214,6 +2249,7 @@
           ],
           "estimatedRamBytes": 1600000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.58,
           "files": [
             {
               "role": "weights",
@@ -2245,14 +2281,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 72,
+          "overall": 71,
           "categories": {
-            "conversation": 83,
-            "keigo": 61,
-            "summary": 72,
-            "writing": 62,
-            "translation": 68,
-            "code": 83
+            "conversation": 77,
+            "keigo": 62,
+            "summary": 68,
+            "writing": 66,
+            "translation": 71,
+            "code": 80
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "1.0",
@@ -2260,22 +2296,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q5_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 45,
+          "overall": 46,
           "categories": {
             "reasoning": 22,
-            "math": 21,
-            "instruction": 59,
-            "code": 63,
-            "longInput": 61
+            "math": 24,
+            "instruction": 61,
+            "code": 61,
+            "longInput": 64
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "1.0",
@@ -2283,9 +2319,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q5_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2339,6 +2375,7 @@
           ],
           "estimatedRamBytes": 1400000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.58,
           "files": [
             {
               "role": "weights",
@@ -2370,14 +2407,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 66,
+          "overall": 63,
           "categories": {
-            "conversation": 69,
-            "keigo": 71,
-            "summary": 59,
+            "conversation": 65,
+            "keigo": 67,
+            "summary": 55,
             "writing": 63,
-            "translation": 56,
-            "code": 76
+            "translation": 57,
+            "code": 72
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.0",
@@ -2385,22 +2422,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 46,
+          "overall": 47,
           "categories": {
             "reasoning": 16,
-            "math": 11,
-            "instruction": 69,
-            "code": 90,
-            "longInput": 42
+            "math": 13,
+            "instruction": 70,
+            "code": 86,
+            "longInput": 48
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.0",
@@ -2408,9 +2445,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2464,6 +2501,7 @@
           ],
           "estimatedRamBytes": 1200000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 3.07,
           "files": [
             {
               "role": "weights",
@@ -2502,7 +2540,7 @@
           "categories": {
             "conversation": 21,
             "keigo": 17,
-            "summary": 21,
+            "summary": 22,
             "writing": 25,
             "translation": 9,
             "code": 8
@@ -2513,9 +2551,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2536,9 +2574,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2593,6 +2631,7 @@
           ],
           "estimatedRamBytes": 3200000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.37,
           "files": [
             {
               "role": "weights",
@@ -2627,14 +2666,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 53,
+          "overall": 54,
           "categories": {
-            "conversation": 51,
+            "conversation": 53,
             "keigo": 52,
-            "summary": 67,
-            "writing": 57,
+            "summary": 65,
+            "writing": 60,
             "translation": 25,
-            "code": 68
+            "code": 67
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -2642,22 +2681,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 58,
+          "overall": 60,
           "categories": {
-            "reasoning": 14,
-            "math": 40,
-            "instruction": 69,
+            "reasoning": 16,
+            "math": 41,
+            "instruction": 71,
             "code": 91,
-            "longInput": 78
+            "longInput": 83
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -2665,9 +2704,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2721,6 +2760,7 @@
           ],
           "estimatedRamBytes": 2500000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.45,
           "files": [
             {
               "role": "weights",
@@ -2757,12 +2797,12 @@
         {
           "overall": 58,
           "categories": {
-            "conversation": 56,
-            "keigo": 43,
-            "summary": 67,
-            "writing": 56,
-            "translation": 51,
-            "code": 77
+            "conversation": 55,
+            "keigo": 46,
+            "summary": 60,
+            "writing": 57,
+            "translation": 54,
+            "code": 76
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -2770,22 +2810,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 61,
+          "overall": 62,
           "categories": {
-            "reasoning": 38,
-            "math": 42,
-            "instruction": 62,
-            "code": 88,
-            "longInput": 76
+            "reasoning": 37,
+            "math": 47,
+            "instruction": 66,
+            "code": 83,
+            "longInput": 77
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -2793,9 +2833,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2850,6 +2890,7 @@
           ],
           "estimatedRamBytes": 1600000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 2.59,
           "files": [
             {
               "role": "weights",
@@ -2899,22 +2940,22 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 17,
+          "overall": 18,
           "categories": {
-            "reasoning": 8,
-            "math": 21,
+            "reasoning": 7,
+            "math": 24,
             "instruction": 23,
             "code": 6,
-            "longInput": 29
+            "longInput": 31
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "R1",
@@ -2922,9 +2963,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -2979,6 +3020,7 @@
           ],
           "estimatedRamBytes": 1200000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.39,
           "files": [
             {
               "role": "weights",
@@ -3017,10 +3059,10 @@
           "categories": {
             "conversation": 40,
             "keigo": 31,
-            "summary": 54,
-            "writing": 47,
-            "translation": 29,
-            "code": 64
+            "summary": 53,
+            "writing": 48,
+            "translation": 31,
+            "code": 61
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.2",
@@ -3028,21 +3070,21 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
         {
-          "overall": 45,
+          "overall": 47,
           "categories": {
-            "reasoning": 14,
-            "math": 20,
-            "instruction": 57,
-            "code": 66,
+            "reasoning": 16,
+            "math": 23,
+            "instruction": 60,
+            "code": 64,
             "longInput": 70
           },
           "scoreVersion": "ja-score-1",
@@ -3051,9 +3093,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -3108,6 +3150,7 @@
           ],
           "estimatedRamBytes": 2600000000,
           "maxContext": 4096,
+          "japaneseCharsPerToken": 1.41,
           "files": [
             {
               "role": "weights",
@@ -3142,13 +3185,13 @@
       ],
       "japaneseScores": [
         {
-          "overall": 54,
+          "overall": 55,
           "categories": {
             "conversation": 55,
-            "keigo": 35,
-            "summary": 62,
-            "writing": 53,
-            "translation": 51,
+            "keigo": 36,
+            "summary": 58,
+            "writing": 56,
+            "translation": 59,
             "code": 68
           },
           "scoreVersion": "ja-score-1",
@@ -3157,9 +3200,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
@@ -3168,10 +3211,10 @@
         {
           "overall": 61,
           "categories": {
-            "reasoning": 16,
-            "math": 27,
-            "instruction": 83,
-            "code": 92,
+            "reasoning": 18,
+            "math": 29,
+            "instruction": 82,
+            "code": 91,
             "longInput": 87
           },
           "scoreVersion": "ja-score-1",
@@ -3180,9 +3223,9 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
+          "judgeModel": "claude-opus-5-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
