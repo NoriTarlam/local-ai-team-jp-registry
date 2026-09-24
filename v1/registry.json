@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 18,
-  "publishedAt": "2026-09-16T00:00:00Z",
+  "revision": 31,
+  "publishedAt": "2026-09-24T00:00:00Z",
   "models": [
     {
       "id": "qwen2.5-0.5b-instruct",
@@ -67,9 +67,12 @@
               "runtime": "llamaCpp",
               "platform": "android",
               "status": "verified",
-              "referenceDecodeTokensPerSec": 28.2,
+              "referenceDecodeTokensPerSec": 28.7,
               "knownIssues": [
-                "Pixel 6 では GPU に処理が渡らず、CPU で動きます。"
+                {
+                  "ja": "Pixel 6 では GPU に処理が渡らず、CPU で動きます。",
+                  "en": "On a Pixel 6 the work never reaches the GPU; it runs on the CPU."
+                }
               ]
             },
             {
@@ -199,7 +202,7 @@
               "runtime": "llamaCpp",
               "platform": "android",
               "status": "verified",
-              "referenceDecodeTokensPerSec": 7.1
+              "referenceDecodeTokensPerSec": 8.9
             },
             {
               "runtime": "llamaCpp",
@@ -327,7 +330,7 @@
               "runtime": "llamaCpp",
               "platform": "android",
               "status": "verified",
-              "referenceDecodeTokensPerSec": 17.0
+              "referenceDecodeTokensPerSec": 19.8
             },
             {
               "runtime": "llamaCpp",
@@ -368,7 +371,10 @@
               "status": "experimental",
               "referenceDecodeTokensPerSec": 10.7,
               "knownIssues": [
-                "この形式はシステムの指示を受け取れないため、アプリは最初の発言にまとめて渡します。その影響で、英訳の指示に従わず日本語で答えることがあります（同じモデルの GGUF 版のほうが日本語AIスコアは高く出ます）。"
+                {
+                  "ja": "この形式はシステムの指示を受け取れないため、アプリは最初の発言にまとめて渡します。その影響で、英訳の指示に従わず日本語で答えることがあります（同じモデルの GGUF 版のほうが日本語AIスコアは高く出ます）。",
+                  "en": "This format cannot take a system instruction, so the app folds it into the first message. As a result it may answer in Japanese when asked to translate into English (the GGUF build of the same model scores higher on the Japanese AI score)."
+                }
               ]
             }
           ],
@@ -404,7 +410,10 @@
               "status": "experimental",
               "referenceDecodeTokensPerSec": 10.7,
               "knownIssues": [
-                "この形式はシステムの指示を受け取れないため、アプリは最初の発言にまとめて渡します。その影響で、英訳の指示に従わず日本語で答えることがあります（同じモデルの GGUF 版のほうが日本語AIスコアは高く出ます）。"
+                {
+                  "ja": "この形式はシステムの指示を受け取れないため、アプリは最初の発言にまとめて渡します。その影響で、英訳の指示に従わず日本語で答えることがあります（同じモデルの GGUF 版のほうが日本語AIスコアは高く出ます）。",
+                  "en": "This format cannot take a system instruction, so the app folds it into the first message. As a result it may answer in Japanese when asked to translate into English (the GGUF build of the same model scores higher on the Japanese AI score)."
+                }
               ]
             }
           ],
@@ -578,9 +587,12 @@
               "runtime": "llamaCpp",
               "platform": "android",
               "status": "verified",
-              "referenceDecodeTokensPerSec": 11.6,
+              "referenceDecodeTokensPerSec": 8.9,
               "knownIssues": [
-                "Pixel 6 では、画像を付けると最初の返事まで17秒ほどかかります。"
+                {
+                  "ja": "Pixel 6 では、画像を付けると最初の返事まで17秒ほどかかります。",
+                  "en": "On a Pixel 6, attaching an image delays the first reply by about 17 seconds."
+                }
               ]
             },
             {
@@ -790,6 +802,258 @@
       ]
     },
     {
+      "id": "qwen3-tts-1.7b",
+      "name": {
+        "ja": "Qwen3-TTS 1.7B（読み上げ）",
+        "en": "Qwen3-TTS 1.7B (speech)"
+      },
+      "description": {
+        "ja": "答えを声に出して読む音声合成モデル。日本語に対応し、端末の中だけで話します。",
+        "en": "Reads answers aloud. Supports Japanese and speaks entirely on the device."
+      },
+      "developer": "Qwen (Alibaba Cloud)",
+      "origin": "overseas",
+      "version": "3",
+      "releasedAt": "2026-02-20",
+      "parameterCount": 1700000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh",
+        "ko",
+        "de",
+        "fr",
+        "ru",
+        "pt",
+        "es",
+        "it"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "tags": [
+        "recommended"
+      ],
+      "purposes": [
+        "speech"
+      ],
+      "artifacts": [
+        {
+          "id": "qwen3-tts-1.7b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "speechSynthesis",
+            "audio"
+          ],
+          "estimatedRamBytes": 2600000000,
+          "maxContext": 4096,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/ggml-org/Qwen3-TTS-12Hz-1.7B-Base-GGUF/resolve/ca27d74bc954b73dadab5b71ca265d87fc861a7c/Qwen3-TTS-12Hz-1.7B-Base-Q4_K_M.gguf",
+              "sizeBytes": 1035965280,
+              "sha256": "8d18c94acb2addd042f97da63c98be144eafa76d0d9495177eab65130cf85129"
+            },
+            {
+              "role": "projector",
+              "fileName": "mmproj.gguf",
+              "url": "https://huggingface.co/ggml-org/Qwen3-TTS-12Hz-1.7B-Base-GGUF/resolve/ca27d74bc954b73dadab5b71ca265d87fc861a7c/mmproj-Qwen3-TTS-12Hz-1.7B-Base-Q8_0.gguf",
+              "sizeBytes": 446422912,
+              "sha256": "6fd65188839bcd6ecc91b277ad471e22a0edfada4699a0fe82f1165c18cfcce2"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whisper-tiny",
+      "name": {
+        "ja": "Whisper Tiny（文字起こし）",
+        "en": "Whisper Tiny (transcription)"
+      },
+      "description": {
+        "ja": "OpenAI の音声認識モデル。小さくて速く、多言語に対応します。日本語は Qwen3-ASR のほうが得意です。",
+        "en": "OpenAI's recognizer. Small, fast and multilingual; Qwen3-ASR is better at Japanese."
+      },
+      "developer": "OpenAI",
+      "origin": "overseas",
+      "version": "1",
+      "releasedAt": "2022-09-21",
+      "parameterCount": 39000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh",
+        "ko",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "tags": [
+        "fast"
+      ],
+      "purposes": [
+        "speech"
+      ],
+      "artifacts": [
+        {
+          "id": "whisper-tiny-f32-litert",
+          "format": "tflite",
+          "quantization": "F32",
+          "capabilities": [
+            "speechRecognition",
+            "audio"
+          ],
+          "estimatedRamBytes": 700000000,
+          "maxContext": 448,
+          "asrPreset": "whisperTiny",
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "whisper_tiny_30s_f32.tflite",
+              "url": "https://huggingface.co/litert-community/whisper-tiny/resolve/d92f0ee1d4316ab0099add38d67ac5f2cc31c8fd/whisper_tiny_30s_f32.tflite",
+              "sizeBytes": 150979184,
+              "sha256": "0c8f0e2a1855909a0c027b4ac3c586fdd299e2b47bf1a4fdab51191bca1e0e89"
+            },
+            {
+              "role": "tokenizer",
+              "fileName": "tokenizer.json",
+              "url": "https://huggingface.co/openai/whisper-tiny/resolve/169d4a4341b33bc18d8881c4b69c2e104e1cc0af/tokenizer.json",
+              "sizeBytes": 2480466,
+              "sha256": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "verified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whisper-base",
+      "name": {
+        "ja": "Whisper Base（書き起こし）",
+        "en": "Whisper Base (transcription)"
+      },
+      "description": {
+        "ja": "OpenAI の音声認識モデル。Tiny より一回り大きく、そのぶん聞き取りが正確です。多言語に対応します。",
+        "en": "OpenAI's recognizer, one size up from Tiny and correspondingly more accurate. Multilingual."
+      },
+      "developer": "OpenAI",
+      "origin": "overseas",
+      "version": "1",
+      "releasedAt": "2022-09-21",
+      "parameterCount": 74000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh",
+        "ko",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "ru"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "tags": [],
+      "purposes": [
+        "speech"
+      ],
+      "artifacts": [
+        {
+          "id": "whisper-base-f32-litert",
+          "format": "tflite",
+          "quantization": "F32",
+          "capabilities": [
+            "speechRecognition",
+            "audio"
+          ],
+          "estimatedRamBytes": 1000000000,
+          "maxContext": 448,
+          "asrPreset": "whisperTiny",
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "whisper_base_30s_f32.tflite",
+              "url": "https://huggingface.co/litert-community/whisper-base/resolve/ba2c613646edc2b72f5a51fa0b5b0b322e436101/whisper_base_30s_f32.tflite",
+              "sizeBytes": 290082636,
+              "sha256": "83f90febae74f6db2b671d792ce844f93de5dfa6d6743cdba8c7a208c8dd708a"
+            },
+            {
+              "role": "tokenizer",
+              "fileName": "tokenizer.json",
+              "url": "https://huggingface.co/openai/whisper-base/resolve/e37978b90ca9030d5170a5c07aadb050351a65bb/tokenizer.json",
+              "sizeBytes": 2480466,
+              "sha256": "27fc476bfe7f17299480be2273fc0608e4d5a99aba2ab5dec5374b4482d1a566"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "experimental",
+              "knownIssues": [
+                {
+                  "ja": "Pixel 6 で日本語の音声を聞かせると、書き起こさずに英訳して返しました（2026-09-24）。認識の言語を日本語に固定する手段がいまの実行環境に無いため、日本語の書き起こしには使えません。",
+                  "en": "On a Pixel 6 it translated Japanese speech into English instead of transcribing it (2026-09-24). The current runtime offers no way to fix the language to Japanese, so it cannot be used for Japanese transcription."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "gemma-4-e2b",
       "name": {
         "ja": "Gemma 4 E2B",
@@ -852,7 +1116,7 @@
               "runtime": "liteRt",
               "platform": "android",
               "status": "verified",
-              "referenceDecodeTokensPerSec": 9.9
+              "referenceDecodeTokensPerSec": 9.8
             }
           ],
           "accelerators": [
@@ -885,7 +1149,10 @@
               "platform": "android",
               "status": "experimental",
               "knownIssues": [
-                "Pixel 6（Mali-G78）では、このGPU用ファイルは読み込みに失敗します（2026年9月19日 実機確認）。CPU用ファイルは問題なく動きます。"
+                {
+                  "ja": "Pixel 6（Mali-G78）では、このGPU用ファイルは読み込みに失敗します（2026年9月19日 実機確認）。CPU用ファイルは問題なく動きます。",
+                  "en": "On a Pixel 6 (Mali-G78) this GPU build fails to load (checked on the device on 19 Sep 2026). The CPU build works fine."
+                }
               ]
             }
           ],
@@ -1006,7 +1273,7 @@
               "runtime": "liteRt",
               "platform": "android",
               "status": "verified",
-              "referenceDecodeTokensPerSec": 21.8
+              "referenceDecodeTokensPerSec": 20.3
             }
           ],
           "accelerators": [
@@ -1063,18 +1330,18 @@
       ]
     },
     {
-      "id": "lfm2.5-1.2b-jp",
+      "id": "lfm2.5-1.2b-jp-202606",
       "name": {
-        "ja": "LFM2.5 1.2B JP",
-        "en": "LFM2.5 1.2B JP"
+        "ja": "LFM2.5 1.2B JP (202606)",
+        "en": "LFM2.5 1.2B JP (202606)"
       },
       "description": {
-        "ja": "日本語向けに調整された小型モデルです。LiteRT-LM 用で、ダウンロードは約 736MB です。売上の大きい組織は商用利用ができないライセンスです。",
-        "en": "A small model tuned for Japanese, for LiteRT-LM (about 736 MB). Its license bars commercial use by larger organizations."
+        "ja": "日本語向けに調整された小型モデルの2026年6月版です。llama.cpp 用の GGUF で、ダウンロードは約 697MB です。売上の大きい組織は商用利用ができないライセンスです。",
+        "en": "The June 2026 build of the small model tuned for Japanese, as GGUF for llama.cpp (about 697 MB). Its license bars commercial use by larger organizations."
       },
       "developer": "Liquid AI",
       "origin": "overseas",
-      "version": "2.5",
+      "version": "2.5-202606",
       "releasedAt": "2026-05-26",
       "parameterCount": 1200000000,
       "languages": [
@@ -1082,6 +1349,7 @@
         "en"
       ],
       "tags": [
+        "recommended",
         "fast"
       ],
       "purposes": [
@@ -1091,7 +1359,7 @@
         "id": "lfm-open-license-1.0",
         "name": "LFM Open License",
         "version": "1.0",
-        "url": "https://huggingface.co/litert-community/LFM2.5-1.2B-JP/blob/main/LICENSE",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-JP-202606-GGUF/blob/main/LICENSE",
         "commercialUse": "restricted",
         "redistribution": true,
         "modification": true,
@@ -1102,109 +1370,52 @@
       },
       "artifacts": [
         {
-          "id": "lfm2.5-1.2b-jp-int4-litertlm",
-          "format": "litertlm",
-          "quantization": "INT4",
+          "id": "lfm2.5-1.2b-jp-202606-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
           "capabilities": [
             "text",
             "streaming"
           ],
-          "estimatedRamBytes": 730000000,
+          "estimatedRamBytes": 1300000000,
           "maxContext": 4096,
           "kvCacheBytesPerToken": 12288,
           "files": [
             {
               "role": "weights",
-              "fileName": "model.litertlm",
-              "url": "https://huggingface.co/litert-community/LFM2.5-1.2B-JP/resolve/8bd3bb3c434e47b12d4789608e100bf8144d5ec5/LFM2.5-1.2B-JP_int4.litertlm",
-              "sizeBytes": 736015744,
-              "sha256": "97909ba9e275470b69a202b506fa347a2b92dfef69ac7048f771e375319dee2e"
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-JP-202606-GGUF/resolve/448ba3f7d408c2f5c32cec8038612f7c1ed9f054/LFM2.5-1.2B-JP-202606-Q4_K_M.gguf",
+              "sizeBytes": 730894624,
+              "sha256": "23d4d4060cb06463563f6e8644bbbc7d1cb0bfe4cf21d5edf3ccc6f515fd44bb"
             }
           ],
           "support": [
             {
-              "runtime": "liteRt",
+              "runtime": "llamaCpp",
               "platform": "android",
               "status": "verified",
-              "referenceDecodeTokensPerSec": 14.6
+              "referenceDecodeTokensPerSec": 16.8
             }
-          ],
-          "accelerators": [
-            "cpu"
-          ]
-        },
-        {
-          "id": "lfm2.5-1.2b-jp-int4-gpu-litertlm",
-          "format": "litertlm",
-          "quantization": "INT4",
-          "capabilities": [
-            "text",
-            "streaming"
-          ],
-          "estimatedRamBytes": 730000000,
-          "maxContext": 4096,
-          "kvCacheBytesPerToken": 12288,
-          "files": [
-            {
-              "role": "weights",
-              "fileName": "model.litertlm",
-              "url": "https://huggingface.co/litert-community/LFM2.5-1.2B-JP/resolve/8bd3bb3c434e47b12d4789608e100bf8144d5ec5/LFM2.5-1.2B-JP_int4_gpu.litertlm",
-              "sizeBytes": 736220768,
-              "sha256": "2c826a9cdeefc614c9b7de1d1c5565c9a64f704e5f3291ad2cd5d7da396790d5"
-            }
-          ],
-          "support": [
-            {
-              "runtime": "liteRt",
-              "platform": "android",
-              "status": "verified",
-              "referenceDecodeTokensPerSec": 15.8
-            }
-          ],
-          "accelerators": [
-            "gpu"
           ]
         }
       ],
       "japaneseScores": [
         {
-          "overall": 62,
+          "overall": 70,
           "categories": {
-            "conversation": 48,
-            "keigo": 58,
-            "summary": 65,
-            "writing": 56,
-            "translation": 75,
-            "code": 68
+            "conversation": 76,
+            "keigo": 55,
+            "summary": 78,
+            "writing": 75,
+            "translation": 67,
+            "code": 71
           },
           "scoreVersion": "ja-score-1",
-          "modelVersion": "2.5",
-          "artifactId": "lfm2.5-1.2b-jp-int4-litertlm",
-          "runtime": "liteRt",
-          "quantization": "INT4",
-          "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
-          "evalSet": "ja-eval-v1",
-          "judgeModel": "claude-opus-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
-          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
-        },
-        {
-          "overall": 62,
-          "categories": {
-            "conversation": 61,
-            "keigo": 48,
-            "summary": 67,
-            "writing": 56,
-            "translation": 71,
-            "code": 68
-          },
-          "scoreVersion": "ja-score-1",
-          "modelVersion": "2.5",
-          "artifactId": "lfm2.5-1.2b-jp-int4-gpu-litertlm",
-          "runtime": "liteRt",
-          "quantization": "INT4",
-          "evaluatedAt": "2026-09-20",
+          "modelVersion": "2.5-202606",
+          "artifactId": "lfm2.5-1.2b-jp-202606-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-24",
           "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5",
@@ -1214,46 +1425,113 @@
       ],
       "capabilityScores": [
         {
-          "overall": 55,
+          "overall": 60,
           "categories": {
-            "reasoning": 21,
-            "math": 40,
-            "instruction": 81,
-            "code": 77,
-            "longInput": 58
-          },
-          "scoreVersion": "ja-score-1",
-          "modelVersion": "2.5",
-          "artifactId": "lfm2.5-1.2b-jp-int4-litertlm",
-          "runtime": "liteRt",
-          "quantization": "INT4",
-          "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
-          "evalSet": "core-eval-v1",
-          "judgeModel": "claude-opus-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
-          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
-        },
-        {
-          "overall": 59,
-          "categories": {
-            "reasoning": 21,
-            "math": 44,
-            "instruction": 83,
-            "code": 81,
+            "reasoning": 17,
+            "math": 60,
+            "instruction": 69,
+            "code": 90,
             "longInput": 64
           },
           "scoreVersion": "ja-score-1",
-          "modelVersion": "2.5",
-          "artifactId": "lfm2.5-1.2b-jp-int4-gpu-litertlm",
-          "runtime": "liteRt",
-          "quantization": "INT4",
-          "evaluatedAt": "2026-09-20",
+          "modelVersion": "2.5-202606",
+          "artifactId": "lfm2.5-1.2b-jp-202606-q4km-gguf",
+          "runtime": "llamaCpp",
+          "quantization": "Q4_K_M",
+          "evaluatedAt": "2026-09-24",
           "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5",
           "device": "Google Pixel 6 / Android 17 (API 37)",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        }
+      ]
+    },
+    {
+      "id": "lfm2.5-2.6b",
+      "name": {
+        "ja": "LFM2.5 2.6B",
+        "en": "LFM2.5 2.6B"
+      },
+      "description": {
+        "ja": "端末で動かすことを前提に作られた多言語モデルです。日本語を含む16言語に対応し、いまのカタログでは大きめの部類に入ります。ダウンロードは約 1.6GB です。売上の大きい組織は商用利用ができないライセンスです。",
+        "en": "A multilingual model built for on-device use, covering 16 languages including Japanese, and one of the larger models in this catalog (about 1.6 GB). Its license bars commercial use by larger organizations."
+      },
+      "developer": "Liquid AI",
+      "origin": "overseas",
+      "version": "2.5",
+      "releasedAt": "2026-07-28",
+      "parameterCount": 2600000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh",
+        "ko",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "ru",
+        "ar",
+        "hi",
+        "id",
+        "pl",
+        "th",
+        "vi"
+      ],
+      "tags": [],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "lfm-open-license-1.0",
+        "name": "LFM Open License",
+        "version": "1.0",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B-GGUF/blob/main/LICENSE",
+        "commercialUse": "restricted",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": true,
+        "reviewed": true,
+        "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。"
+      },
+      "artifacts": [
+        {
+          "id": "lfm2.5-2.6b-q4km-gguf",
+          "format": "gguf",
+          "quantization": "Q4_K_M",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2400000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 16384,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B-GGUF/resolve/e7caca5d835a3901a8e0d63e94009429bafafdfc/LFM2.5-2.6B-Q4_K_M.gguf",
+              "sizeBytes": 1674455040,
+              "sha256": "02a8b7e17487d326e46d68ce0ba24211e1b80a14c4cd0597fa73c1cd697f52ed"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "experimental",
+              "referenceDecodeTokensPerSec": 7.9,
+              "knownIssues": [
+                {
+                  "ja": "必ず英語で考えてから答える推論専用のモデルで、考える部分を止められません。Pixel 6（約8 tok/s）では、日本語の評価30問のすべてで考えている途中に上限に達し、答えまで届きませんでした（2026-09-24）。",
+                  "en": "A reasoning-only model that always thinks in English before answering, and the thinking cannot be switched off. On a Pixel 6 (about 8 tok/s) it hit the length limit mid-thought on all 30 Japanese evaluation items and never reached an answer (2026-09-24)."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1318,7 +1596,8 @@
             {
               "runtime": "llamaCpp",
               "platform": "android",
-              "status": "verified"
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 26.8
             },
             {
               "runtime": "llamaCpp",
@@ -1442,7 +1721,8 @@
             {
               "runtime": "llamaCpp",
               "platform": "android",
-              "status": "verified"
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 13.8
             },
             {
               "runtime": "llamaCpp",
@@ -1566,7 +1846,8 @@
             {
               "runtime": "llamaCpp",
               "platform": "android",
-              "status": "verified"
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 6.6
             },
             {
               "runtime": "llamaCpp",
@@ -1690,7 +1971,8 @@
             {
               "runtime": "llamaCpp",
               "platform": "android",
-              "status": "verified"
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 10.5
             },
             {
               "runtime": "llamaCpp",
@@ -1814,7 +2096,8 @@
             {
               "runtime": "llamaCpp",
               "platform": "android",
-              "status": "verified"
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 12.9
             },
             {
               "runtime": "llamaCpp",
@@ -1941,7 +2224,8 @@
               "status": "experimental",
               "knownIssues": [
                 "このファイルは会話形式の設定が合っておらず、回答が空になったり途中で止まったりします（2026年9月19日 実機確認）。"
-              ]
+              ],
+              "referenceDecodeTokensPerSec": 15.9
             },
             {
               "runtime": "llamaCpp",
@@ -2069,7 +2353,8 @@
               "status": "verified",
               "knownIssues": [
                 "電卓は使えますが、日付を聞くと時計を使わずに「答えられない」と返します（2026年9月20日 実機確認）。"
-              ]
+              ],
+              "referenceDecodeTokensPerSec": 5.2
             },
             {
               "runtime": "llamaCpp",
@@ -2196,7 +2481,8 @@
               "status": "verified",
               "knownIssues": [
                 "ツールを使わず暗算で答え、計算を間違えました（2026年9月20日 実機確認）。このモデルではツールを渡しません。"
-              ]
+              ],
+              "referenceDecodeTokensPerSec": 6.7
             },
             {
               "runtime": "llamaCpp",
@@ -2324,7 +2610,8 @@
               "status": "verified",
               "knownIssues": [
                 "日本語で質問しても中国語で答えることがあります。考えた内容はチャットでは折りたたんで表示します。"
-              ]
+              ],
+              "referenceDecodeTokensPerSec": 11.9
             },
             {
               "runtime": "llamaCpp",
@@ -2452,7 +2739,8 @@
               "status": "verified",
               "knownIssues": [
                 "ツールを呼ばずに呼び出し用のJSONを本文に書き出し、そのあとアプリが強制終了することがあります（2026年9月20日 実機確認）。このモデルではツールを渡しません。"
-              ]
+              ],
+              "referenceDecodeTokensPerSec": 14.8
             },
             {
               "runtime": "llamaCpp",
@@ -2580,7 +2868,8 @@
               "status": "verified",
               "knownIssues": [
                 "ツールは動きますが、そのあとの回答がJSONの断片になります（2026年9月20日 実機確認）。このモデルではツールを渡しません。"
-              ]
+              ],
+              "referenceDecodeTokensPerSec": 6.3
             },
             {
               "runtime": "llamaCpp",
@@ -2642,7 +2931,218 @@
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
+    },
+    {
+      "id": "ruri-v3-30m",
+      "name": {
+        "ja": "Ruri v3 30M（埋め込み）",
+        "en": "Ruri v3 30M (embedding)"
+      },
+      "description": {
+        "ja": "日本語に特化した埋め込みモデル。文書ナレッジの検索に使います。36.7M と小さく、端末内でも素早く索引を作れます。",
+        "en": "Japanese-specialised text embedding model for searching the document knowledge base. At 36.7M parameters it indexes quickly on the device."
+      },
+      "developer": "cl-nagoya (名古屋大学)",
+      "origin": "domestic",
+      "version": "3",
+      "parameterCount": 36700000,
+      "languages": [
+        "ja",
+        "en"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "tags": [
+        "japanese",
+        "fast"
+      ],
+      "purposes": [
+        "embedding",
+        "search"
+      ],
+      "artifacts": [
+        {
+          "id": "ruri-v3-30m-q8-gguf",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "capabilities": [
+            "embedding"
+          ],
+          "estimatedRamBytes": 400000000,
+          "maxContext": 8192,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/keisuke-miyako/ruri-v3-30m-gguf-q8_0/resolve/df6ff05b83d4804b9f4ef2e7cdb8c343475e1092/ruri-v3-30m-Q8_0.gguf",
+              "sizeBytes": 41466592,
+              "sha256": "97531b21511fafc3d4b41cb933b510c59a110a25310600ac601cc2f080ce6664"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "knownIssues": [
+                "ModernBERT 系のため、llamadart が使う llama.cpp のビルドで読めるかどうかを実機で確認するまで experimental。"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multilingual-e5-small",
+      "name": {
+        "ja": "multilingual-e5-small（埋め込み）",
+        "en": "multilingual-e5-small (embedding)"
+      },
+      "description": {
+        "ja": "多言語の埋め込みモデル。文書ナレッジの検索に使います。BERT 系で、どの端末でも確実に動きます。",
+        "en": "Multilingual text embedding model for searching the document knowledge base. A BERT model, so it runs reliably everywhere."
+      },
+      "developer": "Microsoft (intfloat)",
+      "origin": "overseas",
+      "version": "1",
+      "parameterCount": 118000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh",
+        "ko"
+      ],
+      "license": {
+        "id": "mit",
+        "name": "MIT License",
+        "version": "1.0",
+        "url": "https://opensource.org/license/mit",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "tags": [
+        "recommended",
+        "fast"
+      ],
+      "purposes": [
+        "embedding",
+        "search"
+      ],
+      "artifacts": [
+        {
+          "id": "multilingual-e5-small-q8-gguf",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "capabilities": [
+            "embedding"
+          ],
+          "estimatedRamBytes": 500000000,
+          "maxContext": 512,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.gguf",
+              "url": "https://huggingface.co/keisuke-miyako/multilingual-e5-small-gguf-q8_0/resolve/e1da94460f223e3204e75dfe51350e5491c879d4/multilingual-e5-small-Q8_0.gguf",
+              "sizeBytes": 131953504,
+              "sha256": "0d5a5a0b0ad84faad6357a6145e769b0661f0efbf53acf74598afc34dab454f4"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "llamaCpp",
+              "platform": "android",
+              "status": "verified",
+              "knownIssues": [
+                "実機で確認するまで experimental。"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sd-turbo",
+      "name": {
+        "ja": "SD-Turbo（画像生成）",
+        "en": "SD-Turbo (image generation)"
+      },
+      "description": {
+        "ja": "少ないステップで絵を描くモデル。端末内で完結しますが、重い処理です。Pixel 6 実測で 256×256・2ステップが約60秒、512×512・4ステップが約5分（ピーク約3.5GB、CPU 76℃）。端末が冷えていて充電中のときだけ動きます。",
+        "en": "Draws pictures in a few steps, entirely on the device, but it is heavy work. Measured on a Pixel 6: 256×256 at 2 steps takes about 60 s; 512×512 at 4 steps about 5 minutes."
+      },
+      "developer": "Stability AI",
+      "origin": "overseas",
+      "version": "1",
+      "parameterCount": 1000000000,
+      "languages": [
+        "en"
+      ],
+      "license": {
+        "id": "stabilityai-community",
+        "name": "Stability AI Community License Agreement",
+        "version": "1.0",
+        "url": "https://huggingface.co/stabilityai/sd-turbo/blob/main/LICENSE.md",
+        "commercialUse": "restricted",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": true,
+        "notice": "年間収益100万ドル未満の組織は商用利用できます（Stability AI への登録が必要）。100万ドル以上の場合は別途エンタープライズ契約が必要です。配布時は「Powered by Stability AI」の表示が要ります。このモデルを使って基盤生成AIモデルを作る・改良することは禁止されています。",
+        "reviewed": true
+      },
+      "tags": [
+        "heavy"
+      ],
+      "purposes": [
+        "image"
+      ],
+      "artifacts": [
+        {
+          "id": "sd-turbo-q8-gguf",
+          "format": "gguf",
+          "quantization": "Q8_0",
+          "capabilities": [
+            "imageGeneration"
+          ],
+          "estimatedRamBytes": 1900000000,
+          "maxContext": 77,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "sd_turbo.gguf",
+              "url": "https://huggingface.co/Green-Sky/SD-Turbo-GGUF/resolve/19a31586d02d64a73b4419bc193b3ecfaf38e1f0/sd_turbo-f16-q8_0.gguf",
+              "sizeBytes": 2023745376,
+              "sha256": "d50be7655f0a554cf8041c145d88b210bd5f3c545423119dee62ae08cae51580"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "stableDiffusionCpp",
+              "platform": "android",
+              "status": "verified",
+              "minRamBytes": 7000000000,
+              "knownIssues": [
+                "CPUのみ。1枚に数十秒〜数分かかり、発熱します。"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
-  "updatedAt": "2026-09-18"
+  "updatedAt": "2026-09-24T00:00:00Z"
 }
