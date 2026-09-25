@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 33,
-  "publishedAt": "2026-09-24T12:00:00Z",
+  "revision": 34,
+  "publishedAt": "2026-09-25T12:00:00Z",
   "models": [
     {
       "id": "qwen2.5-0.5b-instruct",
@@ -71,8 +71,8 @@
               "referenceDecodeTokensPerSec": 28.7,
               "knownIssues": [
                 {
-                  "ja": "Pixel 6 では GPU に処理が渡らず、CPU で動きます。",
-                  "en": "On a Pixel 6 the work never reaches the GPU; it runs on the CPU."
+                  "ja": "検証した端末では GPU に処理が渡らず、CPU で動きます。",
+                  "en": "On the test device the work never reaches the GPU; it runs on the CPU."
                 }
               ]
             },
@@ -106,10 +106,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -129,10 +129,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -236,10 +236,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -259,10 +259,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -444,10 +444,10 @@
           "runtime": "liteRt",
           "quantization": "INT8",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         },
         {
@@ -466,10 +466,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         },
         {
@@ -488,10 +488,10 @@
           "runtime": "liteRt",
           "quantization": "INT8",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -511,10 +511,10 @@
           "runtime": "liteRt",
           "quantization": "INT8",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         },
         {
@@ -532,10 +532,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -616,8 +616,8 @@
               "referenceDecodeTokensPerSec": 8.9,
               "knownIssues": [
                 {
-                  "ja": "Pixel 6 では、画像を付けると最初の返事まで17秒ほどかかります。",
-                  "en": "On a Pixel 6, attaching an image delays the first reply by about 17 seconds."
+                  "ja": "検証した端末では、画像を付けると最初の返事まで17秒ほどかかります。",
+                  "en": "On the test device, attaching an image delays the first reply by about 17 seconds."
                 }
               ]
             },
@@ -651,10 +651,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -674,10 +674,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -689,8 +689,8 @@
         "en": "Qwen3-ASR 0.6B (speech recognition)"
       },
       "description": {
-        "ja": "音声入力用の音声認識モデル。日本語に対応し、声を端末内で文字にします。",
-        "en": "Speech recognition for voice input. Supports Japanese and transcribes on the device."
+        "ja": "軽くて速い音声認識モデル。人の日本語10文を実機で聞き取らせたところ、文字の誤りは約7%でした（1.7B は約3%）。句読点も付きます。10秒の音声に約5秒です。",
+        "en": "Light, fast speech recognition. On ten sentences of human Japanese speech on a real device it got about 7% of characters wrong (1.7B about 3%), with punctuation. About 5 s for 10 s of speech."
       },
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
@@ -762,8 +762,8 @@
         "en": "Qwen3-ASR 1.7B (speech recognition)"
       },
       "description": {
-        "ja": "精度を重視した音声認識モデル。0.6B より重く、認識に時間がかかります。",
-        "en": "Higher-accuracy speech recognition; heavier and slower than 0.6B."
+        "ja": "この中でいちばん正確な音声認識モデル。人の日本語10文を実機で聞き取らせたところ、文字の誤りは約3%でした（0.6B は約7%、Android 標準は約8%）。句読点も付きます。0.6B より重く、10秒の音声に約9秒かかります。",
+        "en": "The most accurate recognizer here. On ten sentences of human Japanese speech on a real device it got about 3% of characters wrong (0.6B about 7%, Android's own about 8%), with punctuation. Heavier than 0.6B: about 9 s for 10 s of speech."
       },
       "developer": "Qwen (Alibaba Cloud)",
       "origin": "overseas",
@@ -916,8 +916,8 @@
         "en": "Whisper Tiny (transcription)"
       },
       "description": {
-        "ja": "OpenAI の音声認識モデル。小さくて速く、多言語に対応します。日本語は Qwen3-ASR のほうが得意です。",
-        "en": "OpenAI's recognizer. Small, fast and multilingual; Qwen3-ASR is better at Japanese."
+        "ja": "OpenAI の音声認識モデル。小さくて速いものの、日本語の音声は聞き取れません（英語の無関係な文を返します）。日本語には Qwen3-ASR を使ってください。",
+        "en": "OpenAI's recognizer. Small and fast, but it cannot transcribe Japanese (it returns unrelated English). Use Qwen3-ASR for Japanese."
       },
       "developer": "OpenAI",
       "origin": "overseas",
@@ -986,7 +986,13 @@
             {
               "runtime": "liteRt",
               "platform": "android",
-              "status": "verified"
+              "status": "experimental",
+              "knownIssues": [
+                {
+                  "ja": "人の日本語の音声10文を実機で聞き取らせたところ、10文とも日本語ではなく、内容と関係のない英語の文を返しました（2026-09-25）。いまの実行環境では認識の言語を日本語に固定できないため、日本語の音声入力には使えません。",
+                  "en": "On ten sentences of human Japanese speech on a real device it returned unrelated English sentences for all ten (2026-09-25). The current runtime cannot fix the language to Japanese, so it cannot be used for Japanese voice input."
+                }
+              ]
             }
           ]
         }
@@ -1070,8 +1076,8 @@
               "status": "experimental",
               "knownIssues": [
                 {
-                  "ja": "Pixel 6 で日本語の音声を聞かせると、書き起こさずに英訳して返しました（2026-09-24）。認識の言語を日本語に固定する手段がいまの実行環境に無いため、日本語の書き起こしには使えません。",
-                  "en": "On a Pixel 6 it translated Japanese speech into English instead of transcribing it (2026-09-24). The current runtime offers no way to fix the language to Japanese, so it cannot be used for Japanese transcription."
+                  "ja": "実機で日本語の音声を聞かせると、書き起こさずに英訳して返しました（2026-09-24）。認識の言語を日本語に固定する手段がいまの実行環境に無いため、日本語の書き起こしには使えません。",
+                  "en": "On the test device it translated Japanese speech into English instead of transcribing it (2026-09-24). The current runtime offers no way to fix the language to Japanese, so it cannot be used for Japanese transcription."
                 }
               ]
             }
@@ -1177,8 +1183,8 @@
               "status": "experimental",
               "knownIssues": [
                 {
-                  "ja": "Pixel 6（Mali-G78）では、このGPU用ファイルは読み込みに失敗します（2026年9月19日 実機確認）。CPU用ファイルは問題なく動きます。",
-                  "en": "On a Pixel 6 (Mali-G78) this GPU build fails to load (checked on the device on 19 Sep 2026). The CPU build works fine."
+                  "ja": "Mali-G78 の GPU を積んだ端末では、このGPU用ファイルは読み込みに失敗します（2026年9月19日 実機確認）。CPU用ファイルは問題なく動きます。",
+                  "en": "On a device with a Mali-G78 GPU this GPU build fails to load (checked on the device on 19 Sep 2026). The CPU build works fine."
                 }
               ]
             }
@@ -1205,10 +1211,10 @@
           "runtime": "liteRt",
           "quantization": "mixed",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -1228,10 +1234,10 @@
           "runtime": "liteRt",
           "quantization": "mixed",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -1326,10 +1332,10 @@
           "runtime": "liteRt",
           "quantization": "mixed INT4",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -1349,10 +1355,10 @@
           "runtime": "liteRt",
           "quantization": "mixed INT4",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -1445,10 +1451,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -1468,10 +1474,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -1556,8 +1562,8 @@
               "referenceDecodeTokensPerSec": 7.9,
               "knownIssues": [
                 {
-                  "ja": "必ず英語で考えてから答える推論専用のモデルで、考える部分を止められません。Pixel 6（約8 tok/s）では、日本語の評価30問のすべてで考えている途中に上限に達し、答えまで届きませんでした（2026-09-24）。",
-                  "en": "A reasoning-only model that always thinks in English before answering, and the thinking cannot be switched off. On a Pixel 6 (about 8 tok/s) it hit the length limit mid-thought on all 30 Japanese evaluation items and never reached an answer (2026-09-24)."
+                  "ja": "必ず英語で考えてから答える推論専用のモデルで、考える部分を止められません。検証した端末（約8 tok/s）では、日本語の評価30問のすべてで考えている途中に上限に達し、答えまで届きませんでした（2026-09-24）。",
+                  "en": "A reasoning-only model that always thinks in English before answering, and the thinking cannot be switched off. On the test device (about 8 tok/s) it hit the length limit mid-thought on all 30 Japanese evaluation items and never reached an answer (2026-09-24)."
                 }
               ]
             }
@@ -1661,10 +1667,10 @@
           "runtime": "liteRt",
           "quantization": "INT4",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -1684,10 +1690,10 @@
           "runtime": "liteRt",
           "quantization": "INT4",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -1787,10 +1793,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -1810,10 +1816,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -1913,10 +1919,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -1936,10 +1942,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -2039,10 +2045,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -2062,10 +2068,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -2145,8 +2151,8 @@
               "referenceDecodeTokensPerSec": 6.6,
               "knownIssues": [
                 {
-                  "ja": "読み込みに約3.7GBの空きメモリが要ります。Pixel 6 では、ほかのアプリがメモリを使っていると読み込みを断られることがあり（2026-09-24）、そのときは最近使ったアプリを閉じると読み込めました。",
-                  "en": "Loading needs about 3.7 GB of free memory. On a Pixel 6 it was refused while other apps held memory (2026-09-24) and loaded after closing recent apps."
+                  "ja": "読み込みに約3.7GBの空きメモリが要ります。検証した端末では、ほかのアプリがメモリを使っていると読み込みを断られることがあり（2026-09-24）、そのときは最近使ったアプリを閉じると読み込めました。",
+                  "en": "Loading needs about 3.7 GB of free memory. On the test device it was refused while other apps held memory (2026-09-24) and loaded after closing recent apps."
                 }
               ]
             }
@@ -2170,10 +2176,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -2193,10 +2199,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -2296,10 +2302,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q5_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -2319,10 +2325,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q5_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -2422,10 +2428,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -2445,10 +2451,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -2551,10 +2557,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -2574,10 +2580,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -2681,10 +2687,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -2704,10 +2710,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -2810,10 +2816,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -2833,10 +2839,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -2940,10 +2946,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -2963,10 +2969,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -3070,10 +3076,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -3093,10 +3099,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -3200,10 +3206,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
@@ -3223,10 +3229,10 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Google Pixel 6 / Android 17 (API 37) の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
-          "device": "Google Pixel 6 / Android 17 (API 37)",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ]
@@ -3380,8 +3386,8 @@
         "en": "SD-Turbo (image generation)"
       },
       "description": {
-        "ja": "少ないステップで絵を描くモデル。端末内で完結しますが、重い処理です。Pixel 6 実測で 256×256・2ステップが約60秒、512×512・4ステップが約5分（ピーク約3.5GB、CPU 76℃）。端末が冷えていて充電中のときだけ動きます。",
-        "en": "Draws pictures in a few steps, entirely on the device, but it is heavy work. Measured on a Pixel 6: 256×256 at 2 steps takes about 60 s; 512×512 at 4 steps about 5 minutes."
+        "ja": "少ないステップで絵を描くモデル。端末内で完結しますが、重い処理です。検証した端末での実測で 256×256・2ステップが約60秒、512×512・4ステップが約5分（ピーク約3.5GB、CPU 76℃）。端末が冷えていて充電中のときだけ動きます。",
+        "en": "Draws pictures in a few steps, entirely on the device, but it is heavy work. Measured on the test device: 256×256 at 2 steps takes about 60 s; 512×512 at 4 steps about 5 minutes."
       },
       "developer": "Stability AI",
       "origin": "overseas",
