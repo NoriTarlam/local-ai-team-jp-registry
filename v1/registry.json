@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 34,
-  "publishedAt": "2026-09-25T12:00:00Z",
+  "revision": 36,
+  "publishedAt": "2026-09-27T12:00:00Z",
   "models": [
     {
       "id": "qwen2.5-0.5b-instruct",
@@ -91,14 +91,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 50,
+          "overall": 49,
           "categories": {
-            "conversation": 48,
+            "conversation": 47,
             "keigo": 39,
-            "summary": 55,
+            "summary": 54,
             "writing": 50,
-            "translation": 44,
-            "code": 63
+            "translation": 42,
+            "code": 64
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -106,7 +106,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -115,13 +115,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 41,
+          "overall": 42,
           "categories": {
             "reasoning": 14,
             "math": 14,
-            "instruction": 67,
-            "code": 52,
-            "longInput": 60
+            "instruction": 69,
+            "code": 53,
+            "longInput": 61
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -129,7 +129,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -228,7 +228,7 @@
             "summary": 58,
             "writing": 60,
             "translation": 73,
-            "code": 75
+            "code": 76
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -236,7 +236,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -245,10 +245,10 @@
       ],
       "capabilityScores": [
         {
-          "overall": 60,
+          "overall": 61,
           "categories": {
             "reasoning": 32,
-            "math": 41,
+            "math": 43,
             "instruction": 73,
             "code": 68,
             "longInput": 87
@@ -259,7 +259,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -429,11 +429,11 @@
       ],
       "japaneseScores": [
         {
-          "overall": 31,
+          "overall": 30,
           "categories": {
             "conversation": 39,
             "keigo": 24,
-            "summary": 48,
+            "summary": 47,
             "writing": 30,
             "translation": 1,
             "code": 41
@@ -444,7 +444,7 @@
           "runtime": "liteRt",
           "quantization": "INT8",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -453,11 +453,11 @@
         {
           "overall": 50,
           "categories": {
-            "conversation": 42,
+            "conversation": 41,
             "keigo": 34,
             "summary": 56,
-            "writing": 54,
-            "translation": 52,
+            "writing": 53,
+            "translation": 53,
             "code": 64
           },
           "scoreVersion": "ja-score-1",
@@ -466,7 +466,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -477,10 +477,10 @@
           "categories": {
             "conversation": 37,
             "keigo": 26,
-            "summary": 49,
+            "summary": 46,
             "writing": 31,
             "translation": 0,
-            "code": 27
+            "code": 25
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -488,7 +488,7 @@
           "runtime": "liteRt",
           "quantization": "INT8",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -500,10 +500,10 @@
           "overall": 20,
           "categories": {
             "reasoning": 13,
-            "math": 9,
+            "math": 8,
             "instruction": 23,
-            "code": 23,
-            "longInput": 34
+            "code": 22,
+            "longInput": 36
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -511,7 +511,7 @@
           "runtime": "liteRt",
           "quantization": "INT8",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -521,10 +521,10 @@
           "overall": 49,
           "categories": {
             "reasoning": 32,
-            "math": 43,
-            "instruction": 49,
-            "code": 56,
-            "longInput": 64
+            "math": 41,
+            "instruction": 50,
+            "code": 57,
+            "longInput": 66
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -532,7 +532,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -643,7 +643,7 @@
             "summary": 58,
             "writing": 60,
             "translation": 73,
-            "code": 75
+            "code": 76
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -651,7 +651,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-17",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成 / 同一の重み（qwen3.5-2b-q4km-gguf）の評価結果を適用",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -660,12 +660,12 @@
       ],
       "capabilityScores": [
         {
-          "overall": 61,
+          "overall": 60,
           "categories": {
             "reasoning": 32,
             "math": 43,
             "instruction": 73,
-            "code": 69,
+            "code": 68,
             "longInput": 86
           },
           "scoreVersion": "ja-score-1",
@@ -674,7 +674,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1199,11 +1199,11 @@
           "overall": 74,
           "categories": {
             "conversation": 73,
-            "keigo": 70,
-            "summary": 75,
+            "keigo": 75,
+            "summary": 73,
             "writing": 71,
-            "translation": 74,
-            "code": 80
+            "translation": 73,
+            "code": 81
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -1211,7 +1211,7 @@
           "runtime": "liteRt",
           "quantization": "mixed",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1224,9 +1224,9 @@
           "categories": {
             "reasoning": 30,
             "math": 49,
-            "instruction": 91,
+            "instruction": 93,
             "code": 88,
-            "longInput": 92
+            "longInput": 91
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -1234,7 +1234,7 @@
           "runtime": "liteRt",
           "quantization": "mixed",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1321,10 +1321,10 @@
           "categories": {
             "conversation": 39,
             "keigo": 28,
-            "summary": 54,
+            "summary": 53,
             "writing": 35,
-            "translation": 43,
-            "code": 76
+            "translation": 44,
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -1332,7 +1332,7 @@
           "runtime": "liteRt",
           "quantization": "mixed INT4",
           "evaluatedAt": "2026-09-18",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1341,13 +1341,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 42,
+          "overall": 41,
           "categories": {
             "reasoning": 16,
             "math": 28,
-            "instruction": 61,
-            "code": 44,
-            "longInput": 59
+            "instruction": 62,
+            "code": 43,
+            "longInput": 58
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -1355,7 +1355,7 @@
           "runtime": "liteRt",
           "quantization": "mixed INT4",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1436,14 +1436,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 67,
+          "overall": 68,
           "categories": {
             "conversation": 73,
-            "keigo": 51,
+            "keigo": 53,
             "summary": 71,
-            "writing": 73,
+            "writing": 72,
             "translation": 64,
-            "code": 71
+            "code": 72
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5-202606",
@@ -1451,7 +1451,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1460,10 +1460,10 @@
       ],
       "capabilityScores": [
         {
-          "overall": 62,
+          "overall": 61,
           "categories": {
             "reasoning": 17,
-            "math": 62,
+            "math": 60,
             "instruction": 71,
             "code": 87,
             "longInput": 71
@@ -1474,7 +1474,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1652,10 +1652,10 @@
       ],
       "japaneseScores": [
         {
-          "overall": 56,
+          "overall": 55,
           "categories": {
-            "conversation": 49,
-            "keigo": 41,
+            "conversation": 48,
+            "keigo": 39,
             "summary": 55,
             "writing": 56,
             "translation": 61,
@@ -1667,7 +1667,7 @@
           "runtime": "liteRt",
           "quantization": "INT4",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1676,13 +1676,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 54,
+          "overall": 55,
           "categories": {
             "reasoning": 26,
-            "math": 34,
-            "instruction": 73,
-            "code": 60,
-            "longInput": 78
+            "math": 36,
+            "instruction": 72,
+            "code": 61,
+            "longInput": 81
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -1690,7 +1690,7 @@
           "runtime": "liteRt",
           "quantization": "INT4",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1783,9 +1783,9 @@
             "conversation": 55,
             "keigo": 55,
             "summary": 51,
-            "writing": 59,
+            "writing": 56,
             "translation": 39,
-            "code": 72
+            "code": 71
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -1793,7 +1793,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1802,13 +1802,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 29,
+          "overall": 28,
           "categories": {
-            "reasoning": 21,
-            "math": 10,
+            "reasoning": 22,
+            "math": 9,
             "instruction": 32,
             "code": 36,
-            "longInput": 44
+            "longInput": 41
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -1816,7 +1816,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1906,12 +1906,12 @@
         {
           "overall": 58,
           "categories": {
-            "conversation": 65,
-            "keigo": 40,
-            "summary": 47,
-            "writing": 58,
+            "conversation": 67,
+            "keigo": 38,
+            "summary": 46,
+            "writing": 61,
             "translation": 67,
-            "code": 69
+            "code": 71
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -1919,7 +1919,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -1931,10 +1931,10 @@
           "overall": 35,
           "categories": {
             "reasoning": 13,
-            "math": 19,
-            "instruction": 46,
+            "math": 18,
+            "instruction": 47,
             "code": 58,
-            "longInput": 41
+            "longInput": 39
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -1942,7 +1942,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2032,10 +2032,10 @@
         {
           "overall": 73,
           "categories": {
-            "conversation": 71,
-            "keigo": 81,
-            "summary": 71,
-            "writing": 68,
+            "conversation": 72,
+            "keigo": 82,
+            "summary": 70,
+            "writing": 69,
             "translation": 75,
             "code": 71
           },
@@ -2045,7 +2045,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2056,11 +2056,11 @@
         {
           "overall": 56,
           "categories": {
-            "reasoning": 22,
+            "reasoning": 21,
             "math": 34,
             "instruction": 76,
-            "code": 71,
-            "longInput": 77
+            "code": 70,
+            "longInput": 79
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -2068,7 +2068,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2151,8 +2151,8 @@
               "referenceDecodeTokensPerSec": 6.6,
               "knownIssues": [
                 {
-                  "ja": "読み込みに約3.7GBの空きメモリが要ります。検証した端末では、ほかのアプリがメモリを使っていると読み込みを断られることがあり（2026-09-24）、そのときは最近使ったアプリを閉じると読み込めました。",
-                  "en": "Loading needs about 3.7 GB of free memory. On the test device it was refused while other apps held memory (2026-09-24) and loaded after closing recent apps."
+                  "ja": "動かすと約4.3GBのメモリを使います。空きが足りないときは、バックグラウンドで待機しているアプリをAndroidが閉じて読み込みます。画像を読み取るのはCPUだけなので、検証した端末では最初の文字まで1分ほどかかりました（2026-09-27）。",
+                  "en": "Uses about 4.3 GB of memory when running. When free memory is short, Android closes apps waiting in the background to load it. Pictures are read on the CPU only, so on the test device the first word took about a minute (2026-09-27)."
                 }
               ]
             }
@@ -2163,12 +2163,12 @@
         {
           "overall": 72,
           "categories": {
-            "conversation": 79,
-            "keigo": 66,
+            "conversation": 77,
+            "keigo": 69,
             "summary": 64,
-            "writing": 66,
-            "translation": 80,
-            "code": 76
+            "writing": 68,
+            "translation": 79,
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -2176,7 +2176,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2190,8 +2190,8 @@
             "reasoning": 23,
             "math": 30,
             "instruction": 66,
-            "code": 73,
-            "longInput": 54
+            "code": 72,
+            "longInput": 56
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -2199,7 +2199,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2287,14 +2287,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 71,
+          "overall": 70,
           "categories": {
-            "conversation": 77,
+            "conversation": 76,
             "keigo": 62,
             "summary": 68,
-            "writing": 66,
-            "translation": 71,
-            "code": 80
+            "writing": 64,
+            "translation": 72,
+            "code": 79
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "1.0",
@@ -2302,7 +2302,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q5_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2311,13 +2311,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 46,
+          "overall": 48,
           "categories": {
             "reasoning": 22,
-            "math": 24,
+            "math": 28,
             "instruction": 61,
-            "code": 61,
-            "longInput": 64
+            "code": 62,
+            "longInput": 66
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "1.0",
@@ -2325,7 +2325,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q5_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2413,14 +2413,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 63,
+          "overall": 65,
           "categories": {
-            "conversation": 65,
-            "keigo": 67,
-            "summary": 55,
+            "conversation": 68,
+            "keigo": 71,
+            "summary": 57,
             "writing": 63,
             "translation": 57,
-            "code": 72
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.0",
@@ -2428,7 +2428,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2437,13 +2437,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 47,
+          "overall": 46,
           "categories": {
             "reasoning": 16,
-            "math": 13,
-            "instruction": 70,
-            "code": 86,
-            "longInput": 48
+            "math": 12,
+            "instruction": 71,
+            "code": 84,
+            "longInput": 47
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.0",
@@ -2451,7 +2451,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2557,7 +2557,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2580,7 +2580,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2672,14 +2672,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 54,
+          "overall": 53,
           "categories": {
-            "conversation": 53,
+            "conversation": 52,
             "keigo": 52,
-            "summary": 65,
-            "writing": 60,
-            "translation": 25,
-            "code": 67
+            "summary": 66,
+            "writing": 59,
+            "translation": 26,
+            "code": 64
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -2687,7 +2687,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2699,9 +2699,9 @@
           "overall": 60,
           "categories": {
             "reasoning": 16,
-            "math": 41,
-            "instruction": 71,
-            "code": 91,
+            "math": 43,
+            "instruction": 70,
+            "code": 90,
             "longInput": 83
           },
           "scoreVersion": "ja-score-1",
@@ -2710,7 +2710,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2801,13 +2801,13 @@
       ],
       "japaneseScores": [
         {
-          "overall": 58,
+          "overall": 57,
           "categories": {
             "conversation": 55,
-            "keigo": 46,
-            "summary": 60,
+            "keigo": 44,
+            "summary": 59,
             "writing": 57,
-            "translation": 54,
+            "translation": 50,
             "code": 76
           },
           "scoreVersion": "ja-score-1",
@@ -2816,7 +2816,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2828,10 +2828,10 @@
           "overall": 62,
           "categories": {
             "reasoning": 37,
-            "math": 47,
+            "math": 48,
             "instruction": 66,
             "code": 83,
-            "longInput": 77
+            "longInput": 78
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -2839,7 +2839,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2946,7 +2946,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -2969,7 +2969,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -3065,10 +3065,10 @@
           "categories": {
             "conversation": 40,
             "keigo": 31,
-            "summary": 53,
-            "writing": 48,
+            "summary": 54,
+            "writing": 47,
             "translation": 31,
-            "code": 61
+            "code": 63
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.2",
@@ -3076,7 +3076,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -3088,10 +3088,10 @@
           "overall": 47,
           "categories": {
             "reasoning": 16,
-            "math": 23,
+            "math": 22,
             "instruction": 60,
-            "code": 64,
-            "longInput": 70
+            "code": 66,
+            "longInput": 72
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.2",
@@ -3099,7 +3099,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -3191,14 +3191,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 55,
+          "overall": 54,
           "categories": {
             "conversation": 55,
             "keigo": 36,
-            "summary": 58,
+            "summary": 56,
             "writing": 56,
-            "translation": 59,
-            "code": 68
+            "translation": 57,
+            "code": 64
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.2",
@@ -3206,7 +3206,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "ja-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
@@ -3215,13 +3215,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 61,
+          "overall": 62,
           "categories": {
-            "reasoning": 18,
-            "math": 29,
+            "reasoning": 17,
+            "math": 30,
             "instruction": 82,
             "code": 91,
-            "longInput": 87
+            "longInput": 89
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.2",
@@ -3229,7 +3229,7 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
-          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60% / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
