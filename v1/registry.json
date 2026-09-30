@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 36,
-  "publishedAt": "2026-09-27T12:00:00Z",
+  "revision": 37,
+  "publishedAt": "2026-09-30T12:00:00Z",
   "models": [
     {
       "id": "qwen2.5-0.5b-instruct",
@@ -1092,8 +1092,8 @@
         "en": "Gemma 4 E2B"
       },
       "description": {
-        "ja": "Google の小型モデルです。LiteRT-LM 用に作られており、対応する端末では GPU や NPU でも動かせます。",
-        "en": "Google's small model, built for LiteRT-LM. It can also run on the GPU or NPU where supported."
+        "ja": "Google の小型モデルです。LiteRT-LM 版は対応する端末で GPU や NPU でも動かせます。ExecuTorch 版は遅めですが、日本語AIスコアが少し高くなります。",
+        "en": "Google's small model. The LiteRT-LM build can also run on the GPU or NPU where supported; the ExecuTorch build is slower but scores a little higher in Japanese."
       },
       "developer": "Google",
       "origin": "overseas",
@@ -1192,6 +1192,51 @@
           "accelerators": [
             "gpu"
           ]
+        },
+        {
+          "id": "gemma-4-e2b-executorch",
+          "format": "pte",
+          "quantization": "8da4w-emb4",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2600000000,
+          "maxContext": 1024,
+          "japaneseCharsPerToken": 1.95,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.pte",
+              "url": "https://huggingface.co/Arm/gemma-4-e2b-text-executorch/resolve/55a83637f736c6c60a77d49b82d6444582957718/gemma4_e2b_text_8da4w_emb4.pte",
+              "sizeBytes": 2563959040,
+              "sha256": "8e1b784256eea13a0caad42c17fca7fac46f94b830877032cc5d658c11be76cc"
+            },
+            {
+              "role": "tokenizer",
+              "fileName": "tokenizer.json",
+              "url": "https://huggingface.co/Arm/gemma-4-e2b-text-executorch/resolve/55a83637f736c6c60a77d49b82d6444582957718/tokenizer.json",
+              "sizeBytes": 32169626,
+              "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "executorch",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 5.0,
+              "knownIssues": [
+                {
+                  "ja": "覚えておける会話の長さは 1,024 トークンまでです。長い会話や文書には、LiteRT 用のファイルを選んでください。",
+                  "en": "It remembers up to 1,024 tokens of conversation. For long chats or documents, choose the LiteRT build."
+                }
+              ]
+            }
+          ],
+          "accelerators": [
+            "cpu"
+          ]
         }
       ],
       "japaneseScores": [
@@ -1216,6 +1261,28 @@
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 78,
+          "categories": {
+            "conversation": 78,
+            "keigo": 75,
+            "summary": 83,
+            "writing": 67,
+            "translation": 83,
+            "code": 83
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "4",
+          "artifactId": "gemma-4-e2b-executorch",
+          "runtime": "executorch",
+          "quantization": "8da4w-emb4",
+          "evaluatedAt": "2026-09-30",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
@@ -1234,6 +1301,27 @@
           "runtime": "liteRt",
           "quantization": "mixed",
           "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 69,
+          "categories": {
+            "reasoning": 42,
+            "math": 57,
+            "instruction": 82,
+            "code": 81,
+            "longInput": 84
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "4",
+          "artifactId": "gemma-4-e2b-executorch",
+          "runtime": "executorch",
+          "quantization": "8da4w-emb4",
+          "evaluatedAt": "2026-09-30",
           "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
