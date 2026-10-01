@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 38,
+  "revision": 41,
   "publishedAt": "2026-10-01T12:00:00Z",
   "models": [
     {
@@ -1818,6 +1818,631 @@
       ]
     },
     {
+      "id": "qwen3-4b",
+      "name": {
+        "ja": "Qwen3 4B",
+        "en": "Qwen3 4B"
+      },
+      "description": {
+        "ja": "Qwen3 の中型モデルです。MLC LLM 用で、端末の GPU で動きます。メモリを多く使います。",
+        "en": "A mid-sized Qwen3 model for MLC LLM, running on the device's GPU. It needs a lot of memory."
+      },
+      "developer": "Qwen (Alibaba Cloud)",
+      "origin": "overseas",
+      "version": "3",
+      "releasedAt": "2025-04-29",
+      "parameterCount": 4020000000,
+      "languages": [
+        "ja",
+        "en",
+        "zh"
+      ],
+      "tags": [
+        "heavy"
+      ],
+      "purposes": [
+        "chat"
+      ],
+      "license": {
+        "id": "apache-2.0",
+        "name": "Apache License",
+        "version": "2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0",
+        "commercialUse": "allowed",
+        "redistribution": true,
+        "modification": true,
+        "attributionRequired": true,
+        "requiresUserAcceptance": false,
+        "reviewed": true
+      },
+      "artifacts": [
+        {
+          "id": "qwen3-4b-q4f32_1-mlc",
+          "format": "mlc",
+          "quantization": "q4f32_1",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2900000000,
+          "maxContext": 2048,
+          "kvCacheBytesPerToken": 294912,
+          "files": [
+            {
+              "role": "config",
+              "fileName": "mlc-chat-config.json",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/mlc-chat-config.json",
+              "sizeBytes": 2075,
+              "sha256": "fd13528a8c6007671c55076a7181c4ca441b135ebfbcd24608db0af07f485ca3"
+            },
+            {
+              "role": "config",
+              "fileName": "tensor-cache.json",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/tensor-cache.json",
+              "sizeBytes": 180451,
+              "sha256": "fe288cae116da5bd02a9e1d668f195764bb2814937e4643398ddeb8dcfbe4d76"
+            },
+            {
+              "role": "tokenizer",
+              "fileName": "tokenizer.json",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/tokenizer.json",
+              "sizeBytes": 11422654,
+              "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+            },
+            {
+              "role": "other",
+              "fileName": "tokenizer_config.json",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/tokenizer_config.json",
+              "sizeBytes": 9675,
+              "sha256": "5a7303fcb1a27ede63134a2cbd61d5282c247ca6d769ce4746d4ffa124aedd63"
+            },
+            {
+              "role": "other",
+              "fileName": "vocab.json",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/vocab.json",
+              "sizeBytes": 2776833,
+              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+            },
+            {
+              "role": "other",
+              "fileName": "merges.txt",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/merges.txt",
+              "sizeBytes": 1671853,
+              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_0.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_0.bin",
+              "sizeBytes": 194478080,
+              "sha256": "803a03d6c71151203b15959a5506046b3ac94a370da440dae2e380b3c67d5645"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_1.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_1.bin",
+              "sizeBytes": 24314880,
+              "sha256": "ab29357fd1a7a08948b9a5cc2fc6a6c483078383a5c675e53402a1bc75f0c3bb"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_2.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_2.bin",
+              "sizeBytes": 24903680,
+              "sha256": "f157e350cea6dadbd906a6a9998ab017e3a1fe07fa4dccbb2cfc9be68c8b94a2"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_3.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_3.bin",
+              "sizeBytes": 31877632,
+              "sha256": "2b9c78e7553e394a112c28258ceb549788c5647d711a2977660af887e1cab8d1"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_4.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_4.bin",
+              "sizeBytes": 24903680,
+              "sha256": "e4ac50f8f25e8b16074a72c43f68d38e147ef37a97cb6c841af7685ff4ad1b10"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_5.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_5.bin",
+              "sizeBytes": 31877632,
+              "sha256": "2e3b9b8426e7f7bb4aaf59f32ce8111214b3870181ba00b321dc05ac7a43dc85"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_6.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_6.bin",
+              "sizeBytes": 24903680,
+              "sha256": "6ae10b659fc66a7d79fba29433c5fd806f9bd22d31374de7c2bf5e97299298b3"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_7.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_7.bin",
+              "sizeBytes": 31877632,
+              "sha256": "fa40ab75b9e12bb60c8e3fa1571e4606f3fb87294efb7f962f8afcdb25373588"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_8.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_8.bin",
+              "sizeBytes": 24903680,
+              "sha256": "1f3429a1d9de235f394b067b79e60af1b9e5372571022b56a07e8f7fe85be375"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_9.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_9.bin",
+              "sizeBytes": 31877632,
+              "sha256": "c04ecf97e95483feef3b1b6179c5c8f57f59bb47dcb063d6ec0431ec7492ecf9"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_10.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_10.bin",
+              "sizeBytes": 24903680,
+              "sha256": "544301b2dea40e94338995f604cf059a78fa338da0cd8b5e8ae35e496e7812ef"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_11.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_11.bin",
+              "sizeBytes": 31877632,
+              "sha256": "50df64a7abbcfef5d4c52137a6fd0fd52598941ffb40d1c964c68a52bb5602d3"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_12.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_12.bin",
+              "sizeBytes": 24903680,
+              "sha256": "fd92bdc41f40a70fbe20827ef0390abb2f082b96b59769d24f5b0e4f479e2aa2"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_13.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_13.bin",
+              "sizeBytes": 31877632,
+              "sha256": "1967eba269fb57cedc7a1d5e1c1719dcb853b6d9e937b2d2a726db36d74fe5ac"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_14.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_14.bin",
+              "sizeBytes": 24903680,
+              "sha256": "ae9003edbedfc127d122ac614c9774e5db588ebafff83198f44f6d1317576bd1"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_15.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_15.bin",
+              "sizeBytes": 24903680,
+              "sha256": "7f9a2ca0f074ce9af2bff0f47845d9ecadc9b998c221fe50c41326c1203110dc"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_16.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_16.bin",
+              "sizeBytes": 31872512,
+              "sha256": "c5e34658091b217b87a47e393826ed950f3a77f438c07d759228f7c50636267e"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_17.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_17.bin",
+              "sizeBytes": 24903680,
+              "sha256": "2e763adb7d587c736c4fba728ae52656fcabf5da37b941463f9256af8f1deee0"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_18.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_18.bin",
+              "sizeBytes": 31872512,
+              "sha256": "40d6a8bebf90be94cf20d0edd77cd80d5dd79ed8690762c18500663ed91bcc92"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_19.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_19.bin",
+              "sizeBytes": 24903680,
+              "sha256": "835f56d49ed780c7fdeba0f0312497db08e22eb7cfc048ed24152feb26a846c4"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_20.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_20.bin",
+              "sizeBytes": 31877632,
+              "sha256": "d7ac3c013c4cdae40884b0760225b98360f9ba6331348bb80a1e91c4521cc96a"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_21.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_21.bin",
+              "sizeBytes": 24903680,
+              "sha256": "bc6e145d70b226e645341649d975bba83ea886522cfcb79cbb6b9d1775369359"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_22.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_22.bin",
+              "sizeBytes": 31877632,
+              "sha256": "c26dd7beb3197ad95cb6532e0a344caae17a4bf2469b1e4de4e7db0e19e51eb3"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_23.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_23.bin",
+              "sizeBytes": 24903680,
+              "sha256": "3cfa09e2a9c31efda9e94ad822d6dd357f3b00c56ae0be0e55ea196594b8c69f"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_24.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_24.bin",
+              "sizeBytes": 31877632,
+              "sha256": "0e6f361abdda778736066a8e94ac2cf288b4d90eb3961a08a466dad4e306cba1"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_25.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_25.bin",
+              "sizeBytes": 24903680,
+              "sha256": "203b74b0c96d2b974bdc46c2afae74cf1a330f7dcfd45f3bf9b938c4f7791ff5"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_26.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_26.bin",
+              "sizeBytes": 31877632,
+              "sha256": "86e8a1da3075d0d755693b131e24222e3bd351ebb005b389b9ec1bf9c169a1f4"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_27.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_27.bin",
+              "sizeBytes": 24903680,
+              "sha256": "3ff7920bf6be06898c7982ddaf8b7b36e7d3b3f114edc05c21d2f9ff7b45565d"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_28.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_28.bin",
+              "sizeBytes": 31877632,
+              "sha256": "1e47a91e8b997ff97098ac87a115c974a4f82c27b5d736acf5ef03823d3370b0"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_29.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_29.bin",
+              "sizeBytes": 24903680,
+              "sha256": "d0c343468adaf8fb0bd4615ad7a9f0e341d21a5ee66c508e17af2d70564e69b3"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_30.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_30.bin",
+              "sizeBytes": 31877632,
+              "sha256": "536bb8efda07245f4f39f773c7db73451e6924799816ddfd6c8a9707f93ac337"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_31.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_31.bin",
+              "sizeBytes": 24903680,
+              "sha256": "289794ad588e5004b4b1b420fcc90562d3022fc482608387d325171d4640ac36"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_32.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_32.bin",
+              "sizeBytes": 31877632,
+              "sha256": "78b1387dcf12afc448131de3a0f6fe16cd424e7f56786476720ca9a1e5a152b9"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_33.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_33.bin",
+              "sizeBytes": 31887872,
+              "sha256": "1dced4e001d7046ad2d4cbc8e9795b0bb8ce96cb8d4f2d7cccdc63723405820e"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_34.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_34.bin",
+              "sizeBytes": 24903680,
+              "sha256": "49179c6bbc80085ea6119e0c96476fdc370827ca5ad01a4e1ceefd71e34ba98d"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_35.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_35.bin",
+              "sizeBytes": 31877632,
+              "sha256": "e3ecb4fe43f9ba991ffa4b9825103677417d83d5b88862f81b0cf0c6bbc4e06b"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_36.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_36.bin",
+              "sizeBytes": 24903680,
+              "sha256": "23e6e002218f09169af86a9fb53ddc0f1ce9100d685952eb33a451f455426402"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_37.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_37.bin",
+              "sizeBytes": 31877632,
+              "sha256": "fd84e6cc916a7bda901f16b3b2681b0e61918463315fd84e5e62d3fb66e5bccb"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_38.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_38.bin",
+              "sizeBytes": 24903680,
+              "sha256": "41d371d30b4dd54b98b99a4d86a056148538836ac1b675ad93f08b3d042769ff"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_39.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_39.bin",
+              "sizeBytes": 31877632,
+              "sha256": "409e9eccda5b35d9eb9e2fb2d9c35ea80a3c706b24f28eac6df065cffe2dd4d9"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_40.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_40.bin",
+              "sizeBytes": 24903680,
+              "sha256": "5997da5af30262adce068841441151d90ca3b79f1de85739f1392dcc4c50a1cf"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_41.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_41.bin",
+              "sizeBytes": 31877632,
+              "sha256": "a31ab38a4084130913d027fc43604dae71b87fa96069845125da32e929f1d7d8"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_42.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_42.bin",
+              "sizeBytes": 24903680,
+              "sha256": "f49ae6ca93bf47ce1260999e0ff765ddc5b3ced5b2ae877e415a8e190293bf18"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_43.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_43.bin",
+              "sizeBytes": 31877632,
+              "sha256": "7c048ccc934fbd733c95863974dd8d2db59c8dc9a0e5b2536a94eb5bb7eaa05c"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_44.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_44.bin",
+              "sizeBytes": 24903680,
+              "sha256": "1bd73c9fb17b481337353a1ff85f3cb332454b746e75dc5bd1489c483de8a34b"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_45.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_45.bin",
+              "sizeBytes": 31877632,
+              "sha256": "e3300e8610c344ca0c0d11c0474bcbdb555c38269a0ce70ca729d9bd23e87403"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_46.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_46.bin",
+              "sizeBytes": 24903680,
+              "sha256": "bfc611af1ac71fc371816891382ce896c82cb6f31e285254541e4e59d33d2f5b"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_47.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_47.bin",
+              "sizeBytes": 31877632,
+              "sha256": "226854995e3aa336ea43f274546f03af6e7b5d5c91e153efa77090822ec40463"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_48.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_48.bin",
+              "sizeBytes": 24903680,
+              "sha256": "4b64d91e41d0b1d5de008e36be3c5d9610e43ec5cef02906257bf73d9a124e88"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_49.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_49.bin",
+              "sizeBytes": 31877632,
+              "sha256": "c31857fc861f3ac7e5987edac1233489744e4926c14b7eb9ef553e2d6cf15504"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_50.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_50.bin",
+              "sizeBytes": 24903680,
+              "sha256": "363e1d61fe9f92dc4da8b6de6744e1a20ed86786df4a23d1012ad6a6b4b4ca54"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_51.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_51.bin",
+              "sizeBytes": 31877632,
+              "sha256": "da7bf8e47a14e8182b3d1e556458840f357a1cb376c62196fdeeedc779ec89ee"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_52.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_52.bin",
+              "sizeBytes": 24903680,
+              "sha256": "4d03756c7a155e063753fa49d128487711cdcce3ec8f846adf25fe1440033d90"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_53.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_53.bin",
+              "sizeBytes": 31877632,
+              "sha256": "33253bae4f1225064975b983406bdd6fdbbd55be127d5d149e7e7782da55dde7"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_54.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_54.bin",
+              "sizeBytes": 24903680,
+              "sha256": "30eb3f1203c15f08bd17da2ff236efec73232e0311e49204bf14c17bbbfb9973"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_55.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_55.bin",
+              "sizeBytes": 31877632,
+              "sha256": "72d4888487be4c92448df44e6c2037ca97ed5a62254fc805e9e33e8a3fd912e2"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_56.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_56.bin",
+              "sizeBytes": 24903680,
+              "sha256": "08c2e9a239727ebf5603fc5aa294db9401dcc4c1452b3f38239ada52be457547"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_57.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_57.bin",
+              "sizeBytes": 31877632,
+              "sha256": "449083e7e368067aafcc0789c0b8d7972e730d8ad77b0dabd7d3fc869880609e"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_58.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_58.bin",
+              "sizeBytes": 24903680,
+              "sha256": "cc73fc1c3a56db78f7fa1a4558f73d1b7188df67c4fa6663e6a97f9855a7ce36"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_59.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_59.bin",
+              "sizeBytes": 31877632,
+              "sha256": "4a36bfe3f2ca8ccaf39890db281fdaf93eb52c4b41c70870f9ac9ea80777c68e"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_60.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_60.bin",
+              "sizeBytes": 24903680,
+              "sha256": "6e83808230cf1c2e8c86b1e1d091c82b0a2ac70af72ffe04cc3655ca5f267028"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_61.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_61.bin",
+              "sizeBytes": 31877632,
+              "sha256": "27a21023abd1650ca434c0db7e5e00d4cf97245a4c5a25c5269bf7a57cafbf55"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_62.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_62.bin",
+              "sizeBytes": 24903680,
+              "sha256": "89ddf9a798a00010ee422d2870f3524449f1f6a5c62a826b9e6cd0fadde50f74"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_63.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_63.bin",
+              "sizeBytes": 31877632,
+              "sha256": "915a18ed5dd4bd94f85d3e350a382b6d4c19b6151dcd0aa77b8e1fe09b105f06"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_64.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_64.bin",
+              "sizeBytes": 24903680,
+              "sha256": "86416538b068a8d343ff2387effc3b000bf4cad2939af8d2d54d210e4f3c13a1"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_65.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_65.bin",
+              "sizeBytes": 31877632,
+              "sha256": "a3bdcbae955977603b9a0c0038f16e2623214e69fb88a27101f4e57e14b2dd0d"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_66.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_66.bin",
+              "sizeBytes": 24903680,
+              "sha256": "bf9524f07775604821d6dc4a44adfb6f57ef9780f307da306efc02459e28785a"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_67.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_67.bin",
+              "sizeBytes": 31877632,
+              "sha256": "a228dda9483139fb40da851e770eaba1a16a4dd4bcc2ae3c410a9dedc2a959b6"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_68.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_68.bin",
+              "sizeBytes": 24903680,
+              "sha256": "5bc639f751470476891037d85b7487950e6602b24c46389e26aa0a180efe7ce7"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_69.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_69.bin",
+              "sizeBytes": 31877632,
+              "sha256": "99b762e679e706344ddfc9ce374cb456a62de729abb1ea3360c54afcd3ab1ac7"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_70.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_70.bin",
+              "sizeBytes": 24903680,
+              "sha256": "dc57d6bbdbbef42b11ddf5db6ffa3b5d9b3a8e67908977d87d4db6449eb783a9"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_71.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_71.bin",
+              "sizeBytes": 24903680,
+              "sha256": "7ac37c64eb03efa7bbbe4fdc39d12ac49974dacd526fb82b98bc93477296418f"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_72.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_72.bin",
+              "sizeBytes": 31872512,
+              "sha256": "7a019819cc1d6fadc093fe3e4f74216476472bcdd90dcac51061a3f80207aedc"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_73.bin",
+              "url": "https://huggingface.co/mlc-ai/Qwen3-4B-q4f32_1-MLC/resolve/b7e4eb1ba80728187fb5df44055cc1a7c32310e0/params_shard_73.bin",
+              "sizeBytes": 31882752,
+              "sha256": "d05cbf0b986c40b886dfec1db2814841377103db0c90ed27de07363d15a2444c"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "mlc",
+              "platform": "android",
+              "status": "experimental"
+            }
+          ],
+          "accelerators": [
+            "gpu"
+          ]
+        }
+      ]
+    },
+    {
       "id": "lfm2.5-1.2b-jp-202606",
       "name": {
         "ja": "LFM2.5 1.2B JP (202606)",
@@ -1854,7 +2479,8 @@
         "attributionRequired": true,
         "requiresUserAcceptance": true,
         "reviewed": true,
-        "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。"
+        "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
+        "localizedNotice": {"ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。", "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."}
       },
       "artifacts": [
         {
@@ -1984,7 +2610,8 @@
         "attributionRequired": true,
         "requiresUserAcceptance": true,
         "reviewed": true,
-        "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。"
+        "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
+        "localizedNotice": {"ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。", "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."}
       },
       "artifacts": [
         {
@@ -2067,7 +2694,8 @@
         "attributionRequired": true,
         "requiresUserAcceptance": true,
         "reviewed": true,
-        "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。"
+        "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
+        "localizedNotice": {"ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。", "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."}
       },
       "artifacts": [
         {
@@ -2480,6 +3108,529 @@
               "status": "experimental"
             }
           ]
+        },
+        {
+          "id": "sarashina2.2-3b-q4f32_1-mlc",
+          "format": "mlc",
+          "quantization": "q4f32_1",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2600000000,
+          "maxContext": 2048,
+          "japaneseCharsPerToken": 2.25,
+          "kvCacheBytesPerToken": 163840,
+          "files": [
+            {
+              "role": "config",
+              "fileName": "mlc-chat-config.json",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/mlc-chat-config.json",
+              "sizeBytes": 2077,
+              "sha256": "aff17a1ace089e6a8c306065a1cb74f643badffb7b76ece109ede334a3c0af2d"
+            },
+            {
+              "role": "config",
+              "fileName": "tensor-cache.json",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/tensor-cache.json",
+              "sizeBytes": 143135,
+              "sha256": "d8d00930cd8ae1b0dc2cb6d081e2674f823e210e0ef98f7d26302ee8727fa061"
+            },
+            {
+              "role": "tokenizer",
+              "fileName": "tokenizer.model",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/tokenizer.model",
+              "sizeBytes": 1831879,
+              "sha256": "008293028e1a9d9a1038d9b63d989a2319797dfeaa03f171093a57b33a3a8277"
+            },
+            {
+              "role": "other",
+              "fileName": "tokenizer_config.json",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/tokenizer_config.json",
+              "sizeBytes": 6420,
+              "sha256": "ff413f71a6cb94015411448e948f908c70853222a070c04cd63cec2b2292dce2"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_0.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_0.bin",
+              "sizeBytes": 131072000,
+              "sha256": "bb7bb854f89d3071b29aab3f9d2becbada36e95cc2f73a3fc5e8bdc0baa931ca"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_1.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_1.bin",
+              "sizeBytes": 131072000,
+              "sha256": "2dc90621149f40afa01825955194b7de92c3d7b773ee552e61bb695c5a4f4bbd"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_2.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_2.bin",
+              "sizeBytes": 32773120,
+              "sha256": "9d652468f78ae84862e841114f9dfd8d6a3e8b84b78f54ca1f2d93c9d1ea4a6f"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_3.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_3.bin",
+              "sizeBytes": 22937600,
+              "sha256": "ec3859687e1462897011127500d6ecfcc373d00078505d3386deb794708480e4"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_4.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_4.bin",
+              "sizeBytes": 26839040,
+              "sha256": "e849af41d190e09ab9bf87f2b367116260770e6e88ec91701dfe7749c9c5da21"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_5.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_5.bin",
+              "sizeBytes": 22937600,
+              "sha256": "e09c962f843d88e96c0c255a1dc367388703b471d350647c1ffcea40b9ac1116"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_6.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_6.bin",
+              "sizeBytes": 26839040,
+              "sha256": "a56567237daa6a1c457b9cbd9292cadf02f4c80ec38c28e2771160602578f837"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_7.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_7.bin",
+              "sizeBytes": 22937600,
+              "sha256": "65d525f68cb01998d697329938449ac5ef52de7c38509f8d0833ded24d9591f8"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_8.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_8.bin",
+              "sizeBytes": 26839040,
+              "sha256": "b49303cffe5b1c86d34e2b0d09b3d7ac31a53025873f364ce6d42dac00019e88"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_9.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_9.bin",
+              "sizeBytes": 22937600,
+              "sha256": "71f18435b6312d8f66dff553e4a4a32930b104dc4bcb19db5c7a1973d76cd4de"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_10.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_10.bin",
+              "sizeBytes": 26839040,
+              "sha256": "883d211345fd6fa10367fbf2b895b7a329183a55be6c8a9abd27c2831157693f"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_11.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_11.bin",
+              "sizeBytes": 22937600,
+              "sha256": "ce2d99faea56b363145868e090b2c5994e36c329525309a2633180e4812c48b8"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_12.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_12.bin",
+              "sizeBytes": 26839040,
+              "sha256": "76cffc67e823a73c79e911b2c231f22232086036d32038dad1d1b380c8688235"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_13.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_13.bin",
+              "sizeBytes": 22937600,
+              "sha256": "eba11d904cdbbe0cd28f504cef9715af38c6dca477aedf905484a832e857c6e4"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_14.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_14.bin",
+              "sizeBytes": 26839040,
+              "sha256": "21782f430100d0a0cc75c47f409184a2db18d91b45c58292653886caaccd6997"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_15.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_15.bin",
+              "sizeBytes": 22937600,
+              "sha256": "3ee97413b098a625217cd656bfbf23dcc7a18921998a54b0b8b8be352a2abed2"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_16.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_16.bin",
+              "sizeBytes": 26839040,
+              "sha256": "2b3a4c5319b4577e5d468f000ecf743bd93b5f9468ced5c9ef9eaba911d344d8"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_17.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_17.bin",
+              "sizeBytes": 22937600,
+              "sha256": "52a05a2e22055af60faa01f51966e491b81f8840c6ae63ed85909c4c71af70ce"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_18.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_18.bin",
+              "sizeBytes": 26839040,
+              "sha256": "fdcb37f93dda1fd80dd6b241fb98807e0fc0c19147b32ffc90ffffec691aa9ab"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_19.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_19.bin",
+              "sizeBytes": 22937600,
+              "sha256": "27d3b661d9c5a95f603d05066e95c60885520a075abc073aa50d35ad7ababac1"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_20.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_20.bin",
+              "sizeBytes": 26839040,
+              "sha256": "dbe16810fea127be7bcfad0fbeb36da558a37318534e20cb6893ea6ab1a287b5"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_21.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_21.bin",
+              "sizeBytes": 22937600,
+              "sha256": "350956e130d229f1cbf4b1ffdc5e1a067c854261180ae661686e89129b0d7f54"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_22.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_22.bin",
+              "sizeBytes": 26839040,
+              "sha256": "736da4b52a58fd84cf5264cf4e3ca429ce68eb827b180cdb9c621150a507ae17"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_23.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_23.bin",
+              "sizeBytes": 22937600,
+              "sha256": "71d2d32eca4813828ba7aca4f852b0f1f00695ad180451bcc949a6b77a54cd4f"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_24.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_24.bin",
+              "sizeBytes": 26839040,
+              "sha256": "d7330ce401a1d8c536a14dd75164378dbe21ec9f722485f34779424bdc079b12"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_25.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_25.bin",
+              "sizeBytes": 22937600,
+              "sha256": "3840ba55ba4d42c289aa37b8421ffe1bfc2f839fece4add66a4e86f858c5a5ab"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_26.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_26.bin",
+              "sizeBytes": 26839040,
+              "sha256": "e4a69ca26f9227a46259eb6210e96404b9f29131f4da81921c579be764b7bf2b"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_27.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_27.bin",
+              "sizeBytes": 22937600,
+              "sha256": "0ad47e0052128d4fa65ea2fc67adbac48800c3e42ae1166ecdd8e05d31510033"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_28.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_28.bin",
+              "sizeBytes": 26839040,
+              "sha256": "097052bd763ea6053e4322936c7712e8d89a50e6892e7443bb6c644282d2325b"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_29.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_29.bin",
+              "sizeBytes": 22937600,
+              "sha256": "e79897e0faca4d68c905fe9ecf8680db50c65d9c730802164591437254155d39"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_30.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_30.bin",
+              "sizeBytes": 26839040,
+              "sha256": "9a4b26c750b48c785fade77f18334dd0c013d20578b2b8eb1ce2022fbde2e528"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_31.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_31.bin",
+              "sizeBytes": 22937600,
+              "sha256": "13390dd16f649b16fa3aba563058f0e4ef85b878d4c0770574c891b0ec51ee11"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_32.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_32.bin",
+              "sizeBytes": 26839040,
+              "sha256": "eb8ea536583077b110e8491b2546db5545cd0edff78dd0581910f8cdb2fdcb54"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_33.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_33.bin",
+              "sizeBytes": 22937600,
+              "sha256": "be192eeef1d315a73e2dc3a129bb7a4cd5524c158df2a35f8c0e8197b73fdd64"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_34.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_34.bin",
+              "sizeBytes": 26839040,
+              "sha256": "8ec65892c42775c0f527060a3f5fc6a8cb5877bfae2394211801c989c2d9befb"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_35.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_35.bin",
+              "sizeBytes": 22937600,
+              "sha256": "d10f0845f741afba55544a03ee5dea44db4266eda97fffe3ead16e75aa5872d2"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_36.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_36.bin",
+              "sizeBytes": 26839040,
+              "sha256": "c3aef690ea76153b0d84274c3cb43a89757659a391b11363cf0c635399bac6a6"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_37.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_37.bin",
+              "sizeBytes": 22937600,
+              "sha256": "ef937cb2a73806e193b04ee1847f1fe10d7c277c1d88b041731a76676e57789e"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_38.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_38.bin",
+              "sizeBytes": 26839040,
+              "sha256": "93a0017f81c4aa2a2c1c13c096a8f561c64f03ff2beabaeed60a67f5b9f3c9fe"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_39.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_39.bin",
+              "sizeBytes": 22937600,
+              "sha256": "680f38f35d7b4bb06ec76914d3675f1fbbb088970989dc3d2dafb89f86259cb1"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_40.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_40.bin",
+              "sizeBytes": 26839040,
+              "sha256": "3bf9999f90fc2c5c303fcfa8a47d48e74194f1b7dc2aca9efd3f655a0968ce89"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_41.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_41.bin",
+              "sizeBytes": 22937600,
+              "sha256": "f829d8aa0345583081827730038a1344ba4d68a77f96a70c1f47bd7d4c870dd3"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_42.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_42.bin",
+              "sizeBytes": 26839040,
+              "sha256": "dbdab7e276e38a0127e008c9217a486a9fd2a6de1a1eb09664502b70b148ab06"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_43.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_43.bin",
+              "sizeBytes": 22937600,
+              "sha256": "b88db4bf5d169df23051afa2eb5867c11c3770ff93eaed4889286b3788fe6ad2"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_44.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_44.bin",
+              "sizeBytes": 26839040,
+              "sha256": "2a982c4ce672ea4063bf9a2656c675479cf1405241bbf2b1eb41879138f169b6"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_45.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_45.bin",
+              "sizeBytes": 22937600,
+              "sha256": "a28ef7a4e9210e3fe5f40b4ec9dde32b70ae7b31089957f5583d42db7a0e6d33"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_46.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_46.bin",
+              "sizeBytes": 26839040,
+              "sha256": "68678e62c554bdecffbd3ceb486203b28e3c6beaa069a21580a32b6720a5b984"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_47.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_47.bin",
+              "sizeBytes": 22937600,
+              "sha256": "237233a7875bb062a3bf5581800eee0028f37af951151fe1c01f9cbaf6aaccea"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_48.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_48.bin",
+              "sizeBytes": 26839040,
+              "sha256": "a580ec4e56a82758caf647db2d76f3881d898f07e66b01e90dc5af3261c93e50"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_49.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_49.bin",
+              "sizeBytes": 22937600,
+              "sha256": "1f838a34198748d9cb47705fb5c28840c070cd270a667b1727dfe92df7ec1aed"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_50.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_50.bin",
+              "sizeBytes": 26839040,
+              "sha256": "25c0197aaf813b83f8e06e2286e2480476e18fd47b03bc982d3d3954f18f9aed"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_51.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_51.bin",
+              "sizeBytes": 22937600,
+              "sha256": "8c831aaf18dc4207affa5173b15bf48b0924e3a55a2a8a844d1e62d9e716713b"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_52.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_52.bin",
+              "sizeBytes": 26839040,
+              "sha256": "00b8b57db1a9e6abfce80f90b7460a684dc67820961df58b875ad83a1d3e7941"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_53.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_53.bin",
+              "sizeBytes": 22937600,
+              "sha256": "1799b3a6b712b457b887933cae8dbc371864070679699f1c2b87320f42317484"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_54.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_54.bin",
+              "sizeBytes": 26839040,
+              "sha256": "0aa53bf77b1d2e5192810948f2043bf0192323d6f3cff659b7969a063bfb3635"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_55.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_55.bin",
+              "sizeBytes": 22937600,
+              "sha256": "158602e41b542c86ff5b28d5aab80dcfbbf59e560ba3e30432a8315636146ea1"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_56.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_56.bin",
+              "sizeBytes": 26839040,
+              "sha256": "dd5dbf3e8d5148c82209854fc9c952062682fedb1a2401732eae775c4da1a904"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_57.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_57.bin",
+              "sizeBytes": 22937600,
+              "sha256": "cc2819573e1ceb469a22818c166c900865489e7cb536f56f8791ed112dff8ae2"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_58.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_58.bin",
+              "sizeBytes": 26839040,
+              "sha256": "cfb7fe07b96e7caff847666ef2d5b9643ac46672296ecbe695cb28e698e6f4d0"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_59.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_59.bin",
+              "sizeBytes": 22937600,
+              "sha256": "0261748d510db93bd9b2e9aef4c0a00660f130b899ad18d0a01ee8668bda9b53"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_60.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_60.bin",
+              "sizeBytes": 26839040,
+              "sha256": "21562297d431d8445e3f27bcff4bfb234f74a7b12910f98c0730caa207dab7ab"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_61.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_61.bin",
+              "sizeBytes": 22937600,
+              "sha256": "aa87c3014fc682dec18262533eb57f1e548c08cdfdbb1ee930ba8938f3821034"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_62.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_62.bin",
+              "sizeBytes": 26839040,
+              "sha256": "e054c5a423bb9cd624347cc8d25325eb66d787d87c79509d97445a5cdb9b6abe"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_63.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_63.bin",
+              "sizeBytes": 22937600,
+              "sha256": "f31930c1eb5a571cc37170b10bf19968608ca1a08ec376b9c91d183921685a9b"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_64.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_64.bin",
+              "sizeBytes": 26839040,
+              "sha256": "c08b6d5997e5e71cdee0a3d18c7c54a81633280c0709db4d34269bb395de8ff5"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_65.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_65.bin",
+              "sizeBytes": 22937600,
+              "sha256": "b47da52083b65855fd4cb43661f8fb1e7407803059c74328c49d7b67cf0c32cc"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_66.bin",
+              "url": "https://huggingface.co/Norixp/sarashina2.2-3b-instruct-q4f32_1-MLC/resolve/f8566bf0adaacc1031cbce645bb8864c3dd52012/params_shard_66.bin",
+              "sizeBytes": 26839040,
+              "sha256": "01950cfb483df95d93176097f8bd421a7d6aafcaa5969a6a4997cb87a422918b"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "mlc",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 3.9
+            }
+          ],
+          "accelerators": [
+            "gpu"
+          ]
         }
       ],
       "japaneseScores": [
@@ -2504,6 +3655,28 @@
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 67,
+          "categories": {
+            "conversation": 73,
+            "keigo": 58,
+            "summary": 62,
+            "writing": 66,
+            "translation": 67,
+            "code": 76
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.2",
+          "artifactId": "sarashina2.2-3b-q4f32_1-mlc",
+          "runtime": "mlc",
+          "quantization": "q4f32_1",
+          "evaluatedAt": "2026-10-01",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
@@ -2522,6 +3695,27 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 54,
+          "categories": {
+            "reasoning": 42,
+            "math": 26,
+            "instruction": 66,
+            "code": 66,
+            "longInput": 72
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "2.2",
+          "artifactId": "sarashina2.2-3b-q4f32_1-mlc",
+          "runtime": "mlc",
+          "quantization": "q4f32_1",
+          "evaluatedAt": "2026-10-01",
           "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
@@ -2737,6 +3931,291 @@
               "status": "experimental"
             }
           ]
+        },
+        {
+          "id": "tinyswallow-1.5b-q4f32_1-mlc",
+          "format": "mlc",
+          "quantization": "q4f32_1",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2100000000,
+          "maxContext": 2048,
+          "japaneseCharsPerToken": 1.46,
+          "kvCacheBytesPerToken": 57344,
+          "files": [
+            {
+              "role": "config",
+              "fileName": "mlc-chat-config.json",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/mlc-chat-config.json",
+              "sizeBytes": 2111,
+              "sha256": "75b3b17b1b6bf967f89ecefb439f3f15b4619738c6eb9fb12930002e6621405e"
+            },
+            {
+              "role": "config",
+              "fileName": "tensor-cache.json",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/ndarray-cache.json",
+              "sizeBytes": 124489,
+              "sha256": "a1f9a2aade7961dd49c45d4a473515cf43507395026d71c6d605b4cce2a98151"
+            },
+            {
+              "role": "tokenizer",
+              "fileName": "tokenizer.json",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/tokenizer.json",
+              "sizeBytes": 7031673,
+              "sha256": "a8506e7111b80c6d8635951a02eab0f4e1a8e4e5772da83846579e97b16f61bf"
+            },
+            {
+              "role": "other",
+              "fileName": "tokenizer_config.json",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/tokenizer_config.json",
+              "sizeBytes": 7306,
+              "sha256": "7e88129d9769a0b14b1587a7d5e829fe93ac0e1511636471fdfc0811951418e6"
+            },
+            {
+              "role": "other",
+              "fileName": "vocab.json",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/vocab.json",
+              "sizeBytes": 2776833,
+              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+            },
+            {
+              "role": "other",
+              "fileName": "merges.txt",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/merges.txt",
+              "sizeBytes": 1671853,
+              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+            },
+            {
+              "role": "other",
+              "fileName": "added_tokens.json",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/added_tokens.json",
+              "sizeBytes": 605,
+              "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_0.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_0.bin",
+              "sizeBytes": 116686848,
+              "sha256": "a17ee8573c3ac6cf90d090d7b72d52ef6124e5ad52ddea9745a5fa9a9358fd01"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_1.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_1.bin",
+              "sizeBytes": 22330368,
+              "sha256": "45a38f2269e407cc3e1719a6a50ad468c460a32746073be8df47b5804e510538"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_2.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_2.bin",
+              "sizeBytes": 26331136,
+              "sha256": "983e40552dd56f1f4a8c3c0b8e1e1fddc9ca927022cf20b7040a4dd6d22c153e"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_3.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_3.bin",
+              "sizeBytes": 26331136,
+              "sha256": "59730b028a8101aaf15fddbcd12e4e8b1f40f5c330f55304bbf0e563d63fb9d6"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_4.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_4.bin",
+              "sizeBytes": 26331136,
+              "sha256": "c2f09b93f68881e147b858bc734dfbf9636903cc1a91cd7f4003bb3c1cb970da"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_5.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_5.bin",
+              "sizeBytes": 26331136,
+              "sha256": "34962320fa414ade384ea75843bd7df2d45360e579e294e8d8e3657aa8aa5f3c"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_6.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_6.bin",
+              "sizeBytes": 26331136,
+              "sha256": "92454d901ea686762344b8934e9bfa7f9fe4a5d12b343bd2b828b5dea27e4d2d"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_7.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_7.bin",
+              "sizeBytes": 26331136,
+              "sha256": "b4d84d0871ac93862252e801a69259612d8ae6bb36126bf390b7e476fdc079d7"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_8.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_8.bin",
+              "sizeBytes": 26331136,
+              "sha256": "fd5b798b1f7101d8b35fdf4eb34c949f489accffca112a1c8dd63c506ff8ea86"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_9.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_9.bin",
+              "sizeBytes": 26331136,
+              "sha256": "722e71f6aca4fe7f543dbd00510309c8b7b8ec4edc467616c71efac1d8763c75"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_10.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_10.bin",
+              "sizeBytes": 26331136,
+              "sha256": "f32049d0b4717a3b2481e390fcb7bfd44202eafd4da01e9a79ec76dc57642390"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_11.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_11.bin",
+              "sizeBytes": 26331136,
+              "sha256": "b2e5b93660083e81599077a124e5f943eb16f462f61e1614cbfbfd24ae27c123"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_12.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_12.bin",
+              "sizeBytes": 26331136,
+              "sha256": "9779a002ed8fc5364d92da63663f2e1c8cd61547785f934d3f4b55776ebf9d14"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_13.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_13.bin",
+              "sizeBytes": 26331136,
+              "sha256": "c5a8704525f5bcf916a310022303a7140bb449f9a8bd4f770d40210d9b8daa89"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_14.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_14.bin",
+              "sizeBytes": 26331136,
+              "sha256": "aadb43c2f703d7b39b5eb36dcfe360c5d1b17fe7827962d7ad52549697fa2670"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_15.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_15.bin",
+              "sizeBytes": 26331136,
+              "sha256": "3a037dd0812d6e4259ce64da7dc680c6dc260979012684979780e5a4f4c0d6a3"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_16.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_16.bin",
+              "sizeBytes": 26331136,
+              "sha256": "1d11f0ce0448d17e9660941954d815e079dbf5a1a3110069352197f0ad16e9ab"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_17.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_17.bin",
+              "sizeBytes": 26331136,
+              "sha256": "e4499713ef3150f72a2b6ab11c8916a0c1b220e0903de97ac10864968ab73428"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_18.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_18.bin",
+              "sizeBytes": 26331136,
+              "sha256": "44fd670a3adf0e21b4a4fbdfe82b62fc96d81a5c2ff2e9f52d001a44fca7bc95"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_19.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_19.bin",
+              "sizeBytes": 26331136,
+              "sha256": "70e7f36a30f55bcda9459cd7df1ef3695e0bf935cdc4a6c4aea5e6e5216ee58a"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_20.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_20.bin",
+              "sizeBytes": 26331136,
+              "sha256": "7d339781e82d267dd6484a0365588f9b261460b4b3cc0b8720d84e845e5a91d5"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_21.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_21.bin",
+              "sizeBytes": 26331136,
+              "sha256": "ba7b707a0605ada5a1afb1b1bab10fae237ab97fd620c89a335c9240df30c3f1"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_22.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_22.bin",
+              "sizeBytes": 26331136,
+              "sha256": "4c21e1dc09a75c2ccfdb8faf61467c53a89f1527eca79a000f7fb9607bb03d19"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_23.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_23.bin",
+              "sizeBytes": 26331136,
+              "sha256": "1388a64f2f7770c8a020d220253d3cfa007d1b4447fcc48ad75cd8bce6e04c4a"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_24.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_24.bin",
+              "sizeBytes": 26331136,
+              "sha256": "f25dfd62889d6922d54d6c9577290cdba68143948e7d3665b861d9b2f7e59dbc"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_25.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_25.bin",
+              "sizeBytes": 26331136,
+              "sha256": "71eaa4bbde84d4f47dbbdb391169aec734c962d1632e41325cae4786bf28b77f"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_26.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_26.bin",
+              "sizeBytes": 26331136,
+              "sha256": "572ac3661a42654bcf3d0dc84e33efdf020b765e6921bf514da54244a1eed76d"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_27.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_27.bin",
+              "sizeBytes": 26331136,
+              "sha256": "dd228917a0d4e4223ade1c92a5317870a78ee529fa5bf4da4b5e52e2dca46be8"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_28.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_28.bin",
+              "sizeBytes": 26331136,
+              "sha256": "1684f8d027a27911c64335e3b819a887d021572e784df28b4a5bb25816cb86b0"
+            },
+            {
+              "role": "weights",
+              "fileName": "params_shard_29.bin",
+              "url": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct-q4f32_1-MLC/resolve/773245ee7c19838e315b18a6d6311ebcd6bf684d/params_shard_29.bin",
+              "sizeBytes": 18589696,
+              "sha256": "4071fb8813c91e16018c774632f775b88dc234b293e724f2720dfa8fd54a0ced"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "mlc",
+              "platform": "android",
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 5.4
+            }
+          ],
+          "accelerators": [
+            "gpu"
+          ]
         }
       ],
       "japaneseScores": [
@@ -2761,6 +4240,28 @@
           "judgeModel": "claude-opus-5-5",
           "device": "Android 17 (API 37)・RAM 8GB の端末",
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 65,
+          "categories": {
+            "conversation": 76,
+            "keigo": 71,
+            "summary": 63,
+            "writing": 64,
+            "translation": 34,
+            "code": 79
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "1.0",
+          "artifactId": "tinyswallow-1.5b-q4f32_1-mlc",
+          "runtime": "mlc",
+          "quantization": "q4f32_1",
+          "evaluatedAt": "2026-10-01",
+          "method": "ja-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "ja-eval-v1",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         }
       ],
       "capabilityScores": [
@@ -2779,6 +4280,27 @@
           "runtime": "llamaCpp",
           "quantization": "Q5_K_M",
           "evaluatedAt": "2026-09-19",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 38,
+          "categories": {
+            "reasoning": 14,
+            "math": 13,
+            "instruction": 56,
+            "code": 52,
+            "longInput": 57
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "1.0",
+          "artifactId": "tinyswallow-1.5b-q4f32_1-mlc",
+          "runtime": "mlc",
+          "quantization": "q4f32_1",
+          "evaluatedAt": "2026-10-01",
           "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
@@ -3467,7 +4989,8 @@
         "attributionRequired": true,
         "requiresUserAcceptance": true,
         "reviewed": true,
-        "notice": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。"
+        "notice": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。",
+        "localizedNotice": {"ja": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。", "en": "Built with Llama. This is the Meta Llama 3.2 Community License. Use requires displaying \"Built with Llama\", and companies with more than 700 million monthly active users need a separate license from Meta."}
       },
       "artifacts": [
         {
@@ -3597,7 +5120,8 @@
         "attributionRequired": true,
         "requiresUserAcceptance": true,
         "reviewed": true,
-        "notice": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。"
+        "notice": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。",
+        "localizedNotice": {"ja": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。", "en": "Built with Llama. This is the Meta Llama 3.2 Community License. Use requires displaying \"Built with Llama\", and companies with more than 700 million monthly active users need a separate license from Meta."}
       },
       "artifacts": [
         {
@@ -3861,6 +5385,7 @@
         "attributionRequired": true,
         "requiresUserAcceptance": true,
         "notice": "年間収益100万ドル未満の組織は商用利用できます（Stability AI への登録が必要）。100万ドル以上の場合は別途エンタープライズ契約が必要です。配布時は「Powered by Stability AI」の表示が要ります。このモデルを使って基盤生成AIモデルを作る・改良することは禁止されています。",
+        "localizedNotice": {"ja": "年間収益100万ドル未満の組織は商用利用できます（Stability AI への登録が必要）。100万ドル以上の場合は別途エンタープライズ契約が必要です。配布時は「Powered by Stability AI」の表示が要ります。このモデルを使って基盤生成AIモデルを作る・改良することは禁止されています。", "en": "Organizations with annual revenue under US$1 million may use it commercially (registration with Stability AI required). At US$1 million or more, a separate enterprise agreement is needed. Distribution requires displaying \"Powered by Stability AI\". Using this model to create or improve foundational generative AI models is prohibited."},
         "reviewed": true
       },
       "tags": [
