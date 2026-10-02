@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 41,
-  "publishedAt": "2026-10-01T12:00:00Z",
+  "revision": 42,
+  "publishedAt": "2026-10-02T12:00:00Z",
   "models": [
     {
       "id": "qwen2.5-0.5b-instruct",
@@ -1191,6 +1191,117 @@
           ],
           "accelerators": [
             "gpu"
+          ]
+        },
+        {
+          "id": "gemma-4-e2b-npu-sm8750-litertlm",
+          "format": "litertlm",
+          "quantization": "mixed",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2000000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_qualcomm_sm8750.litertlm",
+              "sizeBytes": 3016294400,
+              "sha256": "41dd675fbe735b6029012b5576a5716bac614fd8156de0128db4c9dff3cebd4e"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "verified"
+            }
+          ],
+          "accelerators": [
+            "npu"
+          ],
+          "socs": [
+            "SM8750"
+          ],
+          "requires": [
+            "socs"
+          ]
+        },
+        {
+          "id": "gemma-4-e2b-npu-tensor-g5-litertlm",
+          "format": "litertlm",
+          "quantization": "mixed",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2000000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_Google_Tensor_G5.litertlm",
+              "sizeBytes": 3113545589,
+              "sha256": "af1082986639ecde7db95d91be6fe54f8b6b458104734c5bafc204e69d6852dc"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "verified"
+            }
+          ],
+          "accelerators": [
+            "npu"
+          ],
+          "socs": [
+            "Tensor G5"
+          ],
+          "requires": [
+            "socs"
+          ]
+        },
+        {
+          "id": "gemma-4-e2b-npu-tensor-g6-litertlm",
+          "format": "litertlm",
+          "quantization": "mixed",
+          "capabilities": [
+            "text",
+            "streaming"
+          ],
+          "estimatedRamBytes": 2000000000,
+          "maxContext": 4096,
+          "kvCacheBytesPerToken": 12288,
+          "files": [
+            {
+              "role": "weights",
+              "fileName": "model.litertlm",
+              "url": "https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm/resolve/b3ca0d2f076785a8f4b2219ddbd2bdb99954eae1/gemma-4-E2B-it_Google_Tensor_G6.litertlm",
+              "sizeBytes": 3313938293,
+              "sha256": "f86c7c19c736e9307267946edef58b0a45494a9127036d54d90dd6b7617c95b7"
+            }
+          ],
+          "support": [
+            {
+              "runtime": "liteRt",
+              "platform": "android",
+              "status": "verified"
+            }
+          ],
+          "accelerators": [
+            "npu"
+          ],
+          "socs": [
+            "Tensor G6"
+          ],
+          "requires": [
+            "socs"
           ]
         },
         {
