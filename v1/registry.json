@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 42,
-  "publishedAt": "2026-10-02T12:00:00Z",
+  "revision": 44,
+  "publishedAt": "2026-10-03T12:00:00Z",
   "models": [
     {
       "id": "qwen2.5-0.5b-instruct",
@@ -1129,7 +1129,8 @@
           "quantization": "mixed",
           "capabilities": [
             "text",
-            "streaming"
+            "streaming",
+            "toolCalling"
           ],
           "estimatedRamBytes": 2580000000,
           "maxContext": 4096,
@@ -1162,7 +1163,8 @@
           "quantization": "mixed",
           "capabilities": [
             "text",
-            "streaming"
+            "streaming",
+            "toolCalling"
           ],
           "estimatedRamBytes": 2000000000,
           "maxContext": 4096,
@@ -1217,7 +1219,7 @@
             {
               "runtime": "liteRt",
               "platform": "android",
-              "status": "verified"
+              "status": "experimental"
             }
           ],
           "accelerators": [
@@ -1254,7 +1256,7 @@
             {
               "runtime": "liteRt",
               "platform": "android",
-              "status": "verified"
+              "status": "experimental"
             }
           ],
           "accelerators": [
@@ -1291,7 +1293,7 @@
             {
               "runtime": "liteRt",
               "platform": "android",
-              "status": "verified"
+              "status": "experimental"
             }
           ],
           "accelerators": [
