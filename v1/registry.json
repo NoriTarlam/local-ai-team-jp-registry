@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 45,
+  "revision": 46,
   "publishedAt": "2026-10-03T12:00:00Z",
   "models": [
     {
@@ -91,14 +91,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 49,
+          "overall": 50,
           "categories": {
             "conversation": 47,
-            "keigo": 39,
+            "keigo": 40,
             "summary": 54,
-            "writing": 50,
-            "translation": 42,
-            "code": 64
+            "writing": 49,
+            "translation": 45,
+            "code": 63
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -115,13 +115,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 42,
+          "overall": 41,
           "categories": {
-            "reasoning": 14,
-            "math": 14,
+            "reasoning": 13,
+            "math": 13,
             "instruction": 69,
-            "code": 53,
-            "longInput": 61
+            "code": 52,
+            "longInput": 60
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -225,10 +225,10 @@
           "categories": {
             "conversation": 55,
             "keigo": 50,
-            "summary": 58,
-            "writing": 60,
+            "summary": 61,
+            "writing": 58,
             "translation": 73,
-            "code": 76
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -250,8 +250,8 @@
             "reasoning": 32,
             "math": 43,
             "instruction": 73,
-            "code": 68,
-            "longInput": 87
+            "code": 69,
+            "longInput": 88
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -453,12 +453,12 @@
         {
           "overall": 50,
           "categories": {
-            "conversation": 41,
+            "conversation": 42,
             "keigo": 34,
-            "summary": 56,
-            "writing": 53,
+            "summary": 55,
+            "writing": 54,
             "translation": 53,
-            "code": 64
+            "code": 63
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -475,12 +475,12 @@
         {
           "overall": 28,
           "categories": {
-            "conversation": 37,
+            "conversation": 36,
             "keigo": 26,
-            "summary": 46,
+            "summary": 50,
             "writing": 31,
             "translation": 0,
-            "code": 25
+            "code": 27
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -503,7 +503,7 @@
             "math": 8,
             "instruction": 23,
             "code": 22,
-            "longInput": 36
+            "longInput": 34
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -521,8 +521,8 @@
           "overall": 49,
           "categories": {
             "reasoning": 32,
-            "math": 41,
-            "instruction": 50,
+            "math": 43,
+            "instruction": 49,
             "code": 57,
             "longInput": 66
           },
@@ -640,10 +640,10 @@
           "categories": {
             "conversation": 55,
             "keigo": 50,
-            "summary": 58,
-            "writing": 60,
+            "summary": 61,
+            "writing": 58,
             "translation": 73,
-            "code": 76
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -665,8 +665,8 @@
             "reasoning": 32,
             "math": 43,
             "instruction": 73,
-            "code": 68,
-            "longInput": 86
+            "code": 67,
+            "longInput": 87
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.5",
@@ -1357,7 +1357,7 @@
         {
           "overall": 74,
           "categories": {
-            "conversation": 73,
+            "conversation": 71,
             "keigo": 75,
             "summary": 73,
             "writing": 71,
@@ -1380,10 +1380,10 @@
           "overall": 78,
           "categories": {
             "conversation": 78,
-            "keigo": 75,
+            "keigo": 74,
             "summary": 83,
-            "writing": 67,
-            "translation": 83,
+            "writing": 68,
+            "translation": 82,
             "code": 83
           },
           "scoreVersion": "ja-score-1",
@@ -1401,11 +1401,11 @@
       ],
       "capabilityScores": [
         {
-          "overall": 70,
+          "overall": 71,
           "categories": {
-            "reasoning": 30,
-            "math": 49,
-            "instruction": 93,
+            "reasoning": 31,
+            "math": 50,
+            "instruction": 94,
             "code": 88,
             "longInput": 91
           },
@@ -1422,13 +1422,13 @@
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         },
         {
-          "overall": 69,
+          "overall": 70,
           "categories": {
             "reasoning": 42,
             "math": 57,
-            "instruction": 82,
+            "instruction": 83,
             "code": 81,
-            "longInput": 84
+            "longInput": 86
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -1523,9 +1523,9 @@
           "categories": {
             "conversation": 39,
             "keigo": 28,
-            "summary": 53,
+            "summary": 54,
             "writing": 35,
-            "translation": 44,
+            "translation": 46,
             "code": 75
           },
           "scoreVersion": "ja-score-1",
@@ -1543,13 +1543,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 41,
+          "overall": 42,
           "categories": {
             "reasoning": 16,
-            "math": 28,
-            "instruction": 62,
+            "math": 29,
+            "instruction": 63,
             "code": 43,
-            "longInput": 58
+            "longInput": 59
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -1889,9 +1889,9 @@
           "categories": {
             "conversation": 49,
             "keigo": 32,
-            "summary": 68,
-            "writing": 50,
-            "translation": 59,
+            "summary": 67,
+            "writing": 52,
+            "translation": 58,
             "code": 77
           },
           "scoreVersion": "ja-score-1",
@@ -1909,13 +1909,13 @@
       ],
       "capabilityScores": [
         {
-          "overall": 52,
+          "overall": 53,
           "categories": {
             "reasoning": 16,
             "math": 43,
             "instruction": 74,
-            "code": 63,
-            "longInput": 66
+            "code": 64,
+            "longInput": 67
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -2594,7 +2594,10 @@
         "requiresUserAcceptance": true,
         "reviewed": true,
         "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
-        "localizedNotice": {"ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。", "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."}
+        "localizedNotice": {
+          "ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
+          "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."
+        }
       },
       "artifacts": [
         {
@@ -2633,11 +2636,11 @@
           "overall": 68,
           "categories": {
             "conversation": 73,
-            "keigo": 53,
-            "summary": 71,
-            "writing": 72,
-            "translation": 64,
-            "code": 72
+            "keigo": 55,
+            "summary": 73,
+            "writing": 75,
+            "translation": 63,
+            "code": 71
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5-202606",
@@ -2654,12 +2657,12 @@
       ],
       "capabilityScores": [
         {
-          "overall": 61,
+          "overall": 63,
           "categories": {
             "reasoning": 17,
-            "math": 60,
-            "instruction": 71,
-            "code": 87,
+            "math": 63,
+            "instruction": 74,
+            "code": 88,
             "longInput": 71
           },
           "scoreVersion": "ja-score-1",
@@ -2725,7 +2728,10 @@
         "requiresUserAcceptance": true,
         "reviewed": true,
         "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
-        "localizedNotice": {"ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。", "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."}
+        "localizedNotice": {
+          "ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
+          "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."
+        }
       },
       "artifacts": [
         {
@@ -2809,7 +2815,10 @@
         "requiresUserAcceptance": true,
         "reviewed": true,
         "notice": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
-        "localizedNotice": {"ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。", "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."}
+        "localizedNotice": {
+          "ja": "年間売上が1000万米ドルを超える組織は、商用利用ができません。個人利用と、それ以下の規模の組織の利用は認められています。",
+          "en": "Organizations with annual revenue over US$10 million may not use it commercially. Personal use, and use by smaller organizations, is permitted."
+        }
       },
       "artifacts": [
         {
@@ -2848,14 +2857,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 55,
+          "overall": 56,
           "categories": {
             "conversation": 48,
-            "keigo": 39,
-            "summary": 55,
+            "keigo": 41,
+            "summary": 56,
             "writing": 56,
             "translation": 61,
-            "code": 72
+            "code": 71
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -2874,11 +2883,11 @@
         {
           "overall": 55,
           "categories": {
-            "reasoning": 26,
+            "reasoning": 24,
             "math": 36,
-            "instruction": 72,
+            "instruction": 73,
             "code": 61,
-            "longInput": 81
+            "longInput": 80
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.5",
@@ -2976,10 +2985,10 @@
         {
           "overall": 55,
           "categories": {
-            "conversation": 55,
+            "conversation": 56,
             "keigo": 55,
-            "summary": 51,
-            "writing": 56,
+            "summary": 50,
+            "writing": 59,
             "translation": 39,
             "code": 71
           },
@@ -3000,11 +3009,11 @@
         {
           "overall": 28,
           "categories": {
-            "reasoning": 22,
+            "reasoning": 21,
             "math": 9,
             "instruction": 32,
             "code": 36,
-            "longInput": 41
+            "longInput": 44
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -3100,11 +3109,11 @@
       ],
       "japaneseScores": [
         {
-          "overall": 58,
+          "overall": 59,
           "categories": {
-            "conversation": 67,
-            "keigo": 38,
-            "summary": 46,
+            "conversation": 68,
+            "keigo": 40,
+            "summary": 47,
             "writing": 61,
             "translation": 67,
             "code": 71
@@ -3127,8 +3136,8 @@
           "overall": 35,
           "categories": {
             "reasoning": 13,
-            "math": 18,
-            "instruction": 47,
+            "math": 19,
+            "instruction": 46,
             "code": 58,
             "longInput": 39
           },
@@ -3749,14 +3758,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 73,
+          "overall": 74,
           "categories": {
             "conversation": 72,
-            "keigo": 82,
-            "summary": 70,
+            "keigo": 81,
+            "summary": 73,
             "writing": 69,
-            "translation": 75,
-            "code": 71
+            "translation": 77,
+            "code": 69
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -3771,14 +3780,14 @@
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         },
         {
-          "overall": 67,
+          "overall": 68,
           "categories": {
-            "conversation": 73,
+            "conversation": 75,
             "keigo": 58,
-            "summary": 62,
-            "writing": 66,
+            "summary": 63,
+            "writing": 68,
             "translation": 67,
-            "code": 76
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -3797,11 +3806,11 @@
         {
           "overall": 56,
           "categories": {
-            "reasoning": 21,
+            "reasoning": 23,
             "math": 34,
-            "instruction": 76,
-            "code": 70,
-            "longInput": 79
+            "instruction": 77,
+            "code": 71,
+            "longInput": 77
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -3816,12 +3825,12 @@
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         },
         {
-          "overall": 54,
+          "overall": 55,
           "categories": {
-            "reasoning": 42,
-            "math": 26,
+            "reasoning": 43,
+            "math": 27,
             "instruction": 66,
-            "code": 66,
+            "code": 67,
             "longInput": 72
           },
           "scoreVersion": "ja-score-1",
@@ -3925,9 +3934,9 @@
         {
           "overall": 72,
           "categories": {
-            "conversation": 77,
+            "conversation": 80,
             "keigo": 69,
-            "summary": 64,
+            "summary": 62,
             "writing": 68,
             "translation": 79,
             "code": 75
@@ -3950,10 +3959,10 @@
           "overall": 49,
           "categories": {
             "reasoning": 23,
-            "math": 30,
-            "instruction": 66,
-            "code": 72,
-            "longInput": 56
+            "math": 31,
+            "instruction": 67,
+            "code": 71,
+            "longInput": 54
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "2.2",
@@ -4334,12 +4343,12 @@
       ],
       "japaneseScores": [
         {
-          "overall": 70,
+          "overall": 71,
           "categories": {
-            "conversation": 76,
+            "conversation": 77,
             "keigo": 62,
-            "summary": 68,
-            "writing": 64,
+            "summary": 69,
+            "writing": 65,
             "translation": 72,
             "code": 79
           },
@@ -4356,11 +4365,11 @@
           "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
         },
         {
-          "overall": 65,
+          "overall": 64,
           "categories": {
             "conversation": 76,
-            "keigo": 71,
-            "summary": 63,
+            "keigo": 70,
+            "summary": 61,
             "writing": 64,
             "translation": 34,
             "code": 79
@@ -4383,10 +4392,10 @@
           "overall": 48,
           "categories": {
             "reasoning": 22,
-            "math": 28,
+            "math": 27,
             "instruction": 61,
             "code": 62,
-            "longInput": 66
+            "longInput": 67
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "1.0",
@@ -4503,11 +4512,11 @@
       ],
       "japaneseScores": [
         {
-          "overall": 65,
+          "overall": 64,
           "categories": {
             "conversation": 68,
-            "keigo": 71,
-            "summary": 57,
+            "keigo": 68,
+            "summary": 55,
             "writing": 63,
             "translation": 57,
             "code": 75
@@ -4527,12 +4536,12 @@
       ],
       "capabilityScores": [
         {
-          "overall": 46,
+          "overall": 47,
           "categories": {
             "reasoning": 16,
-            "math": 12,
+            "math": 14,
             "instruction": 71,
-            "code": 84,
+            "code": 86,
             "longInput": 47
           },
           "scoreVersion": "ja-score-1",
@@ -4762,14 +4771,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 53,
+          "overall": 54,
           "categories": {
-            "conversation": 52,
+            "conversation": 53,
             "keigo": 52,
-            "summary": 66,
+            "summary": 65,
             "writing": 59,
             "translation": 26,
-            "code": 64
+            "code": 67
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "4",
@@ -4786,12 +4795,12 @@
       ],
       "capabilityScores": [
         {
-          "overall": 60,
+          "overall": 61,
           "categories": {
             "reasoning": 16,
             "math": 43,
             "instruction": 70,
-            "code": 90,
+            "code": 91,
             "longInput": 83
           },
           "scoreVersion": "ja-score-1",
@@ -4891,14 +4900,14 @@
       ],
       "japaneseScores": [
         {
-          "overall": 57,
+          "overall": 58,
           "categories": {
-            "conversation": 55,
-            "keigo": 44,
-            "summary": 59,
+            "conversation": 56,
+            "keigo": 43,
+            "summary": 61,
             "writing": 57,
-            "translation": 50,
-            "code": 76
+            "translation": 53,
+            "code": 75
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3",
@@ -4915,9 +4924,9 @@
       ],
       "capabilityScores": [
         {
-          "overall": 62,
+          "overall": 63,
           "categories": {
-            "reasoning": 37,
+            "reasoning": 39,
             "math": 48,
             "instruction": 66,
             "code": 83,
@@ -5045,12 +5054,12 @@
       ],
       "capabilityScores": [
         {
-          "overall": 18,
+          "overall": 19,
           "categories": {
             "reasoning": 7,
-            "math": 24,
+            "math": 26,
             "instruction": 23,
-            "code": 6,
+            "code": 7,
             "longInput": 31
           },
           "scoreVersion": "ja-score-1",
@@ -5104,7 +5113,10 @@
         "requiresUserAcceptance": true,
         "reviewed": true,
         "notice": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。",
-        "localizedNotice": {"ja": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。", "en": "Built with Llama. This is the Meta Llama 3.2 Community License. Use requires displaying \"Built with Llama\", and companies with more than 700 million monthly active users need a separate license from Meta."}
+        "localizedNotice": {
+          "ja": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。",
+          "en": "Built with Llama. This is the Meta Llama 3.2 Community License. Use requires displaying \"Built with Llama\", and companies with more than 700 million monthly active users need a separate license from Meta."
+        }
       },
       "artifacts": [
         {
@@ -5152,12 +5164,12 @@
       ],
       "japaneseScores": [
         {
-          "overall": 44,
+          "overall": 45,
           "categories": {
-            "conversation": 40,
+            "conversation": 41,
             "keigo": 31,
-            "summary": 54,
-            "writing": 47,
+            "summary": 53,
+            "writing": 48,
             "translation": 31,
             "code": 63
           },
@@ -5176,12 +5188,12 @@
       ],
       "capabilityScores": [
         {
-          "overall": 47,
+          "overall": 46,
           "categories": {
-            "reasoning": 16,
+            "reasoning": 14,
             "math": 22,
             "instruction": 60,
-            "code": 66,
+            "code": 64,
             "longInput": 72
           },
           "scoreVersion": "ja-score-1",
@@ -5235,7 +5247,10 @@
         "requiresUserAcceptance": true,
         "reviewed": true,
         "notice": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。",
-        "localizedNotice": {"ja": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。", "en": "Built with Llama. This is the Meta Llama 3.2 Community License. Use requires displaying \"Built with Llama\", and companies with more than 700 million monthly active users need a separate license from Meta."}
+        "localizedNotice": {
+          "ja": "Built with Llama。Meta の Llama 3.2 コミュニティライセンスです。利用には「Built with Llama」の表示が必要で、月間利用者が7億人を超える事業者は Meta から別途許諾を受ける必要があります。",
+          "en": "Built with Llama. This is the Meta Llama 3.2 Community License. Use requires displaying \"Built with Llama\", and companies with more than 700 million monthly active users need a separate license from Meta."
+        }
       },
       "artifacts": [
         {
@@ -5285,12 +5300,12 @@
         {
           "overall": 54,
           "categories": {
-            "conversation": 55,
+            "conversation": 53,
             "keigo": 36,
             "summary": 56,
             "writing": 56,
             "translation": 57,
-            "code": 64
+            "code": 65
           },
           "scoreVersion": "ja-score-1",
           "modelVersion": "3.2",
@@ -5311,8 +5326,8 @@
           "categories": {
             "reasoning": 17,
             "math": 30,
-            "instruction": 82,
-            "code": 91,
+            "instruction": 83,
+            "code": 90,
             "longInput": 89
           },
           "scoreVersion": "ja-score-1",
@@ -5499,7 +5514,10 @@
         "attributionRequired": true,
         "requiresUserAcceptance": true,
         "notice": "年間収益100万ドル未満の組織は商用利用できます（Stability AI への登録が必要）。100万ドル以上の場合は別途エンタープライズ契約が必要です。配布時は「Powered by Stability AI」の表示が要ります。このモデルを使って基盤生成AIモデルを作る・改良することは禁止されています。",
-        "localizedNotice": {"ja": "年間収益100万ドル未満の組織は商用利用できます（Stability AI への登録が必要）。100万ドル以上の場合は別途エンタープライズ契約が必要です。配布時は「Powered by Stability AI」の表示が要ります。このモデルを使って基盤生成AIモデルを作る・改良することは禁止されています。", "en": "Organizations with annual revenue under US$1 million may use it commercially (registration with Stability AI required). At US$1 million or more, a separate enterprise agreement is needed. Distribution requires displaying \"Powered by Stability AI\". Using this model to create or improve foundational generative AI models is prohibited."},
+        "localizedNotice": {
+          "ja": "年間収益100万ドル未満の組織は商用利用できます（Stability AI への登録が必要）。100万ドル以上の場合は別途エンタープライズ契約が必要です。配布時は「Powered by Stability AI」の表示が要ります。このモデルを使って基盤生成AIモデルを作る・改良することは禁止されています。",
+          "en": "Organizations with annual revenue under US$1 million may use it commercially (registration with Stability AI required). At US$1 million or more, a separate enterprise agreement is needed. Distribution requires displaying \"Powered by Stability AI\". Using this model to create or improve foundational generative AI models is prohibited."
+        },
         "reviewed": true
       },
       "tags": [
