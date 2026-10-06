@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 46,
+  "revision": 47,
   "publishedAt": "2026-10-03T12:00:00Z",
   "models": [
     {
@@ -532,6 +532,27 @@
           "runtime": "llamaCpp",
           "quantization": "Q4_K_M",
           "evaluatedAt": "2026-09-24",
+          "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
+          "evalSet": "core-eval-v1",
+          "judgeModel": "claude-opus-5-5",
+          "device": "Android 17 (API 37)・RAM 8GB の端末",
+          "evidenceUrl": "https://github.com/NoriTarlam/local-ai-team-jp-registry/tree/main/eval"
+        },
+        {
+          "overall": 31,
+          "categories": {
+            "reasoning": 23,
+            "math": 32,
+            "instruction": 38,
+            "code": 23,
+            "longInput": 41
+          },
+          "scoreVersion": "ja-score-1",
+          "modelVersion": "3.5",
+          "artifactId": "qwen3.5-0.8b-vl-int8-litertlm",
+          "runtime": "liteRt",
+          "quantization": "INT8",
+          "evaluatedAt": "2026-10-06",
           "method": "core-eval-v1（30問・6カテゴリ） / ルール採点40%＋claude-opus-5-5 による判定60%（Claude Code 経由） / Android 17 (API 37)・RAM 8GB の実機でアプリと同じ実行環境・temperature 0 で生成",
           "evalSet": "core-eval-v1",
           "judgeModel": "claude-opus-5-5",
