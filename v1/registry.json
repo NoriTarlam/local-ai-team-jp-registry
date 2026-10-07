@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 47,
+  "revision": 48,
   "publishedAt": "2026-10-03T12:00:00Z",
   "models": [
     {
@@ -1315,7 +1315,8 @@
             {
               "runtime": "liteRt",
               "platform": "android",
-              "status": "experimental"
+              "status": "verified",
+              "referenceDecodeTokensPerSec": 35.1
             }
           ],
           "accelerators": [
